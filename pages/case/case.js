@@ -3,7 +3,9 @@
 const app = getApp();
 let col1H = 0;
 let col2H = 0;
-
+let imgSrcArr = [];
+let prevScrollTop = 0;
+let timer = null;
 Page({
 
   /**
@@ -39,6 +41,13 @@ Page({
       { id: '6', title: '爱情' },
       { id: '7', title: '个性' },
     ],
+    filterData:{
+      filter: false, //是否显示筛选内容
+      filterIfShow: 0,//显示当前的全部筛选条件
+    },
+    searchClass:'',//search-show
+    scrollTopShow:'',//scrollTop-show
+    scrollTop:0,//置顶
     // 搜索内容
     searchVal:'',
     //tab切换
@@ -53,6 +62,64 @@ Page({
       col2: []
     }
   },
+  // 显示筛选模块
+  showFilter: function () {
+    let strfilter = 'filterData.filter';
+    this.setData({
+      [strfilter]: true,
+    })
+  },
+  // 隐藏筛选模块
+  hideFilter: function () {
+    let strfilter = 'filterData.filter';
+    this.setData({
+      [strfilter]: false,
+    })
+  },
+  //条件筛选
+  setFilterFun: function (e) {
+    //学科筛选
+    let strtype = 'filterData.type';
+    let strstyle = 'filterData.style';
+    if (e.currentTarget.dataset.key == 'type') {
+      this.setData({
+        [strtype]: e.currentTarget.dataset.value
+      })
+    }
+    //省份筛选
+    if (e.currentTarget.dataset.key == 'style') {
+      this.setData({
+        [strstyle]: e.currentTarget.dataset.value
+      })
+    }
+  },
+  //是否显示当前的全部筛选条件
+  tabFilterIf: function (event) {
+    var index = event.currentTarget.dataset.index;
+    var filterifshow = this.data.filterData.filterIfShow == index ? 0 : index;
+    let strfilterIfShow = 'filterData.filterIfShow';
+      this.setData({
+        [strfilterIfShow]: filterifshow
+      })
+  }, 
+  // 重置按钮功能
+  resetFun: function () {
+    let strtype = 'filterData.type';
+    let strstyle = 'filterData.style';
+    let strfilter = 'filterData.filter';
+    this.setData({
+      [strtype] : 0,
+      [strstyle] : 0,
+      [strfilter]: false,
+    })
+  },
+  // 提交按钮功能
+  submitFun: function () {
+    let strfilter = 'filterData.filter';    
+    this.setData({
+      [strfilter]: false,
+    })
+  },
   // tab切换方法
   tabNavFun:function(e){
     var index = e.currentTarget.dataset.index;
@@ -61,15 +128,31 @@ Page({
       style: "color:" + this.data.theme + ";border-bottom:1px solid" + this.data.theme
     })
   },
+  // 图片查看器
+  wxParseImgTap : function(e) {
+    var that = this;
+    var nowImgUrl = e.target.dataset.src;
+    wx.previewImage({
+      current: nowImgUrl, // 当前显示图片的http链接
+      urls: that.data.imgLoadData.imgSrcArr // 需要预览的图片http链接列表
+    })
+  },
+  //置顶
+  goTop:function(){
+    this.setData({
+      scrollTop : 0,
+    })
+  },
   // 瀑布流代码
   onImageLoad: function (e) {
     let imageId = e.currentTarget.id;
     let oImgW = e.detail.width;         //图片原始宽度
     let oImgH = e.detail.height;        //图片原始高度
+    let imgSrc = e.target.dataset.src;
     let imgWidth = this.data.imgWidth;  //图片设置的宽度
     let scale = imgWidth / oImgW;        //比例计算
     let imgHeight = oImgH * scale;      //自适应高度
-    console.log(imgWidth)
+    imgSrcArr.push(imgSrc);
 
     let images = this.data.imgLoadData.images;
     let imageObj = null;
@@ -98,12 +181,8 @@ Page({
     var strloadingCount = 'imgLoadData.loadingCount',
         strcol1 = 'imgLoadData.col1',
         strcol2 = 'imgLoadData.col2',
+        strimgSrcArr = 'imgLoadData.imgSrcArr',
         strimages = 'imgLoadData.images';
-    let data = {
-      loadingCount: loadingCount,
-      col1: col1,
-      col2: col2
-    };
 
     //当前这组图片已加载完毕，则清空图片临时加载区域的内容
     if (!loadingCount) {
@@ -116,14 +195,39 @@ Page({
       [strloadingCount]: loadingCount,
       [strcol1]: col1,
       [strcol2]: col2,
+      [strimgSrcArr]:imgSrcArr,
     });
   },
+  // 滚动方法
+  scrollFun:function(e){
+    var that = this;
+    var scrollTop = e.detail.scrollTop;
+    if (timer) {
+      clearTimeout(timer);
+      timer = 0;
+    }
+    timer = setTimeout(function () {
 
+      var searchClass = (scrollTop > prevScrollTop && scrollTop > 100) ? 'search-show' : '';
+      var scrollTopShow = scrollTop > 500 ? 'scrollTop-show' : '';
+      that.setData({
+        searchClass: searchClass,
+        scrollTopShow: scrollTopShow,
+      })
+      prevScrollTop = scrollTop;
+    },20)
+  },
+  //下拉加载
   loadImages: function () {
     let images = [
       { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180710_1531216229.jpg', height: 0 },
       { pic: 'http://m.jujiaonet.com/uploads/ph/o_1cioibqe9nk7hpqr94k8b2bii.jpg', height: 0 },
       { pic: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180809_1533794461.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125478.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180809_1533794448.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180805_1533458988.jpg', height: 0 },
+      
       // { pic: "../../images/4.png", height: 0 },
       // { pic: "../../images/5.png", height: 0 },
       // { pic: "../../images/6.png", height: 0 },
