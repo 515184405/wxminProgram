@@ -1,0 +1,9 @@
+<!-- 轮播模块 -->
+<swiper class='swiper-box' indicator-color='rgba(255,255,255,1)' indicator-active-color="{{theme}}" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="">
+    <swiper-item>
+      <image mode='widthFix' src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>

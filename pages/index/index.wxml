@@ -1,0 +1,57 @@
+<!-- 轮播模块 -->
+<swiper indicator-color='rgba(255,255,255,1)' indicator-active-color="{{theme}}" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="">
+    <swiper-item>
+      <image mode='widthFix' src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 导航模块 -->
+<view class='nav-box fy-container'>
+  <view wx:for="{{8}}" wx:key="" class='nav-item'>
+    <image class='nav-item-img' mode='aspectFill' src='http://uploads.5068.com/allimg/1803/153-1P319144048.jpg'></image>
+    <text class='nav-item-text'>儿童照片</text>
+  </view>
+</view>
+<!-- 模块内容 -->
+<view class='fy-container fy-module'>
+    <view class='fm-title' style="color:{{theme}}">
+      精品套系
+    </view>
+    <view class='fm-title-en'>Top - quality product line</view>
+    <view>
+    <view class='fm-module-list'>
+       <view class='fm-module-item' wx:for="{{4}}"  wx:key=''>
+          <view class='fm-image-box'>
+              <image mode='widthFix' src="http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125491.jpg" class='fm-image'></image>
+          </view>
+          <view class='fm-item-title'>
+            3888套系
+          </view>
+          <view class='flex fm-item-info y-center x-between'>
+            <view class='fm-item-money' style='color:{{theme}}'>￥1000</view>
+            <view class='fm-item-btn' style='background-color:{{theme}}'>查看</view>
+          </view>
+       </view>
+    </view>
+  </view>
+</view>
+<view class='fy-container fy-module'>
+    <view class='fm-title' style="color:{{theme}}">
+      精品案例
+    </view>
+    <view class='fm-title-en'>Top - quality product line</view>
+    <view class='fm-module-list'>
+       <view class='fm-module-item2'wx:for="{{3}}" wx:key=''>
+         <view class='fm-image-box'>
+              <image mode='widthFix' src="http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125491.jpg" class='fm-image'></image>
+          </view>
+        <view class='fm-item-title flex x-center'>
+            3888套系
+          </view>
+       </view>
+    </view>
+</view>
+<import src="../../component/footer/footer.wxml" />
+<template is='footer' />

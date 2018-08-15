@@ -1,0 +1,100 @@
+.slide-image{
+  width:100%;
+  height:180rpx;
+}
+/* 导航 */
+.nav-box{
+  padding-top:0;
+}
+.nav-item{
+  margin-top:30rpx;
+  width:25%;
+  text-align: center;
+  display: inline-block;
+}
+.nav-item-img{
+  width:110rpx;
+  height:110rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  margin:0 auto;
+}
+.nav-item-text{
+  margin-top:5rpx;
+  color:#000;
+  display: block;
+}
+/* 模块 */
+.fy-module{
+  margin-top:20rpx;
+}
+.fm-title{
+  position: relative;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.fm-title:before{
+  content: '';
+  position:absolute;
+  left:0;
+  top:50%;
+  width:35%;
+  height:1px;
+    background: linear-gradient(to left, rgba(220,220,220,1) , rgba(255,255,255,0)); /* 标准的语法 */
+}
+.fm-title:after{
+  content: '';
+  position:absolute;
+  right:0;
+  top:50%;
+  width:35%;
+  height:1px;
+    background: linear-gradient(to right, rgba(220,220,220,1) , rgba(255,255,255,0)); /* 标准的语法 */   
+}
+.fm-title-en{
+  font-size: 24rpx;
+  color:#999;
+  text-align: center;
+  margin-top:10rpx;
+}
+.fm-image-box{
+  height:400rpx;
+  overflow:hidden;
+}
+.fm-module-item{
+  margin-top:20rpx;
+  width:50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.fm-item-money{
+  font-weight: bold;
+}
+.fm-module-item:nth-child(even){
+  padding-left:10rpx;
+}
+.fm-item-info{
+  margin-top:6rpx;
+}
+.fm-item-btn{
+  padding:3rpx 15rpx;
+  color:#fff;
+}
+.fm-item-title{
+  font-size: 28rpx;
+  margin-top:5rpx;
+}
+.fm-module-item:nth-child(odd){
+  padding-right:10rpx;
+}
+.fm-item-info{
+  font-size: 26rpx;
+}
+.fm-image{
+  width:100%;
+}
+.fm-module-item2{
+  margin-top:20rpx;
+}

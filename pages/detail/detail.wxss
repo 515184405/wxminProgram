@@ -1,0 +1,6 @@
+.swiper-box{
+  height:400rpx;
+}
+.slide-image{
+  width:100%;
+}
