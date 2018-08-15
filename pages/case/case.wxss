@@ -1,0 +1,31 @@
+@import "../../component/search/search.wxss";
+
+.case-box{
+  background-color: #ffffff;
+  padding-bottom:0;
+  width:100%;
+  box-sizing: border-box;
+}
+.case-filter-item{
+  width:33.33%;
+  display: inline-block;
+  padding:30rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+}
+.scroll-view_H{
+  width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/* 图片懒加载模块 */
+.case-imgLoadArr{
+  padding:30rpx 20rpx;
+}
+.img_item {
+  width: 48%;
+  margin: 1%;
+  display: inline-block;
+  vertical-align: top;
+}

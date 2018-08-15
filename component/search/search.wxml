@@ -1,0 +1,6 @@
+<template name='search'>
+   <view class='fy-relative'>
+     <input value='{{value}}' bindinput='changeInput' class='fy-search' placeholder='{{text}}'/>
+     <image class='fy-search-icon' src='/component/search/image/search-icon.png'></image>
+  </view>
+</template>

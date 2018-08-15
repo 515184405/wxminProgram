@@ -3,6 +3,7 @@ page{
   font-size: 28rpx;
   color:#333;
   background-color: #f5f7f9;
+  width:100%;
 }
 .fy-container{
   padding:30rpx 20rpx;

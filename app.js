@@ -30,6 +30,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    theme:'#ffc0cb', //主题色
+    theme:'#f37d91', //主题色
   }
 })

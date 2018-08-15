@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.2",
 	"appid": "wx102969aba6bdfcae",
-	"projectname": "%E5%A9%9A%E7%BA%B1",
+	"projectname": "my_wxminProgram",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -33,12 +33,18 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "detail",
-					"pathName": "pages/detail/detail"
+					"pathName": "pages/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "案例",
+					"pathName": "pages/case/case"
 				}
 			]
 		}
