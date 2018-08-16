@@ -1,1 +1,100 @@
-/* pages/service/service.wxss */
+.aboutme_bg{
+  width:100%;
+  display: block;
+}
+.service-module{
+  background-color: #fff;
+  margin-top:40rpx;
+}
+.service-title{
+  padding:20rpx 40rpx;
+  border:1px solid #f1f1f1;
+   box-shadow: 0 2px 5px #f1f1f1;
+  position: relative;
+}
+.st_cn{
+  font-size: 32rpx;
+}
+.st_en{
+  font-size: 24rpx;
+  color:#999;
+  margin-top:5rpx;
+}
+.service-box{
+  padding:0 20rpx 20rpx 20rpx;
+  margin-top:20rpx;
+}
+.service-item{
+  display: inline-block;
+  width:50%;
+  padding:20rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.search-item-bg{
+  background-color: #f5f7f9;
+  padding:40rpx 20rpx;
+  text-align: center;
+  border-radius: 20rpx;
+}
+.click-me{
+  color:#999;
+  font-size: 26rpx;
+  margin-left:10rpx;
+}
+.service-avatar-box{
+  width:140rpx;
+  height:140rpx;
+  border-radius: 50%;
+  margin:0 auto;
+  overflow: hidden;
+}
+.service-avatar{
+  width:140rpx;
+}
+.searvice-name{
+  font-size: 30rpx;
+  color:#000;
+  margin-top:10rpx;
+}
+.searvice-desc{
+  font-size: 26rpx;
+  color:#999;
+  margin-top:10rpx;  
+}
+.online-searvice{
+  padding:40rpx;
+}
+.online-item-name{
+  font-size:30rpx;
+  color:#000;
+  margin-top:10rpx;
+}
+.online-item-desc{
+  font-size:28rpx;
+  color:#999;
+  margin-top:10rpx;
+}
+.online-item-left{
+  display: inline-block;
+  width:70%;
+}
+.online-item-right{
+  width:30%;
+  display: inline-block;
+  box-sizing: border-box;
+  border-left:1px solid #aaa;
+  text-align: center;
+}
+.online-item-btn{
+  background-color: transparent!important;
+  display: inline-block;
+  line-height: 1;
+}
+.online-item-btn::after{
+  border:none!important;
+}
+.online-item-btn .iconfont{
+  font-size: 100rpx;
+  color:rgb(57, 214, 110);
+}

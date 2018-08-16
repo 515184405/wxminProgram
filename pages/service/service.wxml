@@ -1,2 +1,45 @@
-<!--pages/service/service.wxml-->
-<text>pages/service/service.wxml</text>
+<image class='aboutme_bg' mode='widthFix' src='{{aboutme_bg}}'>
+
+</image> 
+<view class='service-module'>
+  <view class='service-title'>
+    <view class='st_cn'>线下咨询</view>
+    <view class='st_en'>OFFLINE CONSULTATION</view>
+  </view>
+  <view class='service-box'>
+    <view class='service-item' wx:for="{{service}}" wx:key="">
+      <view bindtap='makePhoneCalls' data-tel="{{item.tel}}" class='search-item-bg'>
+        <view class='service-avatar-box'>
+          <image src='{{item.avatar}}' mode='widthFix' class='service-avatar'></image>
+        </view>
+        <view class='searvice-name'>{{item.name}}<text class='click-me'>[点击拨号]</text></view>
+        <view class='searvice-desc'>{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='service-module'>
+  <view class='service-title'>
+    <view class='st_cn'>线上咨询</view>
+    <view class='st_en'>ONLINE CONSULTATION</view>
+  </view>
+  <view class='online-searvice'>
+      <view class='online-item flex y-top'>
+          <view class='online-item-left'>
+              <view class='online-item-name'>
+                系统客服
+              </view>
+              <view class='online-item-desc'>
+                实时对话，在线回答您的问题
+              </view>
+          </view>
+          <view class='online-item-right'>
+              <button hover-class="none" class='online-item-btn' open-type='contact'>
+                <text class='iconfont icon-xiaoxi'></text>
+              </button>
+          </view>
+      </view>
+  </view>
+</view>
+<import src="../../component/footer/footer.wxml" />
+<template is='footer' />

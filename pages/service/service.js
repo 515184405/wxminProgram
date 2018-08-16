@@ -5,7 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    aboutme_bg:'http://pic.58pic.com/58pic/13/10/21/04958PICCy5_1024.jpg',
+    service:[
+      { name: '苏畅', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353313 },
+      { name: '苏畅1', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353314 },
+      { name: '苏畅2', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353315 },
+      { name: '苏畅3', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353316 },
+    ]
+  },
+  makePhoneCalls:function(e){
+    var tel = e.currentTarget.dataset.tel+'';
+    console.log(tel);
+    wx.makePhoneCall({
+      phoneNumber: tel,
+      success: function () {
+        console.log("成功拨打电话")
+      },
+      fail: function () {
+        console.log("拨打电话失败！")
+      }
+    })
   },
 
   /**
