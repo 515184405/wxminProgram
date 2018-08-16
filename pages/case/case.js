@@ -125,7 +125,7 @@ Page({
     var index = e.currentTarget.dataset.index;
     this.setData({
       currentTab:index,
-      style: "color:" + this.data.theme + ";border-bottom:1px solid" + this.data.theme
+      style: "font-weight:bold;color:" + this.data.theme + ";border-bottom:1px solid" + this.data.theme
     })
   },
   // 图片查看器
@@ -259,7 +259,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       theme:app.globalData.theme, //设置主题
-      style: "color:" + app.globalData.theme + ";border-bottom:1px solid" + app.globalData.theme //设置当前tab选中样式
+      style: "font-weight:bold;color:" + app.globalData.theme + ";border-bottom:1px solid" + app.globalData.theme //设置当前tab选中样式
     })
 
     // 获取设备信息

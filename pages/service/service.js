@@ -1,4 +1,6 @@
 // pages/service/service.js
+
+const app = getApp();
 Page({
 
   /**
@@ -7,10 +9,10 @@ Page({
   data: {
     aboutme_bg:'http://pic.58pic.com/58pic/13/10/21/04958PICCy5_1024.jpg',
     service:[
-      { name: '苏畅', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353313 },
-      { name: '苏畅1', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353314 },
-      { name: '苏畅2', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353315 },
-      { name: '苏畅3', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353316 },
+      { name: '张三', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353313 },
+      { name: '李四', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353314 },
+      { name: '王二麻子', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353315 },
+      { name: '赵武', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353316 },
     ]
   },
   makePhoneCalls:function(e){
@@ -31,7 +33,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      theme:app.globalData.theme
+    })
   },
 
   /**

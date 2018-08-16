@@ -3,24 +3,7 @@
 </image> 
 <view class='service-module'>
   <view class='service-title'>
-    <view class='st_cn'>线下咨询</view>
-    <view class='st_en'>OFFLINE CONSULTATION</view>
-  </view>
-  <view class='service-box'>
-    <view class='service-item' wx:for="{{service}}" wx:key="">
-      <view bindtap='makePhoneCalls' data-tel="{{item.tel}}" class='search-item-bg'>
-        <view class='service-avatar-box'>
-          <image src='{{item.avatar}}' mode='widthFix' class='service-avatar'></image>
-        </view>
-        <view class='searvice-name'>{{item.name}}<text class='click-me'>[点击拨号]</text></view>
-        <view class='searvice-desc'>{{item.desc}}</view>
-      </view>
-    </view>
-  </view>
-</view>
-<view class='service-module'>
-  <view class='service-title'>
-    <view class='st_cn'>线上咨询</view>
+    <view class='st_cn' style='color:{{theme}}'>线上咨询</view>
     <view class='st_en'>ONLINE CONSULTATION</view>
   </view>
   <view class='online-searvice'>
@@ -37,6 +20,73 @@
               <button hover-class="none" class='online-item-btn' open-type='contact'>
                 <text class='iconfont icon-xiaoxi'></text>
               </button>
+          </view>
+      </view>
+  </view>
+</view>
+<view class='service-module'>
+  <view class='service-title'>
+    <view class='st_cn' style="color:{{theme}}">线下咨询</view>
+    <view class='st_en'>OFFLINE CONSULTATION</view>
+  </view>
+  <view class='service-box'>
+    <view class='service-item' wx:for="{{service}}" wx:key="">
+      <view bindtap='makePhoneCalls' data-tel="{{item.tel}}" class='search-item-bg'>
+        <view class='service-avatar-box'>
+          <image src='{{item.avatar}}' mode='widthFix' class='service-avatar'></image>
+        </view>
+        <view class='searvice-name'>{{item.name}}<text style='color:{{theme}}' class='click-me'>[点击拨号]</text></view>
+        <view class='searvice-desc'>{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='service-module'>
+  <view class='service-title'>
+    <view class='st_cn' style='color:{{theme}}'>关于我们</view>
+    <view class='st_en'>ABOUT US</view>
+  </view>
+  <view class='online-searvice'>
+      <view class='online-item'>
+          <view class='about-us'>
+              <view class='au-title'>
+                门店地址：
+              </view>
+              <view class='au-content'>
+                辽宁省葫芦岛市绥中县绥中镇新兴街二段10-3号
+              </view>
+          </view>
+          <view class='about-us'>
+              <view class='au-title'>
+                联系电话：
+              </view>
+              <view class='au-content' bindtap='makePhoneCalls' data-tel="0429-5102719">
+                0429-5102719
+              </view>
+          </view>
+          <view class='about-us'>
+              <view class='au-title'>
+                业务邮箱：
+              </view>
+              <view class='au-content'>
+                15321353313@163.com
+              </view>
+          </view>
+          <view class='about-us'>
+              <view class='au-title'>
+                业务QQ：
+              </view>
+              <view class='au-content'>
+                515184405
+              </view>
+          </view>
+          <view class='about-us'>
+              <view class='au-title'>
+                位置地图：
+              </view>
+              <view style='color:{{theme}};font-weight:bold' class='au-content'>
+                点击获取位置
+              </view>
           </view>
       </view>
   </view>
