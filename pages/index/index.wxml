@@ -43,29 +43,23 @@
     </view>
     <view class='fm-title-en'>Top - quality product line</view>
     <view class='fm-module-list'>
-       <view class='fm-module-item2'wx:for="{{3}}" wx:key=''>
+       <view class='fm-module-item2'wx:for="{{scene}}" wx:key=''>
          <view class='fm2-module-title'>
-           古装
+           {{item.title}}
          </view>
          <view class='fm-module-desc flex x-between'>
             <view>
-               秦皇岛摄影基地
+               {{item.dress}}
             </view>
-            <view>
-              套系一
+            <view class='item-price'>
+              ￥{{item.price}}
             </view>
          </view>
-         <view class='fm-image-box fm-image1-box flex'>
-              <image mode='widthFix' src="http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125491.jpg" class='fm-image1'></image>
-              <view class='fm-image2-container'>
-                  <view class='fm-image2-box'>
-                    <image mode='widthFix' src="http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125491.jpg" class='fm-image'></image>
-                  </view>
-                  <view class='fm-image2-box fm-image3-box'>
-                    <image class='fm-imageb' mode='widthFix' src="http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125491.jpg" class='fm-image'></image>
-                    <view class='fm-more'>+9</view>
-                  </view>
-              </view>
+         <view class='fm-image-box clearfix'>
+            <view wx:if="{{srcIndex < 3}}" wx:for="{{item.image}}" wx:key='' wx:for-item="srcItem" wx:for-index="srcIndex" class='fm-image-hidden'>
+              <image mode='aspectFill' src="{{srcItem}}" class='fm-image-item'></image>
+            </view>
+            <text class='image-number'>+{{item.image.length - 3}}</text>      
           </view>
         <!-- <view class='fm-item-title flex x-center'>
             3888套系

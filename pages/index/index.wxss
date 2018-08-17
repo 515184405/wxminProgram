@@ -59,26 +59,54 @@
   text-align: center;
   margin-top:10rpx;
 }
-.fm-image-box{
-  height:500rpx;
-  overflow:hidden;
+.item-price{
+  color:#f55;
+  font-size: 32rpx;
+  font-weight: bold;
 }
-.fm-image1{
-  width:490rpx;
+.fm-image-hidden{
+  overflow: hidden;
+  box-sizing: border-box;
+  float: left;
+  height:462rpx;
+}
+.fm-image-hidden:nth-of-type(1){
+  width:462rpx;
   margin-right:10rpx;
 }
-.fm-image2-container{
-  height:500rpx;
-  width:250rpx;
+.fm-image-hidden:nth-of-type(2){
+  width:236rpx;
+  height:226rpx;
 }
-.fm-image2-box{
-  width:100%;
-  height:245rpx;
-  overflow: hidden;
-}
-.fm-image3-box{
+.fm-image-hidden:nth-of-type(3){
+  width:236rpx;
+  height:226rpx;
   margin-top:10rpx;
+}
+.fm-image-hidden:nth-of-type(1) .fm-image-item{
+  width:462rpx;
+  height:462rpx;
+  margin-right:10rpx;
+}
+.fm-image-hidden:nth-of-type(2) .fm-image-item,.fm-image-hidden:nth-of-type(3) .fm-image-item{
+  width:236rpx;
+  height:226rpx;
+}
+.fm-image-box{
   position: relative;
+}
+.image-number{
+  position: absolute;
+  width:236rpx;
+  text-align: center;
+  font-size: 50rpx;
+  font-weight: bold;
+  color:#fff;
+  right:0;
+  top:315rpx;
+}
+.fm-image-item{
+  vertical-align: bottom;
 }
 .fm-more{
   position: absolute;
@@ -131,7 +159,7 @@
 .fm2-module-title{
   text-align: left;
   color: #000;
-  margin-top:50rpx;
+  margin-top:35rpx;
 }
 .fm-module-desc{
   color:#999;

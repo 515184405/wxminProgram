@@ -9,6 +9,15 @@ page{
   padding:30rpx 20rpx;
   background-color: #fff;
 }
+.left{
+  float: left;
+}
+.clearfix{
+  content: '';
+  display: table;
+  clear: both;
+  zoom: 1;
+}
 .flex{
   display: flex;
 }
