@@ -220,15 +220,14 @@ Page({
   //下拉加载
   loadImages: function () {
     let images = [
-      { pic: "http://images.xfwed.com/shop/photo/221/2216184.jpg", height: 0 },
-      { pic: "http://images.xfwed.com/shop/photo/221/2216185.jpg", height: 0 },
-      { pic: "http://images.xfwed.com/shop/photo/221/2216186.jpg", height: 0 },
-      { pic: "http://images.xfwed.com/shop/photo/221/2216187.jpg", height: 0 },
-      { pic: "http://images.xfwed.com/shop/photo/221/2216188.jpg", height: 0 },
-      { pic: "http://images.xfwed.com/shop/photo/221/2216189.jpg", height: 0 },
-      { pic: "http://images.xfwed.com/shop/photo/221/2216190.jpg", height: 0 },
-      { pic: "http://images.xfwed.com/shop/photo/221/2216191.jpg", height: 0 },
-      { pic: "http://images.xfwed.com/shop/photo/221/2216192.jpg", height: 0 },      
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180710_1531216229.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/ph/o_1cioibqe9nk7hpqr94k8b2bii.jpg', height: 0 },
+      { pic: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180809_1533794461.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125478.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180809_1533794448.jpg', height: 0 },
+      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180805_1533458988.jpg', height: 0 },
+      
       // { pic: "../../images/4.png", height: 0 },
       // { pic: "../../images/5.png", height: 0 },
       // { pic: "../../images/6.png", height: 0 },
