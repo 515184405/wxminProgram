@@ -31,5 +31,6 @@ App({
   globalData: {
     userInfo: null,
     theme:'#f37d91', //主题色
+    loading:'http://img.lanrentuku.com/img/allimg/1212/5-121204193951.gif'
   }
 })

@@ -56,8 +56,11 @@
             </view>
          </view>
          <view class='fm-image-box clearfix'>
-            <view wx:if="{{srcIndex < 3}}" wx:for="{{item.image}}" wx:key='' wx:for-item="srcItem" wx:for-index="srcIndex" class='fm-image-hidden'>
-              <image mode='aspectFill' src="{{srcItem}}" class='fm-image-item'></image>
+            <view wx:if="{{srcIndex < 3}}" wx:for="{{item.image}}" wx:key='' wx:for-item="srcItem" wx:for-index="srcIndex" class='fm-image-hidden flex x-center y-center'>
+            <view style='display:none'>
+              <image mode='widthFix' class='loading' data-data="scene[{{index}}].image[{{srcIndex}}]" data-index="{{srcIndex}}" bindload='imageLoad' src='{{srcItem.imgsrc}}'></image>
+              </view>
+              <image mode='aspectFill' src="{{srcItem.loading ? srcItem.imgsrc : loading}}" class='fm-image-item animate-show {{srcItem.loading ? "" : "loading"}}'></image>
             </view>
             <text class='image-number'>+{{item.image.length - 3}}</text>      
           </view>

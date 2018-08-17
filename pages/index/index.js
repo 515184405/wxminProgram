@@ -15,15 +15,15 @@ Page({
         dress:'马路牙子',
         price:'1888',
         image:[
-          "http://images.xfwed.com/shop/photo/221/2216184.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216185.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216186.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216187.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216188.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216189.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216190.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216191.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216192.jpg"
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216184.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216185.jpg",loading: false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216186.jpg", loading: false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216187.jpg", loading: false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216188.jpg", loading: false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216189.jpg", loading: false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216190.jpg", loading: false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216191.jpg", loading: false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216192.jpg", loading: false},
         ]
       },
       {
@@ -31,18 +31,18 @@ Page({
         dress: '秦皇岛北戴河',
         price: '2388',
         image: [
-          "http://images.xfwed.com/shop/photo/221/2216686.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216687.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216688.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216689.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216690.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216691.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216692.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216693.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216694.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216695.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216696.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216697.jpg"
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216686.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216687.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216688.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216689.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216690.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216691.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216692.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216693.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216694.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216695.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216696.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216697.jpg",loading:false},        
         ]
       },
       {
@@ -50,14 +50,14 @@ Page({
         dress: '秦皇岛北戴河',
         price: '1588',
         image: [
-          "http://images.xfwed.com/shop/photo/221/2216678.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216679.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216680.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216681.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216682.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216683.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216684.jpg",
-          "http://images.xfwed.com/shop/photo/221/2216685.jpg"
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216678.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216679.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216680.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216681.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216682.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216683.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216684.jpg",loading:false},
+          { imgsrc:"http://images.xfwed.com/shop/photo/221/2216685.jpg",loading:false},        
         ]
       },
     ],
@@ -67,9 +67,22 @@ Page({
     interval: 5000,
     duration: 1000
   },
+  // 图片加载
+  imageLoad:function(e){
+    let index = e.target.dataset.index;
+    let imgData = e.target.dataset.data+'.loading';
+    var that = this;
+    setTimeout(function(){
+      that.setData({
+        [imgData]: true
+      })
+      console.log(11)
+    },1000)
+  },
   onLoad: function () {
     this.setData({
       theme:app.globalData.theme,//主题色
+      loading:app.globalData.loading,//默认加载图片
     })
   },
 })
