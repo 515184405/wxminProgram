@@ -1,0 +1,29 @@
+<view class='system-title'>
+  <view class='fm2-module-title'>
+           {{scene.title}}
+    </view>
+    <view class='fm-module-desc flex x-between'>
+      <view>
+        {{scene.dress}}
+      </view>
+      <view class='item-price'>
+        ￥{{scene.price}}
+      </view>
+    </view>
+</view>
+<view class='image-box'>
+  <image mode='widthFix' class='scene-image' wx:for="{{scene.image}}" bindtap='wxParseImgTap' wx:key='' data-src="{{item.imgsrc}}" src='{{item.imgsrc}}'></image>
+</view>
+
+<!-- 优惠券 -->
+  <import src="../../component/discount/discount.wxml" />
+  <template data="{{discount:discount}}" is='discount' />
+<!-- 套系推荐 -->
+  <import src="../../component/recommend/recommend.wxml" />
+  <template data="{{recommend:recommend}}" is='recommend' />
+<!-- 底部导航 -->
+<import src="../../component/footerBar/footerBar.wxml" />
+<template data="{{footerBar:footerBar}}" is='footerBar' />
+<!-- footer -->
+<import src="../../component/footer/footer.wxml" />
+<template is='footer' />

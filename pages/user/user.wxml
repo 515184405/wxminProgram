@@ -1,2 +1,14 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class='user_header'>
+  <image class='user_header_bg' src='../../image/user-header-bg.jpg' mode='widthFix'>
+</image>
+</view>
+<view class='user-module clearfix'>
+  <image class='user_xin' src='../../image/xin.png' mode='widthFix'>
+</image>
+  <view class='avatar-left left'>
+    <open-data class="user-avatar" mode='widthFix' type="userAvatarUrl"></open-data>
+  </view>
+  <view class='avatar-right left'>
+    <open-data class="user-avatar" mode='widthFix' type="userAvatarUrl"></open-data>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+@import "/utils/wxParse/wxParse.wxss";
+.recommend-module{
+  background-color: #fff;
+  margin-top:20rpx;
+}
+.recomment-item{
+  margin:25rpx;
+  border-bottom:1px solid #f5f7f9;
+  padding-bottom:25rpx;
+}
+.recomment-item:last-child{
+  margin-bottom:0!important;
+}
+.recommend-title{
+  padding:20rpx;
+  border-bottom:1px solid #f1f1f1;
+  font-size: 30rpx;
+}
+.rec-left-title{
+  color:#000;
+}
+.rec-left-desc{
+  font-size: 24rpx;
+  color:#999;
+  margin-top:10rpx;
+}

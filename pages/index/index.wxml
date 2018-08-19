@@ -1,5 +1,5 @@
 <!-- 轮播模块 -->
-<swiper indicator-color='rgba(255,255,255,1)' indicator-active-color="{{theme}}" indicator-dots="{{indicatorDots}}"
+<swiper class='swiper-box' indicator-color='rgba(255,255,255,1)' indicator-active-color="{{theme}}" indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{imgUrls}}" wx:key="">
     <swiper-item>
@@ -9,9 +9,9 @@
 </swiper>
 <!-- 导航模块 -->
 <view class='nav-box fy-container'>
-  <view wx:for="{{8}}" wx:key="" class='nav-item'>
-    <image class='nav-item-img' mode='aspectFill' src='http://uploads.5068.com/allimg/1803/153-1P319144048.jpg'></image>
-    <text class='nav-item-text'>儿童照片</text>
+  <view wx:for="{{navArr}}" wx:key="" class='nav-item'>
+    <image class='nav-item-img' mode='aspectFill' src='{{item.image}}'></image>
+    <text class='nav-item-text'>{{item.title}}</text>
   </view>
 </view>
 <!-- 模块内容 -->
@@ -56,12 +56,12 @@
             </view>
          </view>
          <view class='fm-image-box clearfix'>
-            <view wx:if="{{srcIndex < 3}}" wx:for="{{item.image}}" wx:key='' wx:for-item="srcItem" wx:for-index="srcIndex" class='fm-image-hidden flex x-center y-center'>
+            <navigator url='/pages/system_detail/system_detail' open-type='navigate' wx:if="{{srcIndex < 3}}" wx:for="{{item.image}}" wx:key='' wx:for-item="srcItem" wx:for-index="srcIndex" class='fm-image-hidden flex x-center y-center'>
             <view style='display:none'>
               <image mode='widthFix' class='loading' data-data="scene[{{index}}].image[{{srcIndex}}]" data-index="{{srcIndex}}" bindload='imageLoad' src='{{srcItem.imgsrc}}'></image>
               </view>
               <image mode='aspectFill' src="{{srcItem.loading ? srcItem.imgsrc : loading}}" class='fm-image-item animate-show {{srcItem.loading ? "" : "loading"}}'></image>
-            </view>
+            </navigator>
             <text class='image-number'>+{{item.image.length - 3}}</text>      
           </view>
         <!-- <view class='fm-item-title flex x-center'>

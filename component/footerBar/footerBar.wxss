@@ -1,0 +1,41 @@
+page{
+  padding-bottom:110rpx;
+}
+.footerBar{
+  position: fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  line-height: 110rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  height:110rpx;
+  border-top:1rpx solid #f1f1f1;
+  box-sizing: border-box;
+}
+.footerBar-left{
+  width:40%;
+  background-color:#fff;
+  padding-left:4%;
+  box-sizing: border-box;
+}
+.footerBar-right{
+  width:60%;
+  background-color: #f11;
+  color:#fff;
+  text-align: center;
+}
+.fb-icon{
+  width:45%;
+  font-size: 24rpx;
+  font-weight: normal;
+  text-align: center;
+}
+.fb-icon .iconfont{
+  font-size: 52rpx;
+  margin-bottom:5rpx;
+  line-height: 52rpx;
+}
+.fb-icon .fb-icontext{
+  line-height: 24rpx;
+}

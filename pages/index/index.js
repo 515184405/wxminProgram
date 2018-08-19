@@ -4,6 +4,12 @@ const app = getApp()
 
 Page({
   data: {
+    navArr:[
+      { title: "婚纱套系", image: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4236226554,3005486819&fm=27&gp=0.jpg' },
+      { title: '写真套系', image: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1610349391,986729414&fm=27&gp=0.jpg' },
+      { title: '儿童套系', image: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3931882706,576426697&fm=27&gp=0.jpg'},
+      { title: '客户实例', image: 'http://m.only1314.com/uploadfile/2018/0815/20180815012601292.jpg' },
+    ],
     imgUrls: [
       'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
       'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
