@@ -26,7 +26,13 @@ Component({
    */
   methods: {
     wxParseData:function(){
-      console.log(111)
+      var that = this, len = this.data.recommend.length;
+      for (let i = 0; i < len; i++) {
+        WxParse.wxParse('reply' + i, 'html', this.data.recommend[i].desc, that);
+        if (i === len - 1) {
+          WxParse.wxParseTemArray("replyTemArray", 'reply', len, that)
+        }
+      }
     }
   },
 })

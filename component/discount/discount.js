@@ -10,6 +10,13 @@ Component({
       observer: function (news, olds, path) {
         console.log(news, olds)
       }
+    },
+    rightIcon:{
+      type:"Boolean",
+      value:true,
+      observer: function (news, olds, path) {
+        console.log(news, olds)
+      }
     }
   },
   data: {
@@ -22,6 +29,9 @@ Component({
   methods: {
     wxParseData: function () {
       console.log(111)
+    },
+    showDialog:function(){
+      this.triggerEvent("showDialog")
     }
   }
 })

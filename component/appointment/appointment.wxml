@@ -1,0 +1,17 @@
+<view class='appointment-module {{isShow ? "showDialog" : ""}}'>
+  <view class='appointment-header flex x-between y-center'>
+    <view>免费预约即可领取优惠大礼包</view>
+    <view catchtap="hideDialog" class='iconfont icon-X-copy'></view>
+  </view>
+  <view class='appointment-content'>
+    <!-- 优惠券 -->
+    <discount id="discount" rightIcon="{{false}}" discount='{{discount}}'>
+    </discount>
+    <view class="section">
+      <input bindinput='bindKeyInput' class='write-tel' maxlength="11" minlength='11' placeholder="请输入11位手机号码" type="number" />
+    </view>
+    <button catchtap='confirmEvent' class='appointment-btn'>立即预约</button>
+  </view>
+</view>
+<view catchtap='hideDialog' class='appointment-content-bg {{isShow ? "showMask" : ""}}'>
+</view>

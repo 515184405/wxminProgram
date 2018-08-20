@@ -1,3 +1,4 @@
+@import '/app.wxss';
 page{
   padding-bottom:110rpx;
 }
@@ -38,4 +39,12 @@ page{
 }
 .fb-icon .fb-icontext{
   line-height: 24rpx;
+}
+.online-item-btn{
+  background-color: transparent!important;
+  display: inline-block;
+  line-height: 1;
+}
+.online-item-btn::after{
+  border:none!important;
 }

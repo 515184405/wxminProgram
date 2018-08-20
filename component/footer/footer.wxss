@@ -1,1 +1,17 @@
-/* component/footer.wxss */
+/* 尾部 */
+.footer-module{
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 20rpx;
+  position: absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+
+}
+page{
+  min-height:100%;
+  width:100%;
+  position: relative;
+  padding-bottom:60rpx;
+}

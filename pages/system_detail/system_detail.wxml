@@ -16,14 +16,17 @@
 </view>
 
 <!-- 优惠券 -->
-  <import src="../../component/discount/discount.wxml" />
-  <template data="{{discount:discount}}" is='discount' />
+  <discount id="discount" bind:showDialog="showDialog" discount='{{discount}}'>
+  </discount>
 <!-- 套系推荐 -->
-  <import src="../../component/recommend/recommend.wxml" />
-  <template data="{{recommend:recommend}}" is='recommend' />
+  <recommend id="recommend" recommend='{{recommend}}'>
+  </recommend>
+<!-- 免费预约弹窗 -->
+  <appointment id="appointment" discount='{{discount}}' appointment='{{appointment}}'>
+  </appointment>
 <!-- 底部导航 -->
-<import src="../../component/footerBar/footerBar.wxml" />
-<template data="{{footerBar:footerBar}}" is='footerBar' />
+  <footerBar id="footerBar" bind:showDialog="showDialog" footerBar='{{footerBar}}'>
+  </footerBar>
 <!-- footer -->
-<import src="../../component/footer/footer.wxml" />
-<template is='footer' />
+  <footer id="footer" footer='{{footer}}'>  
+  </footer>

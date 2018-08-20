@@ -4,14 +4,45 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    starPosition:[],
   },
-
+  // 生成星星坐标
+  createPosition:function(){
+    this.data.starPosition = [];
+    for(var i = 0; i < 10; i++){
+      var positionX = Math.floor(Math.random() * this.data.imgWidth);
+      var positionY = Math.floor(Math.random() * 200 * this.data.unit);
+      var opacity = Math.random() * 0.5;
+      this.data.starPosition.push({ x: positionX, y: positionY, opacity: opacity});
+    }
+    this.setData({
+      starPosition:this.data.starPosition
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    //获取设备的宽高
+    wx.getSystemInfo({
+      success: (res) => {
+        let ww = res.windowWidth;
+        let wh = res.windowHeight;
+        let unit = ww/750;
+
+        this.setData({
+          imgWidth: ww,
+          imgHeight:wh,
+          unit:unit
+        });
+      }
+    })
+    //生成星星坐标
+    that.createPosition();
+    setInterval(function(){
+      that.createPosition();
+    },8000)
   },
 
   /**

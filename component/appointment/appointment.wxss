@@ -1,0 +1,55 @@
+@import '/app.wxss';
+.appointment-module{
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  transform: translate3d(0,100%,0);
+  transition: all 0.2s ease-out;
+  background-color: #fff;  
+  z-index:12;
+}
+.appointment-content-bg{
+  position: fixed;
+  bottom:0;
+  left:0;
+  height:100%;
+  width:100%;
+  z-index:-2;
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  background:rgba(0,0,0,0.5);
+}
+.showDialog{
+  transform: translate3d(0,0,0);
+}
+.showMask{
+  opacity: 1;
+  z-index: 11;
+}
+.appointment-header{
+  padding:30rpx;
+  background-color: #f1f1f1;
+  color:#000;
+  font-weight: bold;
+}
+.appointment-header .icon-X-copy{
+  font-size: 24rpx;
+  color:#555;
+}
+.appointment-content{
+  padding:30rpx;
+}
+.write-tel{
+  padding:15rpx 25rpx;
+  border:1px solid #ddd;
+  border-radius: 5rpx;
+}
+.appointment-btn{
+  border-radius: 5rpx;
+  background: linear-gradient(to right,#f00 0,rgb(247, 113, 113) 100%);
+  margin-top:20rpx;
+  font-size: 30rpx;
+  padding:10rpx 0;
+  color:#fff;
+}

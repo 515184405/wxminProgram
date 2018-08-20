@@ -1,1 +1,9 @@
-{}
+{
+  "usingComponents": {
+    "footerBar": "/component/footerBar/footerBar",
+    "recommend": "/component/recommend/recommend",
+    "discount": "/component/discount/discount",
+    "appointment": "/component/appointment/appointment",
+    "footer": "/component/footer/footer"
+  }
+}

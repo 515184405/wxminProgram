@@ -1,6 +1,3 @@
-@import '/component/discount/discount.wxss';
-@import '/component/recommend/recommend.wxss';
-@import '/component/footerBar/footerBar.wxss';
 
 .system-title{
   padding:20rpx;

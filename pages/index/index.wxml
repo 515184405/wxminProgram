@@ -70,5 +70,6 @@
        </view>
     </view>
 </view>
-<import src="../../component/footer/footer.wxml" />
-<template is='footer' />
+<!-- footer -->
+  <footer id="footer" footer='{{footer}}'>  
+  </footer>

@@ -1,3 +1,4 @@
+@import '/app.wxss';
 .discount-module{
   background-color: #fff;
 }

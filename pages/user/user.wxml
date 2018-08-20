@@ -1,9 +1,22 @@
 <view class='user_header'>
-  <image class='user_header_bg' src='../../image/user-header-bg.jpg' mode='widthFix'>
-</image>
+  <image class='user_header_bg' src='/image/user-header-bg.jpg' mode='widthFix'>
+  </image>
+  <!-- 流星 -->
+  <view class='liuxing_box'>
+    <image class='liuxin1 liuxin-item' src='/image/liuxin1.png' mode='widthFix'></image>
+    <image class='liuxin3 liuxin-item' src='/image/liuxin3.png' mode='widthFix'></image>
+    <image class='liuxin2 liuxin-item' src='/image/liuxin1.png' mode='widthFix'></image>
+    <image class='liuxin31 liuxin-item' src='/image/liuxin3.png' mode='widthFix'></image>
+    <image class='liuxin3_1 liuxin-item' src='/image/liuxin3.png' mode='widthFix'></image>
+    <image class='liuxin3_2 liuxin-item' src='/image/liuxin3.png' mode='widthFix'></image>
+    <image class='liuxin3_3 liuxin-item' src='/image/liuxin3.png' mode='widthFix'></image>
+    <image class='liuxin3_4 liuxin-item' src='/image/liuxin3.png' mode='widthFix'></image>  
+  </view>
+  <!-- star -->
+    <image wx:for="{{starPosition}}" wx:key="" style="left:{{item.x}}px;top:{{item.y}}px;opacity:{{item.opacity}}" class='star-item' src='/image/star.png' mode='widthFix'></image>  
 </view>
 <view class='user-module clearfix'>
-  <image class='user_xin' src='../../image/xin.png' mode='widthFix'>
+  <image class='user_xin' src='/image/xin.png' mode='widthFix'>
 </image>
   <view class='avatar-left left'>
     <open-data class="user-avatar" mode='widthFix' type="userAvatarUrl"></open-data>
@@ -12,3 +25,6 @@
     <open-data class="user-avatar" mode='widthFix' type="userAvatarUrl"></open-data>
   </view>
 </view>
+<!-- footer -->
+  <footer id="footer" footer='{{footer}}'>  
+  </footer>

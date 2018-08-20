@@ -1,12 +1,11 @@
-<template name='discount'>
-    <view wx:if="{{discount.length > 0}}" class='discount-module'>
-        <view wx:for="{{discount}}" wx:key="" class='discount-item flex x-between y-center'>
-          <view class='discount-left'>
-            <view class='discount-card'>{{item.iconText}}</view>
-            <view class='discount-content'>{{item.content}}</view>
-          </view>
-          <view class='discount-right iconfont icon-nvxingfuben'>
-          </view>
-        </view>
+
+<view wx:if="{{discount.length > 0}}" class='discount-module'>
+    <view catchtap='showDialog' wx:for="{{discount}}" wx:key="" class='discount-item flex x-between y-center'>
+      <view class='discount-left'>
+        <view class='discount-card'>{{item.iconText}}</view>
+        <view class='discount-content'>{{item.content}}</view>
+      </view>
+      <view wx:if="{{rightIcon}}" class='discount-right iconfont icon-nvxingfuben'>
+      </view>
     </view>
-</template>
+</view>

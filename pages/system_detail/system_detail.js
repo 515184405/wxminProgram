@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    //footerBar数据 
+    footerBar:{
+      tel:15321353313,
+    },
     // 优惠券
     discount:[
       { iconText: '优惠券', content: '订购送200元抵扣券' },
@@ -12,8 +16,8 @@ Page({
     ],
     // 推荐套系
     recommend:[
-      { title: '情人节专属套餐', price: '4588', desc: '造型：14套 | 拍摄：210张 | 精修：70张' },
-      {title:'特惠套装',price:'2588',desc:'造型：7套 | 拍摄：150张 | 精修：70张'},
+      { title: '情人节专属套餐', price: '4588', desc: '<p>造型：14套 | 拍摄：210张 | 精修：70张</p><p>此活动赠送冰箱一台</p>' },
+      { title: '特惠套装', price: '2588', desc:'<p>造型：7套 | 拍摄：150张 | 精修：70张</p><p>此活动赠送32寸电视机一台</p>'},
     ],
     scene: 
       {
@@ -54,19 +58,26 @@ Page({
     })
   },
 
+  // 显示预约弹框
+  showDialog:function(){
+    this.appointment.showDialog();
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     this.imageArr();
-    // this.wxParseData();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    this.recommend = this.selectComponent("#recommend");
+    this.recommend.wxParseData();
+
+    this.appointment = this.selectComponent("#appointment");
   },
 
   /**

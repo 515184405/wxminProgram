@@ -1,13 +1,17 @@
-<template name='recommend'>
-    <view wx:if="{{recommend.length>0}}" class='recommend-module'>
-        <view class="recommend-title">套餐推荐</view>
-        <view wx:for="{{recommend}}" wx:key="" class='flex x-between y-center recomment-item'>
-          <view class='recommend-left'>
-            <view class='rec-left-title'>{{item.title}}</view>
-            <view class='rec-left-desc'>{{item.desc}}</view>
-          </view>
-          <view class='iconfont icon-nvxingfuben'>
-          </view>
+
+<view wx:if="{{recommend.length>0}}" class='recommend-module'>
+    <view class="recommend-title">套餐推荐</view>
+    <view wx:for="{{recommend}}" wx:key="" class='flex x-between y-center recomment-item'>
+      <view class='recommend-left'>
+        <view class='rec-left-title'>{{item.title}}</view>
+        <view class='rec-left-desc'>
+          <import src="../../utils/wxParse/wxParse.wxml"/>
+          <block wx:for="{{replyTemArray}}" wx:key="" wx:for-index="indexHtml">
+            <template wx:if="{{index == indexHtml}}" is="wxParse" data="{{wxParseData:item}}"/>
+          </block>
         </view>
+      </view>
+      <view class='iconfont icon-nvxingfuben'>
+      </view>
     </view>
-</template>
+</view>

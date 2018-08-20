@@ -1,17 +1,16 @@
-<template name='footerBar'>
-    <view class='footerBar flex x-between'>
-        <view class='footerBar-left flex y-center'>
-          <view class='fb-icon'>
-            <view class='icon-iconfontdianhua3 iconfont'></view>
-            <view class='fb-icontext'>电话</view>
-          </view>
-          <view class='fb-icon'>
-            <view class='icon-service iconfont'></view>
-            <view class='fb-icontext'>客服</view>
-          </view>
-        </view>
-        <view class='footerBar-right'>
-          免费预约
-        </view>
+
+<view class='footerBar flex x-between'>
+    <view class='footerBar-left flex y-center'>
+      <view class='fb-icon' bindtap='makePhoneCalls' data-tel="{{footerBar.tel}}">
+        <view class='icon-iconfontdianhua3 iconfont'></view>
+        <view class='fb-icontext'>电话</view>
+      </view>
+      <button hover-class="none" class='online-item-btn fb-icon' open-type='contact'>
+        <view class='icon-service iconfont'></view>
+        <view class='fb-icontext'>客服</view>
+      </button>
     </view>
-</template>
+    <view catchtap='showDialog' class='footerBar-right'>
+      免费预约
+    </view>
+</view>

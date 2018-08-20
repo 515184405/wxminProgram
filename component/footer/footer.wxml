@@ -1,5 +1,4 @@
-<template name='footer'>
-    <view class='footer-module'>
-        技术支持：微官网提供
-    </view>
-</template>
+
+<view class='footer-module'>
+  技术支持：微官网提供
+</view>

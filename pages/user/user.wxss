@@ -1,3 +1,6 @@
+page{
+  border:1px solid transparent;
+}
 .user_header{
   width:100%;
   height:400rpx;
@@ -50,5 +53,89 @@
   margin-left:-150rpx;
   z-index: 9;
 }
-.user-avatar{
+/* 流星 */
+.liuxing_box{
+  position: fixed;
+  top:-50rpx;
+  right:-100rpx;
+  width:100%;
+}
+.liuxing_box image{
+  width:100rpx;
+  position: absolute;
+  right:0;
+  top:0;
+  z-index:10;
+}
+.liuxin1{
+  animation:liuxin 5s ease-out infinite;
+}
+.liuxin3{
+  animation:liuxin 5s ease-out infinite 3s;
+}
+.liuxin2{
+  animation:liuxin 5s ease-out infinite 5s;
+}
+.liuxing_box .liuxin31{
+  right:60rpx;
+  top:-60rpx;
+  animation:liuxin 7s ease-out infinite 6s;
+}
+.liuxing_box .liuxin3_1{
+  right:40rpx;
+  top:-50rpx;
+  animation:liuxin 6s ease-out infinite 3s;
+}
+.liuxing_box .liuxin3_2{
+  top:-20rpx;
+  animation:liuxin 4s ease-out infinite 4s;
+}
+.liuxing_box .liuxin3_3{
+  right:100rpx;
+  top:-80rpx;
+  animation:liuxin 7s ease-out infinite 0s;
+}
+.liuxing_box .liuxin3_4{
+  right:30rpx;
+  top:-30rpx;
+  animation:liuxin 9s ease-out infinite 1s;
+}
+
+.liuxin-item{
+  transform: rotateZ(20deg);
+}
+@keyframes liuxin
+{
+0%{
+  transform: scale(0.5) translate3d(0,0,0) rotateZ(20deg);
+  opacity: 0.5;
+  }
+100% {
+  transform: scale(1) translate3d(-500px,400rpx,0) rotateZ(20deg);
+  opacity: 1;
+}
+}
+/* 星星闪烁 */
+.star-item{
+  width:30rpx;
+  position: absolute;
+  animation:star 8s ease-out infinite;
+}
+@keyframes star
+{
+0%{
+  transform: scale(0) translate3d(0,0,0);
+  }
+33.33% {
+  transform: scale(1) translate3d(10px,10rpx,0);
+  opacity: 1;
+  }
+66.66%{
+  transform: scale(1) translate3d(10px,10rpx,0);
+  opacity: 1;
+  }
+100% {
+  transform: scale(0) translate3d(60px,60rpx,0);
+  opacity: 0;
+}
 }
