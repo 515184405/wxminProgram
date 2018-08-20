@@ -102,16 +102,16 @@ page{
 }
 
 .liuxin-item{
-  transform: rotateZ(20deg);
+  transform: rotateZ(10deg);
 }
 @keyframes liuxin
 {
 0%{
-  transform: scale(0.5) translate3d(0,0,0) rotateZ(20deg);
+  transform: scale(0.5) translate3d(0,0,0) rotateZ(10deg);
   opacity: 0.5;
   }
 100% {
-  transform: scale(1) translate3d(-500px,400rpx,0) rotateZ(20deg);
+  transform: scale(1) translate3d(-500px,400rpx,0) rotateZ(10deg);
   opacity: 1;
 }
 }
@@ -124,18 +124,18 @@ page{
 @keyframes star
 {
 0%{
-  transform: scale(0) translate3d(0,0,0);
+  transform: scale(0);
   }
 33.33% {
-  transform: scale(1) translate3d(10px,10rpx,0);
+  transform: scale(1);
   opacity: 1;
   }
 66.66%{
-  transform: scale(1) translate3d(10px,10rpx,0);
+  transform: scale(1);
   opacity: 1;
   }
 100% {
-  transform: scale(0) translate3d(60px,60rpx,0);
-  opacity: 0;
+  transform: scale(0);
+  opacity: 0
 }
 }

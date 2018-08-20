@@ -41,7 +41,7 @@
   padding:30rpx;
 }
 .write-tel{
-  padding:15rpx 25rpx;
+  padding:20rpx 25rpx;
   border:1px solid #ddd;
   border-radius: 5rpx;
 }

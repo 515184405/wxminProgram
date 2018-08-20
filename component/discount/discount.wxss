@@ -10,6 +10,7 @@
   border: none;
 }
 .discount-card{
+  margin-right:20rpx;
   padding:2rpx;
   border-radius: 5rpx;
   border:1rpx solid #f55;
@@ -19,7 +20,6 @@
 }
 .discount-content{
   display: inline-block;
-  margin-left:20rpx;
   font-size: 28rpx;
   color:#000;
 }

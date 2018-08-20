@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "footer": "/component/footer/footer"
+    "footer": "/component/footer/footer",
+    "appointment": "/component/appointment/appointment"
   }
 }

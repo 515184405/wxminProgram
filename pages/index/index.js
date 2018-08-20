@@ -4,6 +4,10 @@ const app = getApp()
 
 Page({
   data: {
+    // 优惠券
+    discount: [
+      { iconText: '', content: '到店领取情侣对戒一枚' },
+    ],
     navArr:[
       { title: "婚纱套系", image: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4236226554,3005486819&fm=27&gp=0.jpg' },
       { title: '写真套系', image: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1610349391,986729414&fm=27&gp=0.jpg' },
@@ -73,6 +77,12 @@ Page({
     interval: 5000,
     duration: 1000
   },
+  // 显示预约弹框
+  showDialog: function () {
+    this.appointment = this.selectComponent("#appointment");
+    this.appointment.showDialog();
+    console.log(111)
+  },
   // 图片加载
   imageLoad:function(e){
     let index = e.target.dataset.index;
@@ -91,4 +101,6 @@ Page({
       loading:app.globalData.loading,//默认加载图片
     })
   },
+  onready:function(){
+  }
 })

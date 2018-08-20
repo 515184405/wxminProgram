@@ -9,7 +9,7 @@ Page({
   // 生成星星坐标
   createPosition:function(){
     this.data.starPosition = [];
-    for(var i = 0; i < 10; i++){
+    for(var i = 0; i < 15; i++){
       var positionX = Math.floor(Math.random() * this.data.imgWidth);
       var positionY = Math.floor(Math.random() * 200 * this.data.unit);
       var opacity = Math.random() * 0.5;

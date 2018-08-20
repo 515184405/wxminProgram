@@ -36,7 +36,22 @@ page{
 .y-top{
   align-items: flex-start;
 }
-
+.y-bottom{
+  align-items: flex-end;
+}
+.overflow-text2{
+    display:block;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2; 
+}
+.overflow-text{
+    white-space:nowrap;
+    overflow:hidden; 
+    text-overflow:ellipsis;
+}
 /* 定义动画 */
 .loading{
   max-width:120rpx!important;

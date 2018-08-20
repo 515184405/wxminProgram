@@ -25,7 +25,28 @@
 .nav-item-text{
   margin-top:5rpx;
   color:#000;
+  font-size: 24rpx;
   display: block;
+}
+/* 优惠 */
+.discount-item{ 
+  margin-top:20rpx;
+  padding:20rpx;
+  max-height:200rpx;
+  width:100%;
+  background-color:#f9f9f9;
+  box-sizing: border-box;
+}
+.discount-img{
+  width:180rpx;
+}
+.discount-content{
+  text-align: left;
+  width:calc(100% - 350rpx)
+}
+.discount-text{
+  margin-top:15rpx;
+  color:#999;
 }
 /* 模块 */
 .fy-module{
