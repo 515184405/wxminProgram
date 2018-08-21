@@ -14,7 +14,7 @@
 <swiper current="{{currentTab}}" duration="300" class='swiper-box'  bindchange="swiperTab">
     <!-- 客片 -->
     <swiper-item >
-      <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollH}}px" bindscroll="scrollFun" bindscrolltolower="">
+      <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:100%" bindscroll="scrollFun" bindscrolltolower="">
         <view class='fy-container'>
           <list-one id="list1" scene='{{scene}}'></list-one>
         </view>
@@ -23,7 +23,7 @@
     <!-- 样片 -->
     <swiper-item>
       <view class='case-imgLoadArr'>
-          <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollH}}px" bindscroll="scrollFun" bindscrolltolower="loadImages">
+          <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:100%" bindscroll="scrollFun" bindscrolltolower="loadImages">
             <view style="width:100%">
               <view class="img_item item_img_left">
                 <view wx:for="{{imgLoadData.col1}}" wx:key="id">

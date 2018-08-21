@@ -316,7 +316,6 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      currentTab: (options.id ? options.id : 0),
       theme:app.globalData.theme, //设置主题
       style: "font-weight:bold;color:" + app.globalData.theme + ";border-bottom:1px solid" + app.globalData.theme //设置当前tab选中样式
     })
@@ -331,7 +330,8 @@ Page({
 
         this.setData({
           scrollH: scrollH,
-          imgWidth: imgWidth
+          imgWidth: imgWidth,
+          winWidth: wh,
         });
 
         //加载首组图片
