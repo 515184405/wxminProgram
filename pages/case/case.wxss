@@ -1,5 +1,7 @@
 @import "../../component/search/search.wxss";
-
+page{
+  height:100%;
+}
 .case-box{
   background-color: #ffffff;
   padding-bottom:0;
@@ -17,7 +19,7 @@
   overflow:hidden;
 }
 .case-filter-item{
-  width:33.33%;
+  width:50%;
   display: inline-block;
   padding:30rpx 0;
   text-align: center;
@@ -28,6 +30,9 @@
     box-sizing: border-box;
     overflow: hidden;
     white-space: nowrap;
+}
+.swiper-box{
+  height:100%;
 }
 /* 图片懒加载模块 */
 .case-imgLoadArr{
@@ -70,6 +75,9 @@
   border-radius: 50%;
   z-index: 9;
   background-color: #fff;
+}
+.shaixuan-btn .iconfont{
+  font-size: 20px;
 }
 .zhiding-btn{
   margin-top:20rpx;

@@ -14,6 +14,10 @@ Page({
   data: {
     //主筛选条件
     classify:[
+      {id:1,title:'客片'},
+      {id:2,title:'样片'}
+    ],
+    classify1:[
       { 
         id: 1,
         title: '婚纱'
@@ -40,6 +44,59 @@ Page({
       { id: '5', title: '大气' },
       { id: '6', title: '爱情' },
       { id: '7', title: '个性' },
+    ],
+    // 客片信息
+    scene: [
+      {
+        title: '时光邂逅--客片欣赏 冯先生&赵女士',
+        dress: '3699taoxi',
+        price: '',
+        image: [
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216184.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216185.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216186.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216187.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216188.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216189.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216190.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216191.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216192.jpg", loading: false },
+        ]
+      },
+      {
+        title: '碧海蓝天',
+        dress: '秦皇岛北戴河',
+        price: '',
+        image: [
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216686.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216687.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216688.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216689.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216690.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216691.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216692.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216693.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216694.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216695.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216696.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216697.jpg", loading: false },
+        ]
+      },
+      {
+        title: '花海 - 爱你的季节',
+        dress: '秦皇岛北戴河',
+        price: '',
+        image: [
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216678.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216679.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216680.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216681.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216682.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216683.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216684.jpg", loading: false },
+          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216685.jpg", loading: false },
+        ]
+      },
     ],
     filterData:{
       filter: false, //是否显示筛选内容
@@ -98,6 +155,7 @@ Page({
     var index = event.currentTarget.dataset.index;
     var filterifshow = this.data.filterData.filterIfShow == index ? 0 : index;
     let strfilterIfShow = 'filterData.filterIfShow';
+    console.log(filterifshow)
       this.setData({
         [strfilterIfShow]: filterifshow
       })
@@ -258,6 +316,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
+      currentTab: (options.id ? options.id : 0),
       theme:app.globalData.theme, //设置主题
       style: "font-weight:bold;color:" + app.globalData.theme + ";border-bottom:1px solid" + app.globalData.theme //设置当前tab选中样式
     })

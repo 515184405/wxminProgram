@@ -11,22 +11,35 @@
 <view style="display:none">
   <image wx:for="{{imgLoadData.images}}" wx:key="id" id="{{item.id}}" data-src="{{item.pic}}" src="{{item.pic}}" bindload="onImageLoad"></image>
 </view>
-<view class='case-imgLoadArr'>
-  <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollH}}px" bindscroll="scrollFun" bindscrolltolower="loadImages">
-  <view style="width:100%">
-    <view class="img_item item_img_left">
-      <view wx:for="{{imgLoadData.col1}}" wx:key="id">
-        <image bindtap='wxParseImgTap' class='animate-show' data-src="{{item.pic}}" src="{{item.pic}}" style="width:100%;height:{{item.height}}px"></image>
-      </view>
-    </view>
-    <view class="img_item item_img_right">
-      <view wx:for="{{imgLoadData.col2}}" wx:key="id">
-        <image bindtap='wxParseImgTap' class='animate-show' data-src="{{item.pic}}" src="{{item.pic}}" style="width:100%;height:{{item.height}}px"></image>
-      </view>
-    </view>
-  </view>
-</scroll-view>
-</view>
+<swiper current="{{currentTab}}" duration="300" class='swiper-box'  bindchange="swiperTab">
+    <!-- 客片 -->
+    <swiper-item >
+      <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollH}}px" bindscroll="scrollFun" bindscrolltolower="">
+        <view class='fy-container'>
+          <list-one id="list1" scene='{{scene}}'></list-one>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <!-- 样片 -->
+    <swiper-item>
+      <view class='case-imgLoadArr'>
+          <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollH}}px" bindscroll="scrollFun" bindscrolltolower="loadImages">
+            <view style="width:100%">
+              <view class="img_item item_img_left">
+                <view wx:for="{{imgLoadData.col1}}" wx:key="id">
+                  <image bindtap='wxParseImgTap' class='animate-show' data-src="{{item.pic}}" src="{{item.pic}}" style="width:100%;height:{{item.height}}px"></image>
+                </view>
+              </view>
+              <view class="img_item item_img_right">
+                <view wx:for="{{imgLoadData.col2}}" wx:key="id">
+                  <image bindtap='wxParseImgTap' class='animate-show' data-src="{{item.pic}}" src="{{item.pic}}" style="width:100%;height:{{item.height}}px"></image>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+    </swiper-item>
+</swiper>
 
 <view class='case-btn-all'>
   <!-- 筛选 -->
@@ -50,9 +63,8 @@
       分类
     </view>
     <view class='fy-filter-content flex {{filterData.filterIfShow == 1 ? "filter-if-show" : ""}}'>
-      <view wx:for="{{classify}}" wx:key="" bindtap='setFilterFun' data-key='type' data-value='{{item.id}}' class='fy-filter-select {{filterData.type == item.id ? "filter-active-if" : ""}}'>{{item.title}}</view>
-      <image wx:if="{{filterData.filterIfShow != 1}}"  data-index="1" bindtap='tabFilterIf' src='image/down.png' mode='widthFix' class='fy-down-icon'></image>
-      <image wx:else data-index="1" bindtap='tabFilterIf' src='image/up.png' mode='widthFix' class='fy-down-icon'></image>
+      <view wx:for="{{classify1}}" wx:key="" bindtap='setFilterFun' data-key='type' data-value='{{item.id}}' class='fy-filter-select {{filterData.type == item.id ? "filter-active-if" : ""}}'>{{item.title}}</view>
+      <image data-index="1" bindtap='tabFilterIf' src='{{filterData.filterIfShow != 1 ? "image/down.png" : "image/up.png"}}' mode='widthFix' class='fy-down-icon'></image>
     </view>
     <!-- 筛选 -->
     <view class='fy-filter-title'>
@@ -62,8 +74,7 @@
       
       <view wx:for="{{classify2}}" wx:key="" bindtap='setFilterFun' data-key='style' data-value='{{item.id}}' class='fy-filter-select {{filterData.style == item.id ? "filter-active-if" : ""}}'>{{item.title}}</view>
 
-      <image wx:if="{{filterIfShow != 2}}"  data-index="2" bindtap='tabFilterIf' src='image/down.png' mode='widthFix' class='fy-down-icon'></image>
-      <image wx:else data-index="2" bindtap='tabFilterIf' src='image/up.png' mode='widthFix' class='fy-down-icon'></image>
+      <image data-index="2" bindtap='tabFilterIf' src='{{filterData.filterIfShow !=2 ? "image/down.png" : "image/up.png"}}' mode='widthFix' class='fy-down-icon'></image>
     </view>
     <!-- 按钮 -->
     <view class='fy-btn-all flex'>

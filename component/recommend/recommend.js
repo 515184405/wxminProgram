@@ -11,6 +11,10 @@ Component({
       observer: function (news, olds, path) {
         console.log(news, olds)
       }
+    },
+    titleShow:{
+      type:'Boolean',
+      value:'true',
     }
   },
 

@@ -5,8 +5,7 @@
     "pages/service/service",
     "pages/user/user",
     "pages/case/case",
-    "pages/system_detail/system_detail",
-    "component/discount/discount"
+    "pages/system_detail/system_detail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -9,10 +9,10 @@
 </swiper>
 <!-- 导航模块 -->
 <view class='nav-box fy-container'>
-  <view wx:for="{{navArr}}" wx:key="" class='nav-item'>
+  <navigator wx:for="{{navArr}}" wx:key="" url='{{item.url}}' open-type='{{item.openType}}' class='nav-item'>
     <image class='nav-item-img' mode='aspectFill' src='{{item.image}}'></image>
     <text class='nav-item-text'>{{item.title}}</text>
-  </view>
+  </navigator>
   <view class='discount-item flex x-between y-center'>
     <image src='https://img04.sogoucdn.com/net/a/04/link?url=https%3A%2F%2Fi03picsos.sogoucdn.com%2F1e2f392db899027a&appid=122' mode='widthFix' class='discount-img'></image>
     <view bindtap="showDialog" class='discount-content'>
@@ -26,60 +26,23 @@
   </view>
 </view>
 <!-- 模块内容 -->
-<view class='fy-container fy-module'>
+<view class='fy-container fy-module recommend-index'>
     <view class='fm-title' style="color:{{theme}}">
       精品套系
     </view>
     <view class='fm-title-en'>Top - quality product line</view>
-    <view>
-    <view class='fm-module-list'>
-       <view class='fm-module-item' wx:for="{{4}}"  wx:key=''>
-          <view class='fm-image-box'>
-              <image mode='widthFix' src="http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125491.jpg" class='fm-image'></image>
-          </view>
-          <view class='fm-item-title'>
-            3888套系
-          </view>
-          <view class='flex fm-item-info y-center x-between'>
-            <view class='fm-item-money' style='color:{{theme}}'>￥1000</view>
-            <view class='fm-item-btn' style='background-color:{{theme}}'>查看</view>
-          </view>
-       </view>
-    </view>
-  </view>
+    <!-- 套系推荐 -->
+    <recommend id="recommend" titleShow="{{false}}" recommend='{{recommend}}'>
+    </recommend>
 </view>
 <view class='fy-container fy-module'>
     <view class='fm-title' style="color:{{theme}}">
       场景案例
     </view>
     <view class='fm-title-en'>Top - quality product line</view>
-    <view class='fm-module-list'>
-       <view class='fm-module-item2'wx:for="{{scene}}" wx:key=''>
-         <view class='fm2-module-title'>
-           {{item.title}}
-         </view>
-         <view class='fm-module-desc flex x-between'>
-            <view>
-               {{item.dress}}
-            </view>
-            <view class='item-price'>
-              ￥{{item.price}}
-            </view>
-         </view>
-         <view class='fm-image-box clearfix'>
-            <navigator url='/pages/system_detail/system_detail' open-type='navigate' wx:if="{{srcIndex < 3}}" wx:for="{{item.image}}" wx:key='' wx:for-item="srcItem" wx:for-index="srcIndex" class='fm-image-hidden flex x-center y-center'>
-            <view style='display:none'>
-              <image mode='widthFix' class='loading' data-data="scene[{{index}}].image[{{srcIndex}}]" data-index="{{srcIndex}}" bindload='imageLoad' src='{{srcItem.imgsrc}}'></image>
-              </view>
-              <image mode='aspectFill' src="{{srcItem.loading ? srcItem.imgsrc : loading}}" class='fm-image-item animate-show {{srcItem.loading ? "" : "loading"}}'></image>
-            </navigator>
-            <text class='image-number'>+{{item.image.length - 3}}</text>      
-          </view>
-        <!-- <view class='fm-item-title flex x-center'>
-            3888套系
-          </view> -->
-       </view>
-    </view>
+    <!-- 列表 -->
+    <list-one id="list1" scene='{{scene}}'>  
+    </list-one>
 </view>
 <!-- 免费预约弹窗 -->
   <appointment id="appointment" discount='{{discount}}' appointment='{{appointment}}'>

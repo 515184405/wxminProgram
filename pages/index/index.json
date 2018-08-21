@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "footer": "/component/footer/footer",
-    "appointment": "/component/appointment/appointment"
+    "appointment": "/component/appointment/appointment",
+    "recommend": "/component/recommend/recommend",
+    "list-one": "/component/list_1/list_1"
   }
 }
