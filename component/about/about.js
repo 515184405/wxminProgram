@@ -32,6 +32,27 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    makePhoneCalls: function (e) {
+      var tel = e.currentTarget.dataset.tel + '';
+      console.log(tel);
+      wx.makePhoneCall({
+        phoneNumber: tel,
+        success: function () {
+          console.log("成功拨打电话")
+        },
+        fail: function () {
+          console.log("拨打电话失败！")
+        }
+      })
+    },
+    // 图片查看器
+    wxParseImgTap: function (e) {
+      var that = this;
+      var nowImgUrl = e.target.dataset.src;
+      wx.previewImage({
+        current: nowImgUrl, // 当前显示图片的http链接
+        urls: that.data.imgUrls // 需要预览的图片http链接列表
+      })
+    },
   }
 })

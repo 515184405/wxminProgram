@@ -32,23 +32,16 @@
                 515184405
               </view>
           </view>
-          <view class='about-us'>
-              <view class='au-title'>
-                位置地图：
-              </view>
-              <view style='color:{{theme}};font-weight:bold' class='au-content'>
-                点击获取位置
-              </view>
-          </view>
           <view class='about-us' wx:if="{{showImage}}">
             <view class='au-title'>门店照片：</view>
           </view>
+
             <!-- 轮播模块 -->
             <swiper wx:if="{{showImage}}" class='swiper-box' display-multiple-items="{{items}}" indicator-color='rgba(255,255,255,1)' indicator-active-color="{{theme}}" indicator-dots="{{indicatorDots}}"
               autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
               <block wx:for="{{imgUrls}}" wx:key="">
                 <swiper-item>
-                  <image mode='aspectFill' src="{{item}}" class="slide-image"/>
+                  <image data-src='{{item}}' bindtap='wxParseImgTap' mode='aspectFill' src="{{item}}" class="slide-image"/>
                 </swiper-item>
               </block>
             </swiper>

@@ -17,8 +17,8 @@ Page({
       { title: "客 照", image: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4236226554,3005486819&fm=27&gp=0.jpg',openType:'switchTab',url:'/pages/case/case' },
       { title: '套 系', image: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3931882706,576426697&fm=27&gp=0.jpg', openType: 'navigate', url: '/pages/department/department'},
       { title: '活 动', image: 'http://m.only1314.com/uploadfile/2018/0815/20180815012601292.jpg', openType: 'navigate', url: '/pages/activity/activity' },
-      { title: '我 们', image: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1610349391,986729414&fm=27&gp=0.jpg', openType: 'navigate', url: '/pages/about/about' },
-    ],
+      { title: '我 们', image: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1610349391,986729414&fm=27&gp=0.jpg', openType: 'navigate', url: '/pages/aboutUs/aboutUs' },
+    ], 
     scene: [
       {
         title: '时光邂逅--客片欣赏 冯先生&赵女士',
