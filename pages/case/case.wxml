@@ -43,7 +43,7 @@
 
 <view class='case-btn-all'>
   <!-- 筛选 -->
-  <view  bindtap='showFilter' wx:if="{{swiperTab == 1}}" class='shaixuan-btn flex x-center y-center'>
+  <view  bindtap='showFilter' wx:if="{{currentTab == 1}}" class='shaixuan-btn flex x-center y-center'>
     <text class='iconfont icon-shaixuan'></text>
   </view>
   <!-- 置顶 -->
