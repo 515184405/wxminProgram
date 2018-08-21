@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 7,
 			"list": [
 				{
 					"id": -1,
@@ -68,7 +68,19 @@
 				{
 					"id": -1,
 					"name": "客照",
-					"pathName": "pages/customer_case/customer_case"
+					"pathName": "pages/customer_case/customer_case",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "套系列表",
+					"pathName": "pages/department/department",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/aboutUs/aboutUs"
 				}
 			]
 		}

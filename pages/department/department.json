@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "recommend": "/component/recommend/recommend",
+    "footer": "/component/footer/footer"
+  }
+}

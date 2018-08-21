@@ -101,21 +101,3 @@
   font-size: 100rpx;
   color:rgb(57, 214, 110);
 }
-/* 关于我们 */
-.about-us{
-  padding:20rpx 0;
-  border-bottom: 1px solid #f9f9f9;
-}
-.au-title{
-  width:150rpx;
-  text-align: right;
-  color:#666;
-  font-weight: bold;
-  display: inline-block;
-  vertical-align: top;
-}
-.au-content{
-  display: inline-block;
-  vertical-align: top;
-  width:calc(100% - 150rpx);
-}

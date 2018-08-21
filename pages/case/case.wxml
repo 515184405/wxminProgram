@@ -1,5 +1,5 @@
 <view class='fy-container case-box'>
-  <view class='search-box {{searchClass}}'>
+  <view class='search-box {{searchClass}} {{currentTab == 0 ? "search-show" : ""}}'>
     <import src="../../component/search/search.wxml" />
     <template is='search' data="{{text:'输入关键字搜索',value:searchVal}}" />
   </view>
@@ -14,8 +14,8 @@
 <swiper current="{{currentTab}}" duration="300" class='swiper-box'  bindchange="swiperTab">
     <!-- 客片 -->
     <swiper-item >
-      <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:100%" bindscroll="scrollFun" bindscrolltolower="">
-        <view class='fy-container'>
+      <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:100%" bindscroll="scrollFun" bindscrolltolower="addSceneArr">
+        <view class='fy-container cust_module'>
           <list-one id="list1" scene='{{scene}}'></list-one>
         </view>
       </scroll-view>
@@ -23,7 +23,7 @@
     <!-- 样片 -->
     <swiper-item>
       <view class='case-imgLoadArr'>
-          <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:100%" bindscroll="scrollFun" bindscrolltolower="loadImages">
+          <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollH}}px" bindscroll="scrollFun" bindscrolltolower="loadImages">
             <view style="width:100%">
               <view class="img_item item_img_left">
                 <view wx:for="{{imgLoadData.col1}}" wx:key="id">
@@ -43,7 +43,7 @@
 
 <view class='case-btn-all'>
   <!-- 筛选 -->
-  <view  bindtap='showFilter' class='shaixuan-btn flex x-center y-center'>
+  <view  bindtap='showFilter' wx:if="{{swiperTab == 1}}" class='shaixuan-btn flex x-center y-center'>
     <text class='iconfont icon-shaixuan'></text>
   </view>
   <!-- 置顶 -->

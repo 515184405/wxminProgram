@@ -9,7 +9,7 @@
 </swiper>
 <!-- 导航模块 -->
 <view class='nav-box fy-container'>
-  <navigator wx:for="{{navArr}}" wx:key="" url='{{item.url}}' open-type='{{item.openType}}' class='nav-item'>
+  <navigator hover-class='none' wx:for="{{navArr}}" wx:key="" url='{{item.url}}' open-type='{{item.openType}}' class='nav-item'>
     <image class='nav-item-img' mode='aspectFill' src='{{item.image}}'></image>
     <text class='nav-item-text'>{{item.title}}</text>
   </navigator>

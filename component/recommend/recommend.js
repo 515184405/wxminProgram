@@ -15,6 +15,14 @@ Component({
     titleShow:{
       type:'Boolean',
       value:'true',
+    },
+    titleText:{
+      type:"String",
+      value:"套餐推荐"
+    },
+    titleStyle: {
+      type: "String",
+      value: ""
     }
   },
 

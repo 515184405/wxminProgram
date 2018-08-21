@@ -1,7 +1,7 @@
 
 <view wx:if="{{recommend.length>0}}" class='recommend-module'>
-    <view wx:if="{{titleShow}}" class="recommend-title">套餐推荐</view>
-    <view wx:for="{{recommend}}" wx:key="" class='flex x-between y-center recomment-item'>
+    <view wx:if="{{titleShow}}" style="{{titleStyle}}" class="recommend-title">{{titleText}}</view>
+    <navigator open-type='navigate' url='/pages/dep_detail/dep_detail?id=1' wx:for="{{recommend}}" wx:key="" class='flex x-between y-center recomment-item'>
       <view class='recommend-img'>
         <image mode='aspectFill' class='recommend-width' src='{{item.image}}'></image>
       </view>
@@ -19,5 +19,5 @@
       </view>
       <view class='iconfont icon-nvxingfuben'>
       </view>
-    </view>
+    </navigator>
 </view>

@@ -1,0 +1,9 @@
+
+<recommend id="recommend" titleText="婚纱套系" titleStyle="color:{{theme}};font-weight:bold" recommend='{{recommend}}'>
+</recommend>
+<recommend id="recommend2" titleText="写真套系" titleStyle="color:{{theme}};font-weight:bold" recommend='{{recommend2}}'>
+</recommend>
+<recommend id="recommend3" titleText="儿童套系" titleStyle="color:{{theme}};font-weight:bold" recommend='{{recommend2}}'>
+</recommend>
+<footer id="footer" footer="{{footer}}">
+</footer>

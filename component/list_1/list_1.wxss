@@ -139,3 +139,6 @@
   font-size: 24rpx;
   padding:5rpx 0 15rpx 0;
 }
+.fm-module-item2:first-child .fm2-module-title{
+  margin-top:0;
+}

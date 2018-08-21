@@ -18,6 +18,10 @@ page{
   transform: translateY(-100rpx);
   overflow:hidden;
 }
+.cust_module{
+  margin-top:20rpx;
+  padding-top:20rpx;
+}  
 .case-filter-item{
   width:50%;
   display: inline-block;

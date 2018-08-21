@@ -5,7 +5,11 @@
     "pages/service/service",
     "pages/user/user",
     "pages/case/case",
-    "pages/system_detail/system_detail"
+    "pages/system_detail/system_detail",
+    "pages/department/department",
+    "pages/activity/activity",
+    "pages/dep_detail/dep_detail",
+    "pages/aboutUs/aboutUs"
   ],
   "window": {
     "backgroundTextStyle": "light",

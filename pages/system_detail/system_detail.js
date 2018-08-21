@@ -19,23 +19,22 @@ Page({
       { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '<p>造型：14套 | 拍摄：210张 | 精修：70张</p><p>此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台</p>' },
       { title: '特惠套装特惠套装特惠套装特惠套装', image:'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '2588', desc:'<p>造型：7套 | 拍摄：150张 | 精修：70张</p>'},
     ],
-    scene: 
-      {
-        title: '时光邂逅',
-        dress: '马路牙子',
-        price: '1888',
+    scene: {
+        title: '时光邂逅--客片欣赏 冯先生&赵女士',
+        dress: '3699taoxi',
+        price: '2888',
         image: [
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216184.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216185.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216186.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216187.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216188.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216189.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216190.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216191.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216192.jpg", loading: false },
+          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=4192590352,1079796267&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=1990083140,1871542088&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=3141573913,443875710&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=3003797967,4242511948&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=2326877116,2718696881&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img0.imgtn.bdimg.com/it/u=1586298711,2677183515&fm=26&gp=0.jpg', loading: false },
         ]
-      },
+      }
   },
   // 生成图片数组
   imageArr : function(){

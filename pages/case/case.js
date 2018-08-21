@@ -52,15 +52,15 @@ Page({
         dress: '3699taoxi',
         price: '',
         image: [
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216184.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216185.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216186.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216187.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216188.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216189.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216190.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216191.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216192.jpg", loading: false },
+          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=4192590352,1079796267&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=1990083140,1871542088&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=3141573913,443875710&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=3003797967,4242511948&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=2326877116,2718696881&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img0.imgtn.bdimg.com/it/u=1586298711,2677183515&fm=26&gp=0.jpg', loading: false },
         ]
       },
       {
@@ -68,18 +68,16 @@ Page({
         dress: '秦皇岛北戴河',
         price: '',
         image: [
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216686.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216687.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216688.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216689.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216690.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216691.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216692.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216693.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216694.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216695.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216696.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216697.jpg", loading: false },
+          { imgsrc: 'http://img0.imgtn.bdimg.com/it/u=2548319164,1078741400&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=1888978533,3210951581&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=1271903594,4287480683&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=4155514796,2768838487&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=2274601529,2539830836&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=3102191596,1107181335&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=1420021963,3360030047&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=4017693518,1626260265&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=1013534295,3369857523&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2162474254,2757256366&fm=26&gp=0.jpg', loading: false },
         ]
       },
       {
@@ -87,17 +85,41 @@ Page({
         dress: '秦皇岛北戴河',
         price: '',
         image: [
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216678.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216679.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216680.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216681.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216682.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216683.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216684.jpg", loading: false },
-          { imgsrc: "http://images.xfwed.com/shop/photo/221/2216685.jpg", loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=573902861,2632632308&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=1917150572,2134166181&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=1469945670,3754862906&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=1448446140,2230553981&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=3703244151,2628636191&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=2399700224,2583561969&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=2762344903,1439268382&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=166885346,1996468304&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=2999788056,3431819161&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=2417802683,1714474120&fm=26&gp=0.jpg', loading: false },
         ]
       },
+      {
+        title: '礼堂 - 爱的庄严',
+        dress: '秦皇岛北戴河摄影基地',
+        price: '',
+        image:[
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=2940298191,2980428066&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=3719030059,3704280778&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=2019171211,3766696415&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=621161743,3590281198&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=3307691358,317754040&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=1254507308,159084273&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=2946128382,1351554149&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=1031653249,2705637294&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=1003612578,403292786&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=2950769225,3573438163&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2836995741,1948957127&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=640422490,2267755867&fm=15&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img0.imgtn.bdimg.com/it/u=1009686827,2625811213&fm=15&gp=0.jpg', loading: false },
+        ]
+      }
     ],
+    scenePage:1,
+    sceneCount:3,
     filterData:{
       filter: false, //是否显示筛选内容
       filterIfShow: 0,//显示当前的全部筛选条件
@@ -186,10 +208,15 @@ Page({
       style: "font-weight:bold;color:" + this.data.theme + ";border-bottom:1px solid" + this.data.theme
     })
   },
+  swiperTab:function(e){
+    var that = this;
+    that.setData({ currentTab: e.detail.current });
+  },
   // 图片查看器
   wxParseImgTap : function(e) {
     var that = this;
     var nowImgUrl = e.target.dataset.src;
+    console.log(nowImgUrl)
     wx.previewImage({
       current: nowImgUrl, // 当前显示图片的http链接
       urls: that.data.imgLoadData.imgSrcArr // 需要预览的图片http链接列表
@@ -278,25 +305,29 @@ Page({
   //下拉加载
   loadImages: function () {
     let images = [
-      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180710_1531216229.jpg', height: 0 },
-      { pic: 'http://m.jujiaonet.com/uploads/ph/o_1cioibqe9nk7hpqr94k8b2bii.jpg', height: 0 },
-      { pic: 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg', height: 0 },
-      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180809_1533794461.jpg', height: 0 },
-      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180813_1534125478.jpg', height: 0 },
-      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180809_1533794448.jpg', height: 0 },
-      { pic: 'http://m.jujiaonet.com/uploads/image/jpeg20180805_1533458988.jpg', height: 0 },
-      
-      // { pic: "../../images/4.png", height: 0 },
-      // { pic: "../../images/5.png", height: 0 },
-      // { pic: "../../images/6.png", height: 0 },
-      // { pic: "../../images/7.png", height: 0 },
-      // { pic: "../../images/8.png", height: 0 },
-      // { pic: "../../images/9.png", height: 0 },
-      // { pic: "../../images/10.png", height: 0 },
-      // { pic: "../../images/11.png", height: 0 },
-      // { pic: "../../images/12.png", height: 0 },
-      // { pic: "../../images/13.png", height: 0 },
-      // { pic: "../../images/14.png", height: 0 }
+      { pic: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img3.imgtn.bdimg.com/it/u=4192590352,1079796267&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img4.imgtn.bdimg.com/it/u=1990083140,1871542088&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img1.imgtn.bdimg.com/it/u=3141573913,443875710&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img3.imgtn.bdimg.com/it/u=3003797967,4242511948&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img5.imgtn.bdimg.com/it/u=2326877116,2718696881&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img0.imgtn.bdimg.com/it/u=1586298711,2677183515&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img4.imgtn.bdimg.com/it/u=927024874,3409247806&fm=11&gp=0.jpg', height: 0 },
+      { pic: 'http://img0.imgtn.bdimg.com/it/u=678917998,1986864878&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img2.imgtn.bdimg.com/it/u=863334768,3951465678&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img4.imgtn.bdimg.com/it/u=1480732384,790274052&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img1.imgtn.bdimg.com/it/u=731299135,4028385160&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img3.imgtn.bdimg.com/it/u=2836557333,2058143530&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img5.imgtn.bdimg.com/it/u=4003118724,494246661&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img4.imgtn.bdimg.com/it/u=2724163625,2768374455&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img1.imgtn.bdimg.com/it/u=758291606,1456528031&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img1.imgtn.bdimg.com/it/u=2123654397,634665358&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img5.imgtn.bdimg.com/it/u=1101351412,621663631&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img0.imgtn.bdimg.com/it/u=1159806221,2260067311&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img2.imgtn.bdimg.com/it/u=3477704411,772244421&fm=26&gp=0.jpg', height: 0 },
+      { pic: 'http://img4.imgtn.bdimg.com/it/u=3754638307,4051770475&fm=26&gp=0.jpg', height: 0 },
     ];
 
     let baseId = "img-" + (+new Date());
@@ -310,6 +341,12 @@ Page({
       [strloadingCount]: images.length,
       [strimages]: images
     });
+  },
+  // 客片下拉加载更多
+  addSceneArr:function(){
+    var that = this;
+    // 懒加载内容模块
+    // 执行代码
   },
   /**
    * 生命周期函数--监听页面加载
