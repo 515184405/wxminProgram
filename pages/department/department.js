@@ -8,14 +8,13 @@ Page({
   data: {
     // 推荐套系
     recommend: [
-      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '<p>造型：14套 | 拍摄：210张 | 精修：70张</p><p>此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台</p>' },
-      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '<p>造型：14套 | 拍摄：210张 | 精修：70张</p><p>此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台</p>' },
-      { title: '特惠套装特惠套装特惠套装特惠套装', image: 'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '2588', desc: '<p>造型：7套 | 拍摄：150张 | 精修：70张</p>' },
+      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '造型：14套 | 拍摄：210张 | 精修：70张', activity: '此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台' },
+      { title: '特惠套装特惠套装特惠套装特惠套装', image: 'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '2588', desc: '造型：7套 | 拍摄：150张 | 精修：70张' },
     ],
     recommend2: [
-      { title: '情人节闺蜜写真', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '1588', desc: '<p>造型：6套 | 拍摄：100张 | 精修：50张</p><p>此活动赠送精美钥匙扣一个</p>' },
-      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '<p>造型：14套 | 拍摄：210张 | 精修：70张</p><p>此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台</p>' },
-      { title: '情人节情侣写真', image: 'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '1888', desc: '<p>造型：5套 | 拍摄：100张 | 精修：70张</p><p>此活动赠送情侣戒指一对</p>' },
+      { title: '情人节闺蜜写真', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '1588', desc: '造型：6套 | 拍摄：100张 | 精修：50张',activity:'此活动赠送精美钥匙扣一个' },
+      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '造型：14套 | 拍摄：210张 | 精修：70张',activity:'此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台' },
+      { title: '情人节情侣写真', image: 'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '1888', desc: '造型：5套 | 拍摄：100张 | 精修：70张',activity:'此活动赠送情侣戒指一对' },
     ],
   },
 

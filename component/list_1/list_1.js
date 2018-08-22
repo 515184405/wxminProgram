@@ -29,11 +29,9 @@ Component({
       let index = e.target.dataset.index;
       let imgData = e.target.dataset.data + '.loading';
       var that = this;
-      setTimeout(function () {
-        that.setData({
-          [imgData]: true
-        })
-      }, 1000)
+      that.setData({
+        [imgData]: true
+      })
     },
   }
 })

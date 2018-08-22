@@ -6,8 +6,8 @@ Page({
   data: {
     // 推荐套系
     recommend: [
-      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '<p>造型：14套 | 拍摄：210张 | 精修：70张</p><p>此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台</p>' },
-      { title: '特惠套装特惠套装特惠套装特惠套装', image: 'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '2588', desc: '<p>造型：7套 | 拍摄：150张 | 精修：70张</p>' },
+      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '造型：14套 | 拍摄：210张 | 精修：70张', activity: '此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台' },
+      { title: '特惠套装特惠套装特惠套装特惠套装', image: 'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '2588', desc: '造型：7套 | 拍摄：150张 | 精修：70张' },
     ],
     // 优惠券
     discount: [
@@ -116,7 +116,7 @@ Page({
   },
   onReady:function(){
     //html转小程序代码
-    this.recommend = this.selectComponent("#recommend");
-    this.recommend.wxParseData();
+    // this.recommend = this.selectComponent("#recommend");
+    // this.recommend.wxParseData();
   }
 })

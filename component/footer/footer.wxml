@@ -1,4 +1,5 @@
 
 <view class='footer-module'>
-  技术支持：微官网提供
+  <view>技术支持：个人提供</view>
+  <view bindtap='makePhoneCalls' data-tel="15321353313">招商电话：15321353313</view>
 </view>

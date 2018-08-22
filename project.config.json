@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -80,7 +80,19 @@
 				{
 					"id": -1,
 					"name": "关于我们",
-					"pathName": "pages/aboutUs/aboutUs"
+					"pathName": "pages/aboutUs/aboutUs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "活动",
+					"pathName": "pages/activity/activity",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "套系详情",
+					"pathName": "pages/dep_detail/dep_detail"
 				}
 			]
 		}

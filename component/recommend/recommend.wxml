@@ -10,11 +10,13 @@
           <view class='rec-title-text overflow-text'>{{item.title}}</view>
           <view class='rec-title-price'>￥{{item.price}}</view>
         </view> 
-        <view class='rec-left-desc overflow-text2'>
-          <import src="/utils/wxParse/wxParse.wxml"/>
+        <view class='rec-left-desc'>
+          <!-- <import src="/utils/wxParse/wxParse.wxml"/>
           <block wx:for="{{replyTemArray}}" wx:key="" wx:for-index="indexHtml">
             <template wx:if="{{index == indexHtml}}" is="wxParse" data="{{wxParseData:item}}"/>
-          </block>
+          </block> -->
+          <view class='overflow-text rec-desc-line'>{{item.desc}}</view>
+          <view class='overflow-text'>{{item.activity}}</view>
         </view>
       </view>
       <view class='iconfont icon-nvxingfuben'>

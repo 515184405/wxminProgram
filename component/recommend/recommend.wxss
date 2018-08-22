@@ -35,6 +35,9 @@
   color:#000;
   margin-bottom:80rpx;
 }
+.rec-desc-line{
+  line-height:30rpx;
+}
 .rec-left-desc{
   font-size: 24rpx;
   color:#999;

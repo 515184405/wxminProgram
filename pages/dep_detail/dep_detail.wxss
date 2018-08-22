@@ -1,1 +1,37 @@
-/* pages/dep_detail/dep_detail.wxss */
+.dep-title{
+  font-weight: bold;
+  color:#000;
+  font-size: 29rpx;
+}
+.dep-desc{
+  margin-top:10rpx;
+  font-size: 24rpx;
+}
+.fy-price-box{
+  border-top:1px solid #f1f1f1;
+}
+.fy-price{
+  color: #f55;
+  font-size: 32rpx;
+}
+.cust_price{
+  text-decoration:line-through;
+  margin-left:20rpx;
+  font-size: 24rpx;
+}
+.dep-detail{
+  margin-top:20rpx;
+}
+.dep-detail .fy-container{
+  border-bottom:1px solid #f1f1f1;
+}
+.dep-detail-title{
+  color:#000;
+}
+.dep-detail-title .iconfont{
+  font-size: 30rpx;
+  padding-right:10rpx;
+}
+.dep-detail-item{
+  padding:20rpx 30rpx 20rpx 40rpx;
+}

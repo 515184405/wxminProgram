@@ -1,2 +1,35 @@
-<!--pages/dep_detail/dep_detail.wxml-->
-<text>pages/dep_detail/dep_detail.wxml</text>
+<view class='banner-box'>
+  <image src='{{depObj.image}}' class='imgWidth' mode='widthFix'></image>
+</view>
+<view class='fy-container'>
+  <view class='dep-title'>{{depObj.title}}</view>
+  <view class='dep-desc' style='color:{{theme}}'>{{depObj.desc}}</view>
+</view>
+<view class='fy-container fy-price-box'>
+  优惠价：<text class='fy-price'>{{depObj.price}}</text>
+  <text class='cust_price'>{{depObj.cust_price}}元</text>
+</view>
+<!-- 套系详情模块 -->
+<view class='dep-detail'>
+  <view wx:for="{{3}}" wx:key="" class='fy-container'>
+    <view class='dep-detail-title'><text style="color:{{theme}}" class='iconfont icon-xin'></text>造型</view>
+    <view wx:for="{{5}}" wx:key="" class='dep-detail-item'>
+      造型数量：10套
+    </view>
+  </view>
+</view>
+<!-- 优惠券 -->
+  <discount id="discount" bind:showDialog="showDialog" discount='{{discount}}'>
+  </discount>
+<!-- 套系推荐 -->
+  <recommend id="recommend" recommend='{{recommend}}'>
+  </recommend>
+<!-- 免费预约弹窗 -->
+  <appointment id="appointment" discount='{{discount}}' appointment='{{appointment}}'>
+  </appointment>
+<!-- 底部导航 -->
+  <footerBar id="footerBar" bind:showDialog="showDialog" footerBar='{{footerBar}}'>
+  </footerBar>
+<!-- footer -->
+  <footer id="footer" footer='{{footer}}'>  
+  </footer>

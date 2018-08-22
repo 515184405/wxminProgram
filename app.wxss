@@ -9,6 +9,14 @@ page{
   padding:30rpx 20rpx;
   background-color: #fff;
 }
+.banner-box{
+  width:100%;
+  overflow: hidden;
+  max-height:400rpx;
+}
+.imgWidth{
+  width:100%;
+}
 .left{
   float: left;
 }

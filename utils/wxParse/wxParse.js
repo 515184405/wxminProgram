@@ -33,12 +33,10 @@ function wxParse(bindName = 'wxParseData', type='html', data='<div class="color:
   var transData = {};//存放转化后的数据
   if (type == 'html') {
     transData = HtmlToJson.html2json(data, bindName);
-    // console.log(JSON.stringify(transData, ' ', ' '));
   } else if (type == 'md' || type == 'markdown') {
     var converter = new showdown.Converter();
     var html = converter.makeHtml(data);
     transData = HtmlToJson.html2json(html, bindName);
-    // console.log(JSON.stringify(transData, ' ', ' '));
   }
   transData.view = {};
   transData.view.imagePadding = 0;
@@ -46,6 +44,15 @@ function wxParse(bindName = 'wxParseData', type='html', data='<div class="color:
     transData.view.imagePadding = imagePadding
   }
   var bindData = {};
+  for (var i = 0; i < transData.images.length;i++){
+    var arr = transData.images[i].attr.style ? transData.images[i].attr.style.split(';') : [];
+    for(var j = 0;j < arr.length;j++){
+      if(arr[j].indexOf('width') != -1){
+        transData.images[i].styleWidth = arr[j].split(':')[1].split('px')[0];
+      }
+    }
+  }
+  console.log(transData.images);
   bindData[bindName] = transData;
   that.setData(bindData)
   that.wxParseImgLoad = wxParseImgLoad;
