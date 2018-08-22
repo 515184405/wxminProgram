@@ -14,8 +14,8 @@ Page({
   data: {
     //主筛选条件
     classify:[
-      {id:1,title:'客片'},
-      {id:2,title:'样片'}
+      {id:1,title:'最新客片'},
+      {id:2,title:'精选样片'}
     ],
     classify1:[
       { 
@@ -205,7 +205,7 @@ Page({
     var index = e.currentTarget.dataset.index;
     this.setData({
       currentTab:index,
-      style: "font-weight:bold;color:" + this.data.theme + ";border-bottom:1px solid" + this.data.theme
+      style: "color:" + this.data.theme + ";border-bottom:1px solid" + this.data.theme
     })
   },
   swiperTab:function(e){
@@ -354,7 +354,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       theme:app.globalData.theme, //设置主题
-      style: "font-weight:bold;color:" + app.globalData.theme + ";border-bottom:1px solid" + app.globalData.theme //设置当前tab选中样式
+      style: "color:" + app.globalData.theme + ";border-bottom:1px solid" + app.globalData.theme //设置当前tab选中样式
     })
 
     // 获取设备信息

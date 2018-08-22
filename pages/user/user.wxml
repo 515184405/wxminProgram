@@ -16,15 +16,19 @@
     <image wx:for="{{starPosition}}" wx:key="" style="left:{{item.x}}px;top:{{item.y}}px;opacity:{{item.opacity}}" class='star-item' src='/image/star.png' mode='widthFix'></image>  
 </view>
 <view class='user-module clearfix'>
-  <image class='user_xin' src='/image/xin.png' mode='widthFix'>
-</image>
-  <view class='avatar-left left'>
+  <view class='avatar-left'>
     <open-data class="user-avatar" mode='widthFix' type="userAvatarUrl"></open-data>
   </view>
-  <view class='avatar-right left'>
-    <open-data class="user-avatar" mode='widthFix' type="userAvatarUrl"></open-data>
+  <view class='user-date-module'>
+    <open-data class="userNickName" type="userNickName"></open-data>
+    <view class='user-desc'>相知相依相爱，相守一生</view>
   </view>
 </view>
+<view class='user-module2'>
+  <gift bColor="transparent"></gift>
+</view>
 <!-- footer -->
+<view class='footer-foot'>
   <footer id="footer" footer='{{footer}}'>  
   </footer>
+</view>

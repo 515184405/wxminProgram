@@ -54,7 +54,7 @@ Component({
     * triggerEvent 用于触发事件
     */
     confirmEvent() {
-      var regTel = /^1\d{10}$/;
+      var regTel = /^1[3,4,5,7,8]\d{9}$/;
       if (!regTel.test(this.data.inputVal)) {
         wx.showToast({
           title: '请正确输入手机号码',

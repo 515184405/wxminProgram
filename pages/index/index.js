@@ -9,10 +9,6 @@ Page({
       { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '造型：14套 | 拍摄：210张 | 精修：70张', activity: '此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台' },
       { title: '特惠套装特惠套装特惠套装特惠套装', image: 'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '2588', desc: '造型：7套 | 拍摄：150张 | 精修：70张' },
     ],
-    // 优惠券
-    discount: [
-      { iconText: '', content: '到店领取情侣对戒一枚' },
-    ],
     navArr:[
       { title: "客 照", image: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=4236226554,3005486819&fm=27&gp=0.jpg',openType:'switchTab',url:'/pages/case/case' },
       { title: '套 系', image: 'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3931882706,576426697&fm=27&gp=0.jpg', openType: 'navigate', url: '/pages/department/department'},
@@ -102,13 +98,23 @@ Page({
     interval: 5000,
     duration: 1000
   },
-  // 显示预约弹框
-  showDialog: function () {
-    this.appointment = this.selectComponent("#appointment");
-    this.appointment.showDialog();
-    console.log(111)
-  },
+
   onLoad: function () {
+    // 判断首页是否需要授权
+    if (app.globalData.indexAuthority && !app.globalData.userInfo){
+    // 查看是否授权
+      wx.getSetting({
+        success: function (res) {
+          if (!res.authSetting['scope.userInfo']) {
+            var page = getCurrentPages();
+            var route = page.pop().__route__;
+            wx.redirectTo({
+              url: '/pages/login/login?route=' + route,
+            })
+          }
+        }
+      })
+    }    
     this.setData({
       theme:app.globalData.theme,//主题色
       loading:app.globalData.loading,//默认加载图片

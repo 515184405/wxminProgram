@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
 
   /**
@@ -24,6 +25,21 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    // 判断个人中心是否需要授权
+    if (app.globalData.userAuthority && !app.globalData.userInfo ) {
+      // 查看是否授权
+      wx.getSetting({
+        success: function (res) {
+          if (!res.authSetting['scope.userInfo']) {
+            var page = getCurrentPages();
+            var route = page.pop().__route__;
+            wx.redirectTo({
+              url: '/pages/login/login?route=' + route,
+            })
+          }
+        }
+      })
+    } 
     //获取设备的宽高
     wx.getSystemInfo({
       success: (res) => {
@@ -42,7 +58,7 @@ Page({
     that.createPosition();
     setInterval(function(){
       that.createPosition();
-    },8000)
+    },5000)
   },
 
   /**

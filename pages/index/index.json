@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "footer": "/component/footer/footer",
-    "appointment": "/component/appointment/appointment",
+    "gift": "/component/gift/gift",
     "recommend": "/component/recommend/recommend",
     "list-one": "/component/list_1/list_1"
   }

@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -92,7 +92,13 @@
 				{
 					"id": -1,
 					"name": "套系详情",
-					"pathName": "pages/dep_detail/dep_detail"
+					"pathName": "pages/dep_detail/dep_detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "授权",
+					"pathName": "pages/login/login"
 				}
 			]
 		}

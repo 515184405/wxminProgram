@@ -28,6 +28,7 @@ page{
   padding:30rpx 0;
   text-align: center;
   font-size: 30rpx;
+  font-weight:bold;
 }
 .scroll-view_H{
   width: 100%;

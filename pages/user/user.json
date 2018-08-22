@@ -1,5 +1,6 @@
 {
   "usingComponents": {
+    "gift": "/component/gift/gift",
     "footer": "/component/footer/footer"
   }
 }
