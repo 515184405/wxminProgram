@@ -1,4 +1,3 @@
-@import "../../component/search/search.wxss";
 page{
   height:100%;
 }

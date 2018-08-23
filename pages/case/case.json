@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "list-one": "/component/list_1/list_1"
+    "list-one": "/component/list_1/list_1",
+    "search-one": "/component/search/search"
   },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",
