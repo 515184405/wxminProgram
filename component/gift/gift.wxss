@@ -1,0 +1,35 @@
+/* 优惠 */
+@import '/app.wxss';
+.discount-item{ 
+  margin-top:20rpx;
+  padding:20rpx 0;
+  max-height:200rpx;
+  width:100%;
+  box-sizing: border-box;
+}
+.discount-img{
+  width:180rpx;
+}
+.discount-content{
+  text-align: left;
+  width:calc(100% - 340rpx)
+}
+.discount-right{
+  width:100rpx;
+  margin-right:10rpx;
+  margin-bottom:20rpx;
+  transform-origin: left bottom;
+  animation: goAnimate 2s ease-in-out infinite;
+}
+.discount-text{
+  margin-top:15rpx;
+  color:#999;
+}
+@keyframes goAnimate
+{
+0% {transform:rotateZ(0deg) scaleZ(1)}
+10% { transform:rotateZ(20deg) scaleZ(1.1)}
+20% {transform:rotateZ(0deg) scaleZ(1)}
+100% {transform:rotateZ(0deg) scaleZ(1)}
+
+}
