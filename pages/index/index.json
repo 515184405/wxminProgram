@@ -4,5 +4,9 @@
     "gift": "/component/gift/gift",
     "recommend": "/component/recommend/recommend",
     "list-one": "/component/list_1/list_1"
-  }
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "首页",
+  "navigationBarTextStyle": "black"
 }

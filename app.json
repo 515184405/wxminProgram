@@ -9,13 +9,12 @@
     "pages/department/department",
     "pages/activity/activity",
     "pages/dep_detail/dep_detail",
-    "pages/aboutUs/aboutUs",
-    "pages/login/login"
+    "pages/aboutUs/aboutUs"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "摄影",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
