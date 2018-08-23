@@ -5,5 +5,9 @@
     "discount": "/component/discount/discount",
     "appointment": "/component/appointment/appointment",
     "footer": "/component/footer/footer"
-  }
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "活动信息",
+  "navigationBarTextStyle": "black"
 }

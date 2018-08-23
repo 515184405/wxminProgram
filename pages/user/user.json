@@ -2,5 +2,9 @@
   "usingComponents": {
     "gift": "/component/gift/gift",
     "footer": "/component/footer/footer"
-  }
+  },
+   "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "个人中心",
+  "navigationBarTextStyle": "black"
 }

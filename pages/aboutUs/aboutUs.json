@@ -2,5 +2,9 @@
   "usingComponents": {
     "footer": "/component/footer/footer",
     "about": "/component/about/about"
-  }
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "关于我们",
+  "navigationBarTextStyle": "black"
 }

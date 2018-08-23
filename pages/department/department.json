@@ -2,5 +2,9 @@
   "usingComponents": {
     "recommend": "/component/recommend/recommend",
     "footer": "/component/footer/footer"
-  }
+  },
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "套系列表",
+  "navigationBarTextStyle": "black"
 }
