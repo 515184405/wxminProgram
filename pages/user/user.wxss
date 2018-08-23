@@ -67,6 +67,11 @@ page{
   padding:0 10rpx;
   box-sizing: border-box;
 }
+.selectStore{
+  line-height: 100rpx;
+  font-weight: bold;
+  padding-left:20rpx;
+}
 /* 流星 */
 .liuxing_box{
   position: fixed;

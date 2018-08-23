@@ -1,0 +1,10 @@
+<view class='store-box fy-container'>
+  <view data-id='{{item.id}}' bindtap="bindStore" class="store-item flex x-between y-center" wx:for="{{store}}" wx:key="">
+    <view>
+      <view class='store-name'>{{item.stroeName}}</view>
+      <view class='store-dress'>{{item.dress}} </view>
+    </view>
+    <view class='iconfont icon-nvxingfuben'>
+    </view>
+  </view>
+</view>

@@ -100,9 +100,10 @@ Page({
   },
 
   onLoad: function () {
+    var that = this;
     // 判断首页是否需要授权
-    if (app.globalData.indexAuthority && !app.globalData.userInfo){
-    // 查看是否授权
+    if (app.globalData.indexAuthority && !app.globalData.userInfo) {
+      // 查看是否授权
       wx.getSetting({
         success: function (res) {
           if (!res.authSetting['scope.userInfo']) {
@@ -111,13 +112,20 @@ Page({
             wx.redirectTo({
               url: '/pages/login/login?route=' + route,
             })
+          }else{
+            app.globalData.scope = true;
+            app.setStore();
           }
         }
       })
     }    
+
+    (app.globalData.scope || !app.globalData.indexAuthority) && app.setStore();
+
     this.setData({
       theme:app.globalData.theme,//主题色
       loading:app.globalData.loading,//默认加载图片
+      isSelectStore : app.globalData.isSelectStore,//是否需要门店选择
     })
   },
   onReady:function(){

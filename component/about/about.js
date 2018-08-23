@@ -1,4 +1,5 @@
 // component/about/about.js
+const app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -25,7 +26,11 @@ Component({
     circular: true,
     interval: 3000,
     duration: 1000,
-    items:3
+    items:3,
+    // 主题色
+    theme:(function(){
+      return app.globalData.theme;
+    })()
   },
 
   /**
@@ -54,5 +59,15 @@ Component({
         urls: that.data.imgUrls // 需要预览的图片http链接列表
       })
     },
+    // 导航
+    mapLine:function(){
+      wx.openLocation({
+        latitude: 40.33349,
+        longitude: 120.347382,
+        scale: 15 ,
+        name: '绥中纳尼亚',
+        address: '辽宁省葫芦岛市绥中县绥中镇新兴街二段10-3号'
+      })
+    }
   }
 })

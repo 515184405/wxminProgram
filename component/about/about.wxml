@@ -4,8 +4,8 @@
               <view class='au-title'>
                 门店地址：
               </view>
-              <view class='au-content'>
-                辽宁省葫芦岛市绥中县绥中镇新兴街二段10-3号
+              <view class='au-content' bindtap='mapLine'>
+                辽宁省葫芦岛市绥中县绥中镇新兴街二段10-3号 <text style='color:{{theme}}'>[导航]</text>
               </view>
           </view>
           <view class='about-us'>

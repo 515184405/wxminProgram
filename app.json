@@ -9,7 +9,9 @@
     "pages/department/department",
     "pages/activity/activity",
     "pages/dep_detail/dep_detail",
-    "pages/aboutUs/aboutUs"
+    "pages/aboutUs/aboutUs",
+    "pages/login/login",
+    "pages/selectStore/selectStore"
   ],
   "window": {
     "backgroundTextStyle": "light",

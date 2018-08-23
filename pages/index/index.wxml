@@ -1,3 +1,4 @@
+<navigator class='selectStore' wx:if="{{isSelectStore}}" open-type='navigate' url='/pages/selectStore/selectStore'>古城店</navigator>
 <!-- 轮播模块 -->
 <swiper class='swiper-box' indicator-color='rgba(255,255,255,1)' indicator-active-color="{{theme}}" indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">

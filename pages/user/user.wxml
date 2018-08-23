@@ -24,6 +24,9 @@
     <view class='user-desc'>相知相依相爱，相守一生</view>
   </view>
 </view>
+<view class='user-module2' wx:if="{{isSelectStore}}">
+  <navigator hover-class='none' class='selectStore' open-type='navigate' url='/pages/selectStore/selectStore'>古城店 <text style="color:{{theme}}">[更换门店]</text></navigator>
+</view>
 <view class='user-module2'>
   <gift bColor="transparent"></gift>
 </view>

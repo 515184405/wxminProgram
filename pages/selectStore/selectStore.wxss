@@ -1,0 +1,18 @@
+page{
+  background: #fff;
+}
+.store-name{
+  color:#000;
+}
+.store-dress{
+  font-size: 24rpx;
+  color:#999;
+  margin-top:10rpx;
+}
+.store-tel{
+  margin-left:20rpx;
+}
+.store-item{
+  padding:20rpx 0;
+  border-bottom:1px solid #ddd;
+}
