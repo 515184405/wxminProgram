@@ -25,6 +25,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    console.log('user');
     that.setData({
       isSelectStore: app.globalData.isSelectStore,
       theme:app.globalData.theme

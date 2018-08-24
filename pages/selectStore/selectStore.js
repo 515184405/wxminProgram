@@ -28,7 +28,7 @@ Page({
       key: "store",
       data: id,
       success: function () {
-        wx.switchTab({
+        wx.reLaunch({
           url: '/pages/index/index'
         })
       }
@@ -36,24 +36,23 @@ Page({
   },
   // 绑定门店地址
   bindStore: function (e) {
+    var name = e.currentTarget.dataset.name;
     var that = this;
     var storeId = '';
     // 获取storage是否已存在门店
     wx.getStorage({
       key: 'store',
       success: function (res) {
-        if (res.data != '') {
-          wx.showModal({
-            title: '温馨提示',
-            content: '确认切换？切换成功后下次登陆或十分钟后生效',
-            success: function (res) {
-              if (res.confirm) {
-                //存门店
-                that.setStore(e);
-              }
-            }
+          //切换门店
+          wx.showToast({
+            title: '切换成功',
+            duration:2000,
+            icon:'none'
           })
-        }
+
+          setTimeout(function(){
+            that.setStore(e);
+          },1000)
       },
       fail: function () {
         //存门店
