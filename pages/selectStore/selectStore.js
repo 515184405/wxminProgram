@@ -11,15 +11,18 @@ Page({
       { id: 3, stroeName: '北京市顺义区顺义店', dress: '北京市顺义区站前北街13号', tel:'010-81484180'},
       { id: 4, stroeName: '北京市通州区金鼎店', dress: '北京市通州区新华大街43号',tel:'010-69528600' },
       { id: 5, stroeName: '北京市门头沟区门城店', dress:'北京市门头沟区城子东街1号',tel:'010-69838141'},
-    ]
+    ],
+    storeArr : []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  //获取门店信息数据
+  getStoreArr:function(){
+    var that = this;
+    that.setData({
+      storeArr: that.data.store
+    })
   },
-  setStore:function(e){
+  // 设置门店信息
+  setStore: function (e) {
     var id = e.currentTarget.dataset.id;
     wx.setStorage({
       key: "store",
@@ -32,14 +35,14 @@ Page({
     })
   },
   // 绑定门店地址
-  bindStore:function(e){
+  bindStore: function (e) {
     var that = this;
     var storeId = '';
     // 获取storage是否已存在门店
     wx.getStorage({
       key: 'store',
       success: function (res) {
-        if(res.data != ''){
+        if (res.data != '') {
           wx.showModal({
             title: '温馨提示',
             content: '确认切换？切换成功后下次登陆或十分钟后生效',
@@ -52,11 +55,33 @@ Page({
           })
         }
       },
-      fail:function(){
+      fail: function () {
         //存门店
         that.setStore(e);
       }
     })
+  },
+  // 输入门店名搜索
+  searchContent: function (e) {
+    var that = this;
+    var searchVal = e.detail.searchVal;
+    var len = that.data.store.length;
+    that.data.storeArr = [];
+    for(var i = 0; i < len; i++){
+      if (that.data.store[i].stroeName.indexOf(searchVal) != -1){
+        that.data.storeArr.push(that.data.store[i]);
+      }
+    }
+    that.setData({
+      storeArr: that.data.storeArr
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    // 获取门店数据
+    this.getStoreArr();
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

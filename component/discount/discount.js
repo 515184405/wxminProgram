@@ -8,14 +8,14 @@ Component({
       type: "Array",
       value: "",
       observer: function (news, olds, path) {
-        console.log(news, olds)
+        // console.log(news, olds)
       }
     },
     rightIcon:{
       type:"Boolean",
       value:true,
       observer: function (news, olds, path) {
-        console.log(news, olds)
+        // console.log(news, olds)
       }
     }
   },

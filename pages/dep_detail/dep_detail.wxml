@@ -13,9 +13,7 @@
 <view class='dep-detail'>
   <view wx:for="{{3}}" wx:key="" class='fy-container'>
     <view class='dep-detail-title'><text style="color:{{theme}}" class='iconfont icon-xin'></text>造型</view>
-    <view wx:for="{{5}}" wx:key="" class='dep-detail-item'>
-      造型数量：10套
-    </view>
+    <rich-text nodes="{{dep_desc}}" bindtap="tap"></rich-text>
   </view>
 </view>
 <!-- 优惠券 -->

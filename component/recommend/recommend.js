@@ -9,7 +9,7 @@ Component({
       type: "Array",
       value: "",
       observer: function (news, olds, path) {
-        console.log(news, olds)
+        // console.log(news, olds)
       }
     },
     titleShow:{

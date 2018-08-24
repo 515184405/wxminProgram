@@ -1,4 +1,7 @@
 {
+  "usingComponents": {
+    "search-one": "/component/search/search"
+  },
   "backgroundTextStyle": "light",
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "选择门店",

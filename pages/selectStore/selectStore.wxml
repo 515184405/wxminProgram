@@ -1,5 +1,6 @@
 <view class='store-box fy-container'>
-  <view data-id='{{item.id}}' bindtap="bindStore" class="store-item flex x-between y-center" wx:for="{{store}}" wx:key="">
+  <search-one bind:searchContent="searchContent" id="search" text="输入门店名搜索" value="{{searchVal}}"></search-one>
+  <view data-id='{{item.id}}' bindtap="bindStore" class="store-item flex x-between y-center" wx:for="{{storeArr}}" wx:key="">
     <view>
       <view class='store-name'>{{item.stroeName}}</view>
       <view class='store-dress'>{{item.dress}} </view>

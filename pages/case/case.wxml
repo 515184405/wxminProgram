@@ -1,6 +1,6 @@
 <view class='fy-container case-box'>
   <view class='search-box {{searchClass}} {{currentTab == 0 ? "search-show" : ""}}'>
-    <search-one id="search" text="输入关键字搜索" value="{{searchVal}}"></search-one>
+    <search-one bind:searchContent="searchContent" id="search" text="输入关键字搜索" value="{{searchVal}}"></search-one>
   </view>
   <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
       <view style='{{currentTab == index ? style : ""}}' data-index='{{index}}' bindtap='tabNavFun' class='case-filter-item' wx:for="{{classify}}" wx:key="">{{item.title}}</view>

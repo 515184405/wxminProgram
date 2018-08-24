@@ -5,7 +5,7 @@
   padding:7rpx 20rpx 7rpx 40rpx;
   border-radius: 30rpx;
   background-color: #fff;
-  z-index: 9999;
+  z-index: 9;
   font-size: 24rpx;
   font-weight: bold;
 }

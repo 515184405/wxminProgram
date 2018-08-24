@@ -342,6 +342,11 @@ Page({
       [strimages]: images
     });
   },
+  // 样片搜索内容
+  searchContent:function(e){
+    var searchVal = e.detail.searchVal;
+    console.log(searchVal);
+  },
   // 客片下拉加载更多
   addSceneArr:function(){
     var that = this;
