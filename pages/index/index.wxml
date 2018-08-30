@@ -32,7 +32,7 @@
     </view>
     <view class='fm-title-en'>Top - quality product line</view>
     <!-- 列表 -->
-    <list-one id="list1" scene='{{scene}}'>  
+    <list-one id="list1" types="{{3}}" scene='{{scene}}'>  
     </list-one>
 </view>
 <!-- footer -->

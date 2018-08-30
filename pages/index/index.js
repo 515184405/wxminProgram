@@ -21,7 +21,7 @@ Page({
         dress: '3699taoxi',
         price: '2888',
         image: [
-          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', loading: false },
+          { imgsrc: 'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', loading: false },
           { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', loading: false },
           { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', loading: false },
           { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=4192590352,1079796267&fm=26&gp=0.jpg', loading: false },

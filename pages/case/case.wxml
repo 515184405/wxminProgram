@@ -15,7 +15,7 @@
     <swiper-item >
       <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:100%" bindscroll="scrollFun" bindscrolltolower="addSceneArr">
         <view class='fy-container cust_module'>
-          <list-one id="list1" scene='{{scene}}'></list-one>
+          <list-one id="list1" types="{{9}}" scene='{{scene}}'></list-one>
         </view>
       </scroll-view>
     </swiper-item>
