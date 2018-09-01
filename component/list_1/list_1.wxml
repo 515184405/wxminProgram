@@ -17,7 +17,7 @@
          <view class='fm-image-box clearfix'>
             <view data-keyindex='{{srcIndex}}' data-index="{{index}}" data-src="{{srcItem.imgsrc}}" bindtap='wxParseImgTap' wx:if="{{srcIndex < types}}" wx:for="{{item.image}}" wx:key='' wx:for-item="srcItem" wx:for-index="srcIndex" class='fm-image-hidden{{index%2}} fm-image-hiddenIndex flex x-center y-center'>
             <view style='display:none'>
-              <image mode='widthFix' class='loading' data-data="scene[{{index}}].image[{{srcIndex}}]" data-index="{{srcIndex}}" bindload='imageLoad' src='{{srcItem.imgsrc}}'></image> 
+              <image mode='aspectFill' class='loading' data-data="scene[{{index}}].image[{{srcIndex}}]" data-index="{{srcIndex}}" bindload='imageLoad' src='{{srcItem.imgsrc}}'></image> 
               </view>
               <image mode='aspectFill' src="{{srcItem.imgsrc}}" class='fm-image-item {{srcItem.loading ? "animate-show" : ""}}'></image>
               <navigator  url='/pages/system_detail/system_detail' open-type='navigate' wx:if="{{(srcIndex == (types - 1)) && ((item.image.length - types) > 0)}}" class='image-number'><view>+{{item.image.length - types}} </view>               

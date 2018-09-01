@@ -1,5 +1,6 @@
 
 <view class='footer-module'>
-  <view>技术支持：个人提供</view>
-  <view bindtap='makePhoneCalls' data-tel="15321353313">招商电话：15321353313</view>
+  <view>{{footer.technical_support}}</view>
+  <view>{{footer.version}}</view>
+  <!-- <view bindtap='makePhoneCalls' data-tel="15321353313">招商电话：15321353313</view> -->
 </view>
