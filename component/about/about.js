@@ -8,6 +8,10 @@ Component({
     showImage:{
       type:"Boolean",
       value:true,
+    },
+    about: {
+      type: "Object",
+      value: {},
     }
   },
 
@@ -15,12 +19,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg',
-    ],
+   
     indicatorDots: false,
     autoplay: true,
     circular: true,
@@ -60,13 +59,14 @@ Component({
       })
     },
     // 导航
-    mapLine:function(){
+    mapLine:function(e){
+      var map = e.currentTarget.dataset.map.split(',');
       wx.openLocation({
-        latitude: 40.33349,
-        longitude: 120.347382,
+        latitude: parseFloat(map[1]),//40.33349,
+        longitude: parseFloat(map[0]),// 120.347382,
         scale: 15 ,
-        name: '绥中纳尼亚',
-        address: '辽宁省葫芦岛市绥中县绥中镇新兴街二段10-3号'
+        name: app.globalData.store_name,
+        address: e.currentTarget.dataset.address
       })
     }
   }

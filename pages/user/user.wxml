@@ -26,7 +26,7 @@
   </view>
 </view>
 <view class='user-module2' wx:if="{{isSelectStore}}">
-  <navigator hover-class='none' class='selectStore' open-type='navigate' url='/pages/selectStore/selectStore'>古城店 <text style="color:{{theme}}">[更换]</text></navigator>
+  <navigator hover-class='none' class='selectStore' open-type='navigate' url='/pages/selectStore/selectStore'>{{store_name}} <text style="color:{{theme}}">[更换]</text></navigator>
 </view>
 <view class='user-module2'>
   <gift bColor="transparent"></gift>

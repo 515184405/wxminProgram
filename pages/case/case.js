@@ -46,78 +46,7 @@ Page({
       { id: '7', title: '个性' },
     ],
     // 客片信息
-    scene: [
-      {
-        title: '时光邂逅--客片欣赏 冯先生&赵女士',
-        dress: '3699taoxi',
-        price: '',
-        image: [
-          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=4192590352,1079796267&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=1990083140,1871542088&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=3141573913,443875710&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=3003797967,4242511948&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=2326877116,2718696881&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img0.imgtn.bdimg.com/it/u=1586298711,2677183515&fm=26&gp=0.jpg', loading: false },
-        ]
-      },
-      {
-        title: '碧海蓝天',
-        dress: '秦皇岛北戴河',
-        price: '',
-        image: [
-          { imgsrc: 'http://img0.imgtn.bdimg.com/it/u=2548319164,1078741400&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=1888978533,3210951581&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=1271903594,4287480683&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=4155514796,2768838487&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=2274601529,2539830836&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=3102191596,1107181335&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=1420021963,3360030047&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=4017693518,1626260265&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=1013534295,3369857523&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2162474254,2757256366&fm=26&gp=0.jpg', loading: false },
-        ]
-      },
-      {
-        title: '花海 - 爱你的季节',
-        dress: '秦皇岛北戴河',
-        price: '',
-        image: [
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=573902861,2632632308&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=1917150572,2134166181&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=1469945670,3754862906&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=1448446140,2230553981&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=3703244151,2628636191&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=2399700224,2583561969&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=2762344903,1439268382&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=166885346,1996468304&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=2999788056,3431819161&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=2417802683,1714474120&fm=26&gp=0.jpg', loading: false },
-        ]
-      },
-      {
-        title: '礼堂 - 爱的庄严',
-        dress: '秦皇岛北戴河摄影基地',
-        price: '',
-        image:[
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=2940298191,2980428066&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=3719030059,3704280778&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=2019171211,3766696415&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=621161743,3590281198&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=3307691358,317754040&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=1254507308,159084273&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=2946128382,1351554149&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=1031653249,2705637294&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=1003612578,403292786&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=2950769225,3573438163&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2836995741,1948957127&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=640422490,2267755867&fm=15&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img0.imgtn.bdimg.com/it/u=1009686827,2625811213&fm=15&gp=0.jpg', loading: false },
-        ]
-      }
-    ],
+    scene: [],
     scenePage:1,
     sceneCount:3,
     filterData:{
@@ -357,7 +286,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('case');    
+    this.scene();    
     this.setData({
       theme:app.globalData.theme, //设置主题
       style: "color:" + app.globalData.theme + ";border-bottom:1px solid" + app.globalData.theme //设置当前tab选中样式
@@ -382,49 +311,15 @@ Page({
       }
     })
   },
+  //场景案例
+  scene: function () {
+    var that = this;
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+    app._Get('index/get_data', 'm/anli/w__is_index/1/f/id,title,price,imgs,remark as dress/o/sort@asc/l/3', function (data) {
+        console.log(data);
+      that.setData({ scene: data })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
   /**
    * 用户点击右上角分享
    */

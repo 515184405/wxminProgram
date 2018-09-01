@@ -8,12 +8,8 @@ Page({
    */
   data: {
     aboutme_bg:'http://pic.58pic.com/58pic/13/10/21/04958PICCy5_1024.jpg',
-    service:[
-      { name: '张三', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353313 },
-      { name: '李四', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353314 },
-      { name: '王二麻子', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353315 },
-      { name: '赵武', desc: '漂亮大方', avatar: 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2537627520,3119182571&fm=27&gp=0.jpg', tel: 15321353316 },
-    ]
+    service:[],
+    about:{}
   },
   makePhoneCalls:function(e){
     var tel = e.currentTarget.dataset.tel+'';
@@ -37,48 +33,23 @@ Page({
     this.setData({
       theme:app.globalData.theme
     })
+    this.service();
+    this.about();
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  service:function(){
+    var that = this;
+    app._Get('index/get_data', 'm/kefu/f/name,tel,headpic,flat', function (data) {
+      for(var i in data){
+        data[i].avatar = data[i].headpic;
+      }
+      that.setData({ service: data })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
+  about: function () {
+    var that = this;
+    app._Get('index/get_data', 'm/about/l/1/o/id@desc/f/email,imgs,map,map_address,qq,tel', function (data) {
+       that.setData({ about: data[0] })
+    })
   },
 
   /**

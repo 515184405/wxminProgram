@@ -1,4 +1,5 @@
 // pages/system_detail/system_detail.js
+const app = getApp()
 Page({
 
   /**
@@ -7,34 +8,13 @@ Page({
   data: {
     //footerBar数据 
     footerBar:{
-      tel:15321353313,
+      tel:'',
     },
     // 优惠券
-    discount:[
-      { iconText: '优惠券', content: '订购送200元抵扣券' },
-      { iconText: '到店礼', content:'到店即送精美水杯一个'},
-    ],
+    discount:[],
     // 推荐套系
-    recommend:[
-      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '造型：14套 | 拍摄：210张 | 精修：70张', activity:'此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台' },
-      { title: '特惠套装特惠套装特惠套装特惠套装', image:'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '2588', desc:'造型：7套 | 拍摄：150张 | 精修：70张'},
-    ],
-    scene: {
-        title: '时光邂逅--客片欣赏 冯先生&赵女士',
-        dress: '3699taoxi',
-        price: '2888',
-        image: [
-          { imgsrc: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=4192590352,1079796267&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img4.imgtn.bdimg.com/it/u=1990083140,1871542088&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img1.imgtn.bdimg.com/it/u=3141573913,443875710&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img3.imgtn.bdimg.com/it/u=3003797967,4242511948&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img5.imgtn.bdimg.com/it/u=2326877116,2718696881&fm=26&gp=0.jpg', loading: false },
-          { imgsrc: 'http://img0.imgtn.bdimg.com/it/u=1586298711,2677183515&fm=26&gp=0.jpg', loading: false },
-        ]
-      }
+    recommend:[],
+    scene: {}
   },
   // 生成图片数组
   imageArr : function(){
@@ -66,7 +46,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.imageArr();
+    var id = options.id;
+    app.recommend(this);
+    app.discount(this);
+    this.scene(id);
+    app.defualt_kefu(this);
+   
   },
 
   /**
@@ -79,40 +64,13 @@ Page({
 
     this.appointment = this.selectComponent("#appointment");
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
+  scene: function (id) {
+    var that = this;
+    app._Get('index/get_data', 'm/anli/w__id/' + id +'/f/title,price,imgs,remark as dress', function (data) {
+      //   console.log(data);
+      that.setData({ scene: data })
+      that.imageArr();
+    })
   },
 
   /**

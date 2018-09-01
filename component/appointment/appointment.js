@@ -1,4 +1,5 @@
 // component/appointment/appointment.js
+let app = getApp()
 Component({
   /**
    * 组件的属性列表
@@ -53,7 +54,8 @@ Component({
     * 内部私有方法建议以下划线开头
     * triggerEvent 用于触发事件
     */
-    confirmEvent() {
+    confirmEvent(e) {
+      var that = this;
       var regTel = /^1[3,4,5,7,8]\d{9}$/;
       if (!regTel.test(this.data.inputVal)) {
         wx.showToast({
@@ -62,12 +64,15 @@ Component({
           duration: 2000,
         })
       }else{
-        wx.showToast({
-          title: '预约成功',
-          icon: 'none',
-          duration: 2000,
+        var data = e.detail.value;
+        data.formid = e.detail.formId;
+        data.m = 'liuyan';
+        app._Post('index/set_data', data,function(msg){
+          if (msg == 'success'){
+            that.hideDialog();
+          }
         })
-        this.hideDialog();
+       
       }
       //触发成功回调
       //this.triggerEvent("confirmEvent");

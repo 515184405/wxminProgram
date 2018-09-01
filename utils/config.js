@@ -37,6 +37,7 @@ module.exports = {
     param.openid = this.globalData.openid;
     //获取额外参数
     var extra_param = this.extra_param();
+    //合并参数
     param = Object.assign(param,extra_param);
     param.time = Date.parse(new Date()) / 1000 + this.globalData.diff_time;
     var safe = this.globalData.safe;
@@ -71,31 +72,26 @@ module.exports = {
       fun(res);
     })
   },
-  set_globalData: function (_this) {
-    _this.setData({
-      technical_support: this.globalData.technical_support,
-      versions: '版本号：' + this.globalData.versions,
-    })
 
-  },
-  //关闭加载
-  colse_load: function (_this) {
-    _this.setData({ load_status: false });
-    this.set_globalData(_this);
-    this.get_base_image_url(_this);
-  },
-  // 获取图片路径
-  get_base_image_url: function (_this) {
-    _this.setData({ base_image_url: this.globalData.base_image_url });
-
-  },
   get_api_config: function () {
     var _this = this;
     wx.login({
       success: function (res) {
+        var param = {
+          suid: _this.globalData.suid,
+          wxapp_id:_this.globalData.wxapp_id,
+          code: res.code,
+          versions: _this.globalData.versions
+        }
+
+        //获取额外参数
+        var extra_param = _this.extra_param();
+        //合并参数
+        param = Object.assign(param, extra_param);
         //动态更换域名
         requestHandler.httpsPromisify(wx.request)({
-          url: _this.globalData.api + '/index/index/suid/' + _this.globalData.suid + '/wxapp_id/' + _this.globalData.wxapp_id + "/code/" + res.code + "/versions/" + _this.globalData.versions,
+          url: _this.globalData.api + '/index/index',
+          data:param,
           method: "GET",
           header: { 'content-type': 'application/json' }
         }).then(function (res) {
@@ -111,9 +107,7 @@ module.exports = {
           //时间差
           _this.globalData.diff_time = Date.parse(new Date()) / 1000 - res.data.data.time;
           console.log(_this.globalData.diff_time);
-          _this.globalData.base_image_url = res.data.data.base_image_url;
-          _this.globalData.base_video_url = res.data.data.base_video_url;
-
+   
           // 是否显示底部
           _this.globalData.is_show_bottom = res.data.data.is_show_bottom;
           // 底部信息
@@ -122,39 +116,13 @@ module.exports = {
             _this.globalData.host = res.data.data.api;
           }
           _this.globalData.openid = res.data.data.openid;
-
+          _this.baseData(res.data.data);
         })
 
       }
     });
   },
-  //解析图片
-  get_img_url: function (data, keys) {
-
-    var keysArr = keys.split(',');
-    for (var i in data) {
-
-      if (typeof data[i] == 'string') {
-        for (var key in keysArr) {
-
-          if (i == keysArr[key]) {
-
-            if (data[i].indexOf('xwUploads') > 0) {
-              data[i] = this.globalData.base_image_url + data[i];
-            } else if (data[i].indexOf('snapshot') > 0) {
-              data[i] = this.globalData.base_video_url + data[i];
-            } else {
-              data[i] = this.globalData.host + data[i];
-            }
-
-          }
-        }
-      } else if (typeof data[i] == 'object') {
-        data[i] = this.get_img_url(data[i], keys);
-      }
-    }
-    return data;
-  },
+ 
   onLaunch: function () {
     //获取api所有接口地址
     this.globalData.api_url = this.api;
@@ -176,9 +144,6 @@ module.exports = {
     footer:'',
     diff_time: 0//手机时间与服务器时间只差
   },
-  extra_param:function(){
-    return {}
-  },
   footer:function(_this){
     var that = this;
    
@@ -187,8 +152,28 @@ module.exports = {
       return ;
     }
     this._Get('index/footer', '', function (data) {
+      data.version = that.globalData.versions;
       that.globalData.footer = data;
       _this.setData({ footer: data })
     })
-  }
+  },
+  //调整
+  goto:function(data){
+      switch(data.type){
+        case 'reLaunch':
+          wx.reLaunch({url: data.url});break;
+        case 'switchTab':
+          wx.switchTab({ url: data.url }); break;
+        case 'redirectTo':
+          wx.redirectTo({ url: data.url }); break;
+        case 'navigateTo':
+          wx.navigateTo({ url: data.url }); break;
+      }
+  },
+    //api请求额外参数，放到app.js里面
+  extra_param: function () {
+    return {}
+  },
+  //base接口返回参数额外处理方法，放到app.js里面
+  baseData: function (data) {}
 };

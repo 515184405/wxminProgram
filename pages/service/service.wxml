@@ -36,7 +36,7 @@
           <image src='{{item.avatar}}' mode='widthFix' class='service-avatar'></image>
         </view>
         <view class='searvice-name'>{{item.name}}<text style='color:{{theme}}' class='click-me'>[点击拨号]</text></view>
-        <view class='searvice-desc'>{{item.desc}}</view>
+        <view class='searvice-desc'>{{item.flat}}</view>
       </view>
     </view>
   </view>
@@ -46,7 +46,7 @@
     <view class='st_cn' style='color:{{theme}}'>关于我们</view>
     <view class='st_en'>ABOUT US</view>
   </view>
-  <about id='about' showImage="{{true}}"></about>
+  <about id='about' showImage="{{true}}" about="{{about}}"></about>
 </view>
 <!-- footer -->
   <footer id="footer" footer='{{footer}}'>  

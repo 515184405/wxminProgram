@@ -1,17 +1,12 @@
 // pages/selectStore/selectStore.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    store:[
-      { id: 1, stroeName: '北京石景山古城店', dress: '北京市石景山区古城大街',tel:'010-68278242'},
-      { id: 2, stroeName: '北京市通州区西门店', dress: '北京市通州区新华大街256号', tel:'010-69512449' },
-      { id: 3, stroeName: '北京市顺义区顺义店', dress: '北京市顺义区站前北街13号', tel:'010-81484180'},
-      { id: 4, stroeName: '北京市通州区金鼎店', dress: '北京市通州区新华大街43号',tel:'010-69528600' },
-      { id: 5, stroeName: '北京市门头沟区门城店', dress:'北京市门头沟区城子东街1号',tel:'010-69838141'},
-    ],
+    store:[],
     storeArr : []
   },
   //获取门店信息数据
@@ -24,42 +19,23 @@ Page({
   // 设置门店信息
   setStore: function (e) {
     var id = e.currentTarget.dataset.id;
-    wx.setStorage({
-      key: "store",
-      data: id,
-      success: function () {
-        wx.reLaunch({
-          url: '/pages/index/index'
-        })
-      }
-    })
-  },
-  // 绑定门店地址
-  bindStore: function (e) {
     var name = e.currentTarget.dataset.name;
-    var that = this;
-    var storeId = '';
-    // 获取storage是否已存在门店
-    wx.getStorage({
-      key: 'store',
-      success: function (res) {
-          //切换门店
-          wx.showToast({
-            title: '切换成功',
-            duration:2000,
-            icon:'none'
-          })
-
-          setTimeout(function(){
-            that.setStore(e);
-          },1000)
-      },
-      fail: function () {
-        //存门店
-        that.setStore(e);
-      }
+    app.globalData.store_id = id;
+    app.globalData.store_name = name;
+    wx.showToast({
+      title: '切换成功',
+      duration: 2000,
+      icon: 'none'
     })
+
+    setTimeout(function () {
+      wx.reLaunch({
+        url: '/pages/index/index'
+      })
+    }, 1000)
+   
   },
+
   // 输入门店名搜索
   searchContent: function (e) {
     var that = this;
@@ -80,6 +56,9 @@ Page({
    */
   onLoad: function (options) {
     // 获取门店数据
+    var store = app.globalData.store;
+    console.log(store);
+    this.setData({ store: store})
     this.getStoreArr();
   },
   /**

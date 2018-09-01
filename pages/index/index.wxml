@@ -1,4 +1,4 @@
-<navigator class='selectStore' wx:if="{{isSelectStore}}" open-type='navigate' url='/pages/selectStore/selectStore'>古城店</navigator>
+<view bindtap='goto' class='selectStore' wx:if="{{isSelectStore}}" data-type='navigateTo' data-url='/pages/selectStore/selectStore'>{{store_name}}</view>
 <!-- 轮播模块 -->
 <swiper class='swiper-box' indicator-color='rgba(255,255,255,1)' indicator-active-color="{{theme}}" indicator-dots="{{indicatorDots}}"
   autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
@@ -10,10 +10,10 @@
 </swiper>
 <!-- 导航模块 -->
 <view class='nav-box fy-container'>
-  <navigator hover-class='none' wx:for="{{navArr}}" wx:key="" url='{{item.url}}' open-type='{{item.openType}}' class='nav-item'>
+  <view bindtap='goto' hover-class='none' wx:for="{{navArr}}" wx:key="" data-url='{{item.url}}' data-type='{{item.openType}}' class='nav-item'>
     <image class='nav-item-img' mode='aspectFill' src='{{item.image}}'></image>
     <text class='nav-item-text'>{{item.title}}</text>
-  </navigator>
+  </view>
   <gift id="gift"></gift>
 </view>
 <!-- 模块内容 -->

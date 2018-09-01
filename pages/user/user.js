@@ -25,10 +25,11 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    console.log('user');
+    app.footer(this);
     that.setData({
       isSelectStore: app.globalData.isSelectStore,
-      theme:app.globalData.theme
+      theme:app.globalData.theme,
+      store_name: app.globalData.store_name
     })
     //获取设备的宽高
     wx.getSystemInfo({

@@ -26,7 +26,7 @@ function _Get(url, fun, method,data){
         return;
       }
       if (typeof fun == 'function'){
-          fun(res.data.data);
+          fun(res.data.data,res.data.code);
  
       }
     }

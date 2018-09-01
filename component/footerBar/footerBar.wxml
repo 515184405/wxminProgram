@@ -1,7 +1,7 @@
 
 <view class='footerBar flex x-between'>
     <view class='footerBar-left flex y-center'>
-      <view class='fb-icon' bindtap='makePhoneCalls' data-tel="{{Tel}}">
+      <view class='fb-icon' bindtap='makePhoneCalls' data-tel="{{footerBar.tel}}">
         <view class='icon-iconfontdianhua3 iconfont'></view>
         <view class='fb-icontext'>电话</view>
       </view>

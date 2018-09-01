@@ -1,17 +1,22 @@
-<view class='appointment-module {{isShow ? "showDialog" : ""}}'>
-  <view class='appointment-header flex x-between y-center'>
-    <view>免费预约即可领取优惠大礼包</view>
-    <view catchtap="hideDialog" class='iconfont icon-X-copy'></view>
-  </view>
-  <view class='appointment-content'>
-    <!-- 优惠券 -->
-    <discount id="discount" rightIcon="{{false}}" discount='{{discount}}'>
-    </discount>
-    <view class="section">
-      <input bindinput='bindKeyInput' class='write-tel' maxlength="11" minlength='11' placeholder="请输入11位手机号码" type="number" />
+<form bindsubmit="confirmEvent" report-submit='true'>
+    <view class='appointment-module {{isShow ? "showDialog" : ""}}'>
+      <view class='appointment-header flex x-between y-center'>
+        <view>免费预约即可领取优惠大礼包</view>
+        <view catchtap="hideDialog" class='iconfont icon-X-copy'></view>
+      </view>
+      <view class='appointment-content'>
+        <!-- 优惠券 -->
+        <discount id="discount" rightIcon="{{false}}" discount='{{discount}}'>
+        </discount>
+        <view class="section">
+          <input bindinput='bindKeyInput' class='write-tel' maxlength="11" minlength='11' name='tel' placeholder="请输入11位手机号码" type="number" />
+        </view>
+        <view class="section" style='margin-top:10rpx;'>
+          <input  class='write-tel' name='name' maxlength="11"  placeholder="请输入您的姓名"  />
+        </view>
+        <button formType="submit" class='appointment-btn'>立即预约</button>
+      </view>
     </view>
-    <button catchtap='confirmEvent' class='appointment-btn'>立即预约</button>
-  </view>
-</view>
+</form>
 <view catchtap='hideDialog' class='appointment-content-bg {{isShow ? "showMask" : ""}}'>
 </view>
