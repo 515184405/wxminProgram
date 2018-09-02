@@ -15,19 +15,14 @@ Page({
     if (e.detail.userInfo) {
       //用户按了允许授权按钮
       app.globalData.userInfo = e.detail.userInfo;
-      app.globalData.scope = true;
-      app.setStore();
-      //去登陆
-      if (app.globalData.isSelectStore){
-        //选择门店
-        app.logining();
-      }else{
-        //插入登录的用户的相关信息到数据库
-        //授权成功后，跳转进入小程序首页
-        wx.switchTab({
-          url: that.data.route
-        })
-      }
+   
+      //插入登录的用户的相关信息到数据库
+      console.log(e.detail);
+      //授权成功后，跳转进入小程序首页
+      wx.switchTab({
+        url: that.data.route
+      })
+      
     } else {
       //用户按了拒绝按钮
       wx.showModal({

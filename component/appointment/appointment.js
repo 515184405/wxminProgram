@@ -67,10 +67,8 @@ Component({
         var data = e.detail.value;
         data.formid = e.detail.formId;
         data.m = 'liuyan';
-        app._Post('index/set_data', data,function(msg){
-          if (msg == 'success'){
+        app._Post('index/set_data', data,function(msg){    
             that.hideDialog();
-          }
         })
        
       }

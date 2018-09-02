@@ -1,9 +1,9 @@
-<view style="background:{{bColor}}" bindtap="showDialog" class='discount-item flex x-between y-center'>
+<view style="background:{{bColor}}" bindtap="showDialog" class='discount-item flex x-between y-center' wx:if="{{discount.length}}">
     <image src='https://img04.sogoucdn.com/net/a/04/link?url=https%3A%2F%2Fi03picsos.sogoucdn.com%2F1e2f392db899027a&appid=122' mode='widthFix' class='discount-img'></image>
     <view class='discount-content'>
       <view class=' overflow-text'>小程序用户专享优惠</view>
       <view class='flex y-center discount-text x-between'>
-        <view class='overflow-text'>到店领取情侣对戒一枚到店领取情侣对戒一枚</view>
+        <view class='overflow-text'>点击查看小程序用户优惠详情</view>
       </view>
     </view>
     <view class='discount-right'>

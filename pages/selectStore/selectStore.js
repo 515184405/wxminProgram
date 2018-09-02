@@ -20,6 +20,7 @@ Page({
   setStore: function (e) {
     var id = e.currentTarget.dataset.id;
     var name = e.currentTarget.dataset.name;
+    var oldStoreId = app.globalData.store_id;
     app.globalData.store_id = id;
     app.globalData.store_name = name;
     wx.showToast({
@@ -28,6 +29,11 @@ Page({
       icon: 'none'
     })
 
+    if (oldStoreId != id){
+      //清除之前的门店缓存
+      app.clearCache();
+    }
+    
     setTimeout(function () {
       wx.reLaunch({
         url: '/pages/index/index'

@@ -42,9 +42,6 @@ Page({
             wx.redirectTo({
               url: '/pages/login/login?route=' + route,
             })
-          }else{
-            app.globalData.scope = true;
-            app.setStore();
           }
         }
       })

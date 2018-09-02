@@ -1,4 +1,5 @@
 // component/gift/gift.js
+const app = getApp()
 Component({
   /**
    * 组件的属性列表
@@ -15,9 +16,7 @@ Component({
    */
   data: {
     // 优惠券
-    discount: [
-      { iconText: '', content: '到店领取情侣对戒一枚' },
-    ],
+    discount: [],
   },
 
   /**
@@ -29,5 +28,8 @@ Component({
       this.appointment = this.selectComponent("#appointment");
       this.appointment.showDialog();
     },
+  },
+  ready:function(){
+    app.discount(this);
   }
 })

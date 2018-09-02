@@ -8,26 +8,45 @@ const requestHandler = require('sendRequest.js');
 module.exports = {
 
   //请求
-  _Get: function (request_url, param, fun, method) {
+  _Get: function (request_url, param, fun) {
     var that = this;
-    if (method == undefined) {
-      method = "GET";
-    }
-
-    //构建基础参数
-    var globalData = this.globalData;
-    if (!globalData.host) {
+  
+    if (!this.globalData.host) {
       setTimeout(function () {
-        that._Get(request_url, param, fun, method);
+        that._Get(request_url, param, fun);
       }, 100);
       return false;
     }
 
+    //解析请求地址和参数
+    var data = this.set_data_param(request_url, param);
 
+    Request._Get(data.url, function (res){
+      if (typeof fun == 'function') {
+        fun(res.data.data);
+      }
+    }, "GET", data.param);
+
+  },
+  //  var time = Date.now();
+  _Post: function (request_url, param, fun) {
+    wx.showLoading({ title: '发送中..' });
+    //解析请求地址和参数
+    var data = this.set_data_param(request_url, param);
+    Request._Get(data.url,  function (res) {
+      if (typeof fun != 'function') {
+        wx.hideLoading()
+        return;
+      }
+      wx.showToast({ title: res.data.msg, icon: 'success', duration: 3000 })
+      fun(res.data);
+    }, "POST", data.param)
+  },
+  //解析请求参数
+  set_data_param: function (request_url, param){
     if (param == undefined || param == '') {
       param = {};
     }
-
     if (typeof param == 'string') {
       param = Strings.parseString(param);
     }
@@ -38,41 +57,19 @@ module.exports = {
     //获取额外参数
     var extra_param = this.extra_param();
     //合并参数
-    param = Object.assign(param,extra_param);
+    param = Object.assign(param, extra_param);
     param.time = Date.parse(new Date()) / 1000 + this.globalData.diff_time;
     var safe = this.globalData.safe;
     //console.log(safe + Md5.objOurl(param));
     console.log(param);
     var sign = Md5.hex_md5(safe + Md5.objOurl(param));
     param.sign = sign;
-    var url = globalData.host + request_url;
-    //获取额外参数
-    Request._Get(url, fun, "POST", param);
-
+    //检查s参数是否全
+    request_url = this.parse_model(request_url);
+    var url = this.globalData.host + "?s=" + request_url;
+    return {url:url,param:param}
   },
-  //  var time = Date.now();
-  _Post: function (request_url, param, fun) {
-    wx.showLoading({ title: '发送中..' });
-    var time = Date.now();
-    this._Get(request_url, param, function (res) {
-      if (typeof fun != 'function') {
-        return;
-      }
-
-      if (Date.now() - time < 1000) {
-        setTimeout(function () {
-          wx.hideLoading();
-          wx.showToast({ title: res, icon: 'success', duration: 2000 })
-          fun(res);
-        }, 1000)
-        return;
-      }
-      wx.hideLoading()
-      wx.showToast({ title: res.data.data, icon: 'success', duration: 0 })
-      fun(res);
-    })
-  },
-
+  //进入小程序第一次请求，获取相应的配置参数
   get_api_config: function () {
     var _this = this;
     wx.login({
@@ -90,7 +87,7 @@ module.exports = {
         param = Object.assign(param, extra_param);
         //动态更换域名
         requestHandler.httpsPromisify(wx.request)({
-          url: _this.globalData.api + '/index/index',
+          url: _this.globalData.api + '?s=/sheying/index/index',
           data:param,
           method: "GET",
           header: { 'content-type': 'application/json' }
@@ -134,13 +131,10 @@ module.exports = {
   },
   globalData : {
     suid: 0,
-    api: 'https://api.xiaowei.035k.com/',
-    base_image_url: '',
-    base_video_url: '',
+    api: '',
     project_id: 0,
     versions: "",
     safe: '',
-    api_url: {},
     footer:'',
     diff_time: 0//手机时间与服务器时间只差
   },
@@ -175,5 +169,15 @@ module.exports = {
     return {}
   },
   //base接口返回参数额外处理方法，放到app.js里面
-  baseData: function (data) {}
+  baseData: function (data) {},
+  //解析模块参数
+  parse_model:function(data){
+    data = Strings.trim(data,'/');
+    var param = data.split('/');
+    if (param.length == 2){
+      data = this.globalData.host_model+'/'+data;
+    }
+    return data;
+  }
+
 };

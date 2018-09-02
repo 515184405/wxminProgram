@@ -17,38 +17,14 @@ Page({
       {id:1,title:'最新客片'},
       {id:2,title:'精选样片'}
     ],
-    classify1:[
-      { 
-        id: 1,
-        title: '婚纱'
-      },
-      {
-        id:2,
-        title:'写真'
-      },
-      {
-        id:3,
-        title:'儿童'
-      },
-      {
-        id: 4,
-        title: '其他'
-      }
-    ],
+    classify1:[],
     // 附筛选条件
-    classify2:[
-      { id: '1', title: '唯美' },
-      { id: '2', title: '复古' },
-      { id: '3', title: '故事' },
-      { id: '4', title: '另类' },
-      { id: '5', title: '大气' },
-      { id: '6', title: '爱情' },
-      { id: '7', title: '个性' },
-    ],
+    classify2:[],
     // 客片信息
     scene: [],
     scenePage:1,
     sceneCount:3,
+    sceneEndStatus:false,
     filterData:{
       filter: false, //是否显示筛选内容
       filterIfShow: 0,//显示当前的全部筛选条件
@@ -61,6 +37,9 @@ Page({
     //tab切换
     currentTab:0,
     // 图片懒加载模块
+    loadImagesEndStatus:false,
+    loadImagesPage: 1,
+    loadImagesCount: 10,
     imgLoadData:{
       scrollH: 0,
       imgWidth: 0,
@@ -100,6 +79,8 @@ Page({
         [strstyle]: e.currentTarget.dataset.value
       })
     }
+
+    
   },
   //是否显示当前的全部筛选条件
   tabFilterIf: function (event) {
@@ -121,6 +102,11 @@ Page({
       [strstyle] : 0,
       [strfilter]: false,
     })
+
+    //清除原有的精选样片数据
+    let imgLoadData = { scrollH: 0, imgWidth: 0, loadingCount: 0, images: [], col1: [], col2: [] };
+    this.setData({ imgLoadData: imgLoadData, loadImagesEndStatus: false, loadImagesPage: 1 });
+    this.loadImages(true);
   },
   // 提交按钮功能
   submitFun: function () {
@@ -128,6 +114,11 @@ Page({
     this.setData({
       [strfilter]: false,
     })
+
+    //清除原有的精选样片数据
+    let imgLoadData = { scrollH: 0, imgWidth: 0, loadingCount: 0, images: [], col1: [], col2: [] };
+    this.setData({ imgLoadData: imgLoadData, loadImagesEndStatus: false, loadImagesPage: 1 });
+    this.loadImages(true);
   },
   // tab切换方法
   tabNavFun:function(e){
@@ -232,33 +223,33 @@ Page({
     },20)
   },
   //下拉加载
-  loadImages: function () {
-    let images = [
-      { pic: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img3.imgtn.bdimg.com/it/u=4192590352,1079796267&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img4.imgtn.bdimg.com/it/u=1990083140,1871542088&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img1.imgtn.bdimg.com/it/u=3141573913,443875710&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img3.imgtn.bdimg.com/it/u=3003797967,4242511948&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img5.imgtn.bdimg.com/it/u=2326877116,2718696881&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img0.imgtn.bdimg.com/it/u=1586298711,2677183515&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img4.imgtn.bdimg.com/it/u=927024874,3409247806&fm=11&gp=0.jpg', height: 0 },
-      { pic: 'http://img0.imgtn.bdimg.com/it/u=678917998,1986864878&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img2.imgtn.bdimg.com/it/u=863334768,3951465678&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img4.imgtn.bdimg.com/it/u=1480732384,790274052&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img1.imgtn.bdimg.com/it/u=731299135,4028385160&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img3.imgtn.bdimg.com/it/u=2836557333,2058143530&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img5.imgtn.bdimg.com/it/u=4003118724,494246661&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img4.imgtn.bdimg.com/it/u=2724163625,2768374455&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img1.imgtn.bdimg.com/it/u=758291606,1456528031&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img1.imgtn.bdimg.com/it/u=2123654397,634665358&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img5.imgtn.bdimg.com/it/u=1101351412,621663631&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img0.imgtn.bdimg.com/it/u=1159806221,2260067311&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img2.imgtn.bdimg.com/it/u=3477704411,772244421&fm=26&gp=0.jpg', height: 0 },
-      { pic: 'http://img4.imgtn.bdimg.com/it/u=3754638307,4051770475&fm=26&gp=0.jpg', height: 0 },
-    ];
-
+  parseImages: function (images) {
+    // let images = [
+    //   { pic: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img3.imgtn.bdimg.com/it/u=4192590352,1079796267&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img4.imgtn.bdimg.com/it/u=1990083140,1871542088&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img1.imgtn.bdimg.com/it/u=3141573913,443875710&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img3.imgtn.bdimg.com/it/u=3003797967,4242511948&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img5.imgtn.bdimg.com/it/u=2326877116,2718696881&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img0.imgtn.bdimg.com/it/u=1586298711,2677183515&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img4.imgtn.bdimg.com/it/u=927024874,3409247806&fm=11&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img0.imgtn.bdimg.com/it/u=678917998,1986864878&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img2.imgtn.bdimg.com/it/u=863334768,3951465678&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img4.imgtn.bdimg.com/it/u=1480732384,790274052&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img1.imgtn.bdimg.com/it/u=731299135,4028385160&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img3.imgtn.bdimg.com/it/u=2836557333,2058143530&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img5.imgtn.bdimg.com/it/u=4003118724,494246661&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img4.imgtn.bdimg.com/it/u=2724163625,2768374455&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img1.imgtn.bdimg.com/it/u=758291606,1456528031&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img1.imgtn.bdimg.com/it/u=2123654397,634665358&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img5.imgtn.bdimg.com/it/u=1101351412,621663631&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img0.imgtn.bdimg.com/it/u=1159806221,2260067311&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img2.imgtn.bdimg.com/it/u=3477704411,772244421&fm=26&gp=0.jpg', height: 0 },
+    //   { pic: 'http://img4.imgtn.bdimg.com/it/u=3754638307,4051770475&fm=26&gp=0.jpg', height: 0 },
+    // ];
+    console.log(images);
     let baseId = "img-" + (+new Date());
 
     for (let i = 0; i < images.length; i++) {
@@ -280,13 +271,17 @@ Page({
   addSceneArr:function(){
     var that = this;
     // 懒加载内容模块
+    this.scene()
     // 执行代码
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.scene();    
+    this.scene();  
+    //加载首组图片
+    this.loadImages();
+    this.getClass();  //获取分类风格列表
     this.setData({
       theme:app.globalData.theme, //设置主题
       style: "color:" + app.globalData.theme + ";border-bottom:1px solid" + app.globalData.theme //设置当前tab选中样式
@@ -306,18 +301,69 @@ Page({
           winWidth: wh,
         });
 
-        //加载首组图片
-        this.loadImages();
+        
       }
     })
   },
   //场景案例
   scene: function () {
     var that = this;
+    //已经到底啦
+    if (this.data.sceneEndStatus === true){
+      return;
+    }
+    var page = this.data.scenePage,count = this.data.sceneCount,start = (page-1)*count;
+    this.setData({ scenePage:++page});
+    app._Get('index/get_data', 'm/anli/f/id,title,price,imgs,remark as dress/o/sort@asc/l/'+start+","+count, function (data) {
+      var scene = that.data.scene;
+      if (!data.length){
+        that.data.sceneEndStatus = true;
+        that.endMessage();
+        return;
+      }
+      scene = scene.concat(data);
+      that.setData({ scene: scene })
+    })
+  },
+  //场景案例
+  loadImages: function () {
+    
+    var that = this;
+    //已经到底啦
+    if (this.data.loadImagesEndStatus === true) {
+      return;
+    }
+    var page = this.data.loadImagesPage, count = this.data.loadImagesCount, start = (page - 1) * count;
+    this.setData({ loadImagesPage: ++page });
+    var param = 'm/jingxuan/f/image/o/sort@asc/l/' + start + "," + count;
+    //判断分类条件
+    if (this.data.filterData.type !== undefined && this.data.filterData.type){
+      param += "/w__class/" + this.data.filterData.type;
+    }
+    //判断风格条件
+    if (this.data.filterData.style !== undefined && this.data.filterData.style) {
+      param += "/w__fengge/" + this.data.filterData.style;
+    }
 
-    app._Get('index/get_data', 'm/anli/w__is_index/1/f/id,title,price,imgs,remark as dress/o/sort@asc/l/3', function (data) {
-        console.log(data);
-      that.setData({ scene: data })
+    app._Get('index/get_data',param, function (data) {
+     console.log(data);
+      if (!data.length) {
+        that.data.loadImagesEndStatus = true;
+        that.endMessage();
+        return;
+      }
+
+      let images = [];
+      for(var i in data){
+        images[i] = { pic: data[i].image, height:0} ;
+      }
+      that.parseImages(images);
+    })
+  },
+  getClass:function(){
+    var that = this;
+    app._Get('index/config','f/jingxuan_class,jingxuan_fengge', function (data) {
+      that.setData({ classify1: data.jingxuan_class, classify2: data.jingxuan_fengge})
     })
   },
   /**
@@ -325,5 +371,12 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  endMessage:function(){
+    wx.showToast({
+      title: '我是有底线的',
+      icon: 'none',
+      duration: 2000
+    })
   }
 })

@@ -28,7 +28,7 @@
 <view class='user-module2' wx:if="{{isSelectStore}}">
   <navigator hover-class='none' class='selectStore' open-type='navigate' url='/pages/selectStore/selectStore'>{{store_name}} <text style="color:{{theme}}">[更换]</text></navigator>
 </view>
-<view class='user-module2'>
+<view class='user-module2'  wx:if="{{discount.length}}">
   <gift bColor="transparent"></gift>
 </view>
 <!-- footer -->

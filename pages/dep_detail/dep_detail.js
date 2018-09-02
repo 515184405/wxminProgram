@@ -8,18 +8,11 @@ Page({
    */
   data: {
     // 优惠券
-    discount: [
-      { iconText: '优惠券', content: '订购送200元抵扣券' },
-      { iconText: '到店礼', content: '到店即送精美水杯一个' },
-    ],
+    discount: [],
     // 推荐套系
-    recommend: [
-      { title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588', desc: '造型：14套 | 拍摄：210张 | 精修：70张', activity: '此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台' },
-      { title: '特惠套装特惠套装特惠套装特惠套装', image: 'http://images.xfwed.com/shop/photo/221/2216185.jpg', price: '2588', desc: '造型：7套 | 拍摄：150张 | 精修：70张' },
-    ],
+    recommend: [],
     //详情
-    depObj : {
-      title: '情人节专属套餐情人节专属套餐', image: 'http://images.xfwed.com/shop/photo/221/2216184.jpg', price: '4588',cust_price:'5388', desc: '造型：14套 | 拍摄：210张 | 精修：70张', activity: '此活动赠送冰箱一台此活动赠送冰箱一台此活动赠送冰箱一台' },
+    depObj : {},
     dep_desc:`
       <p class="clearfix" style="margin-top: 0px; margin-bottom: 0px; padding: 10px 0px 0px; -webkit-tap-highlight-color: transparent; color: rgb(51, 51, 51); position: relative; font-family: &quot;hiragino sans gb&quot;, 微软雅黑, &quot;microsoft yahei&quot;, Arial, Helvetica, sans-serif, 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
     <p class="clearfix" style="margin-top: 0px; margin-bottom: 0px; padding: 10px 0px 0px; -webkit-tap-highlight-color: transparent; color: rgb(51, 51, 51); position: relative; font-family: &quot;hiragino sans gb&quot;, 微软雅黑, &quot;microsoft yahei&quot;, Arial, Helvetica, sans-serif, 宋体; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
@@ -48,9 +41,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var id = options.id;
     this.setData({
       theme: app.globalData.theme
     })
+    app.discount(this);
+    app.recommend(this);
+    this.get_info(id);
   },
 
   /**
@@ -59,40 +56,15 @@ Page({
   onReady: function () {
     this.appointment = this.selectComponent("#appointment");
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
+  get_info:function(id){
+    var that = this;
+    app._Get('index/get_data', 'm/taoxi/w__id/'+id, function (data) {
+        console.log(data);
+      data.image = data.img;
+      data.cust_price = data.y_price;
+      data.price = data.price;
+      that.setData({ depObj: data })
+    })
   },
 
   /**

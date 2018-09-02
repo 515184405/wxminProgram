@@ -26,6 +26,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     app.footer(this);
+    app.discount(this);
     that.setData({
       isSelectStore: app.globalData.isSelectStore,
       theme:app.globalData.theme,
