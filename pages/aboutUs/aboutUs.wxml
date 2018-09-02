@@ -1,7 +1,7 @@
   <!-- 关于我们banner图 -->
 <image class='aboutme_bg' mode='widthFix' src='{{aboutme_bg}}'>
 </image> 
-  <about id='about' showImage="{{true}}"></about>
+  <about id='about' showImage="{{true}}" about="{{about}}"></about>
 <!-- footer -->
   <footer id="footer" footer='{{footer}}'>  
   </footer>

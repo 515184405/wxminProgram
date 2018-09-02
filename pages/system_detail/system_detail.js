@@ -51,6 +51,7 @@ Page({
     app.discount(this);
     this.scene(id);
     app.defualt_kefu(this);
+    app.footer(this);
    
   },
 

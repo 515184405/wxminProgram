@@ -48,6 +48,7 @@ Page({
     app.discount(this);
     app.recommend(this);
     this.get_info(id);
+    app.footer(this);
   },
 
   /**
