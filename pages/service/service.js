@@ -35,6 +35,7 @@ Page({
     })
     this.service();
     this.about();
+    app.footer(this);
   },
   service:function(){
     var that = this;

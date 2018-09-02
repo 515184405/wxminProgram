@@ -1,7 +1,7 @@
 .selectStore{
   position: absolute;
-  right:5rpx;
-  top:5rpx;
+  right:10rpx;
+  top:10rpx;
   padding:7rpx 20rpx 7rpx 40rpx;
   border-radius: 30rpx;
   background-color: #fff;
