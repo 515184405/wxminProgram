@@ -1,5 +1,5 @@
 
-<view wx:if="{{recommend.length>0}}" class='recommend-module'>
+<view wx:if="{{recommend.length>0}}" class='recommend-module recommend-module{{types}}'>
     <view wx:if="{{titleShow}}" style="{{titleStyle}}" class="recommend-title">{{titleText}}</view>
     <navigator open-type='navigate' url='/pages/dep_detail/dep_detail?id=1' wx:for="{{recommend}}" wx:key="" class='flex x-between y-center recomment-item'>
       <view class='recommend-img'>
@@ -11,10 +11,6 @@
           <view class='rec-title-price'>￥{{item.price}}</view>
         </view> 
         <view class='rec-left-desc'>
-          <!-- <import src="/utils/wxParse/wxParse.wxml"/>
-          <block wx:for="{{replyTemArray}}" wx:key="" wx:for-index="indexHtml">
-            <template wx:if="{{index == indexHtml}}" is="wxParse" data="{{wxParseData:item}}"/>
-          </block> -->
           <view class='overflow-text rec-desc-line'>{{item.desc}}</view>
           <view class='overflow-text'>{{item.activity}}</view>
         </view>

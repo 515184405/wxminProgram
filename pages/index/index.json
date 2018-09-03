@@ -2,6 +2,7 @@
   "usingComponents": {
     "footer": "/component/footer/footer",
     "gift": "/component/gift/gift",
+    "nav": "/component/nav/nav",
     "recommend": "/component/recommend/recommend",
     "list-one": "/component/list_1/list_1"
   },

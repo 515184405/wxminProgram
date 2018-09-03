@@ -23,6 +23,10 @@ Component({
     titleStyle: {
       type: "String",
       value: ""
+    },
+    types:{
+      type:"Number",
+      value:3
     }
   },
 
