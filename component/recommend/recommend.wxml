@@ -1,5 +1,5 @@
 
-<view wx:if="{{recommend.length>0}}" class='recommend-module'>
+<view wx:if="{{recommend.length>0}}" class='recommend-module recommend-module{{types}}'>
     <view wx:if="{{titleShow}}" style="{{titleStyle}}" class="recommend-title">{{titleText}}</view>
     <navigator open-type='navigate' url='/pages/dep_detail/dep_detail?id={{item.id}}' wx:for="{{recommend}}" wx:key="" class='flex x-between y-center recomment-item'>
       <view class='recommend-img'>

@@ -1,0 +1,38 @@
+/* 导航 */
+.nav-item{
+  margin-top:30rpx;
+  width:25%;
+  text-align: center;
+  display: inline-block;
+}
+.nav-item-img{
+  width:110rpx;
+  height:110rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  margin:0 auto;
+}
+.nav-item-text{
+  margin-top:5rpx;
+  color:#000;
+  font-size: 24rpx;
+  display: block;
+}
+
+.nav-item2 .nav-item-img{
+  border-radius: 10rpx;
+}
+.nav-item3{
+  padding:15rpx 0;
+  background-color:#f9f9f9;
+  box-sizing: border-box;
+  border-right:4px solid #fff;
+  border-radius: 10rpx;
+}
+.nav-item3:last-child{
+  border-right:0;
+}
+.nav-item3 .nav-item-img{
+  border-radius: 10rpx;
+}

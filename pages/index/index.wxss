@@ -23,29 +23,8 @@
 .slide-image{
   width:100%;
 }
-/* 导航 */
 .nav-box{
   padding-top:0;
-}
-.nav-item{
-  margin-top:30rpx;
-  width:25%;
-  text-align: center;
-  display: inline-block;
-}
-.nav-item-img{
-  width:110rpx;
-  height:110rpx;
-  border-radius: 50%;
-  overflow: hidden;
-  display: block;
-  margin:0 auto;
-}
-.nav-item-text{
-  margin-top:5rpx;
-  color:#000;
-  font-size: 24rpx;
-  display: block;
 }
 
 /* 模块 */

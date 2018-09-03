@@ -1,29 +1,33 @@
 @import '/app.wxss';
-@import "/utils/wxParse/wxParse.wxss";
 .recommend-module{
   background-color: #fff;
   margin-top:20rpx;
 }
-.recomment-item{
-  padding:25rpx 20rpx;
-  border-bottom:1px solid #f5f7f9;
-}
-.recommend-left{
-  width:calc(100% - 240rpx);
-  position: relative;
-}
-.recomment-item:last-child{
-  margin-bottom:0!important;
-}
-.recommend-title{
+.recommend-module .recommend-title{
   padding:20rpx;
   border-bottom:1px solid #f1f1f1;
   font-size: 30rpx;
 }
-.rec-title-text{
+.rec-left-desc{
+  font-size: 24rpx;
+}
+/* 以上为通用样式 */
+/* 样式1 */
+.recommend-module1 .recomment-item{
+  padding:25rpx 20rpx;
+  border-bottom:1px solid #f5f7f9;
+}
+.recommend-module1 .recommend-left{
+  width:calc(100% - 240rpx);
+  position: relative;
+}
+.recommend-module1 .recomment-item:last-child{
+  margin-bottom:0!important;
+}
+.recommend-module1 .rec-title-text{
   width:calc(100% - 160rpx);
 }
-.rec-title-price{
+.recommend-module1 .rec-title-price{
   width:160rpx;
   color:#f55;
   text-align: left;
@@ -31,14 +35,15 @@
   padding-left:20rpx;
   box-sizing:  border-box;
 }
-.rec-left-title{
+.recommend-module1 .rec-left-title{
   color:#000;
   margin-bottom:80rpx;
 }
-.rec-desc-line{
+.recommend-module1 .rec-desc-line{
   line-height:30rpx;
 }
-.rec-left-desc{
+
+.recommend-module1 .rec-left-desc{
   font-size: 24rpx;
   color:#999;
   margin-top:10rpx;
@@ -50,18 +55,107 @@
   overflow: hidden!important;
   display: block!important;
 }
-.recommend-img{
+.recommend-module1 .recommend-img{
   width:180rpx;
   vertical-align: bottom;
 }
-.recommend-width{
+.recommend-module1 .recommend-width{
   width:100%;
   height:120rpx;
   display: block;
 }
-.overflow-text2 view{
-  white-space:nowrap;
-  overflow:hidden; 
-  font-size: 22rpx;
-  text-overflow:ellipsis;
+/* 样式2 */
+.recommend-module2{
+  padding:0 20rpx;
+}
+.recommend-module2 .recomment-item{
+  height:350rpx;
+  width:100%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10rpx;
+  border-bottom:1px solid #f1f1f1;
+}
+.recommend-module2 .recomment-item:first-child .recommend-img{
+  margin-top:0;
+}
+.recommend-module2 .recomment-item:last-child{
+  border-bottom:0;
+}
+.recommend-module2 .recommend-img{
+  position: absolute;
+  left:0;
+  top:0;
+  margin:20rpx 0;
+  width:100%;
+  height:calc(100% - 40rpx);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.recommend-module2 .recommend-width{
+  width:100%;
+}
+.recommend-module2 .recommend-left{
+  position: absolute;
+  bottom:20rpx;
+  left:0;
+  width:100%;
+  color:#fff;
+  padding:30rpx 20rpx 10rpx 20rpx;
+  box-sizing: border-box;
+  background:linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.8));
+}
+.recommend-module2 .rec-title-text,.recommend-module3 .rec-title-text{
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.recommend-module2 .rec-left-desc,.recommend-module3 .rec-left-desc{
+  margin-top:15rpx;
+}
+.recommend-module2 .rec-title-price,.recommend-module3 .rec-title-price{
+  margin-left:30rpx;
+  color:rgba(255, 4, 4, 0.986);
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.recommend-module2 .icon-nvxingfuben,.recommend-module3 .icon-nvxingfuben{
+  display: none;
+}
+/* 样式3 */
+.recommend-module3{
+  padding:0 20rpx;
+}
+.recommend-module3 .recomment-item{
+  width:100%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10rpx;
+  border-bottom:1px solid #f1f1f1;
+  margin:20rpx 0;
+}
+.recommend-module3 .recomment-item:last-child{
+  border-bottom:0;
+  margin-bottom:0;
+}
+.recommend-module3 .recommend-img{
+  display: block;
+  width:100%;
+  height:330rpx;
+  overflow:hidden;
+  border-radius: 10rpx;
+  background-color: #fff;
+}
+.recommend-module3 .recommend-width{
+  display: block;
+  width:100%;
+}
+.recommend-module3 .recommend-left{
+  padding-bottom:20rpx;
+  margin-top:10rpx;
+  color:#333;
+}
+.recommend-module3 .rec-left-desc{
+  color:#999;
 }

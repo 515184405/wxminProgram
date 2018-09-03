@@ -1,0 +1,4 @@
+<navigator hover-class='none' wx:for="{{navArr}}" wx:key="" url='{{item.url}}' open-type='{{item.openType}}' class='nav-item nav-item{{types}}'>
+    <image class='nav-item-img' mode='aspectFill' src='{{item.image}}'></image>
+    <text class='nav-item-text'>{{item.title}}</text>
+</navigator>

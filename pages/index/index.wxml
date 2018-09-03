@@ -10,10 +10,7 @@
 </swiper>
 <!-- 导航模块 -->
 <view class='nav-box fy-container'>
-  <view bindtap='goto' hover-class='none' wx:for="{{navArr}}" wx:key="" data-url='{{item.url}}' data-type='{{item.openType}}' class='nav-item'>
-    <image class='nav-item-img' mode='aspectFill' src='{{item.image}}'></image>
-    <text class='nav-item-text'>{{item.title}}</text>
-  </view>
+  <nav id='nav' navArr="{{navArr}}"></nav>
   <gift id="gift"></gift>
 </view>
 <!-- 模块内容 -->
