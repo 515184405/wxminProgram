@@ -11,20 +11,111 @@
 </view>
 <!-- 套系详情模块 -->
 <view class='dep-detail'>
-  <view wx:for="{{3}}" wx:key="" class='fy-container'>
+  <view class='fy-container'>
     <view class='dep-detail-title'><text style="color:{{theme}}" class='iconfont icon-xin'></text>造型</view>
     <view class='deps-list'>
        <view class='deps-items flex x-between'>
           <view class='deps-items-title'>造型数量</view>
-          <rich-text nodes="10套" class='deps-items-desc'>
+          <rich-text nodes="{{depObj.ext_param.zhaoxing.num}}套" class='deps-items-desc'>
           </rich-text>
        </view>
        <view class='deps-items flex x-between'>
           <view class='deps-items-title'>服装说明</view>
-          <rich-text nodes="新娘：提供5套（含1套便装）服装拍摄<br/>新郎：提供5套（含1套便装）服装拍摄" class='deps-items-desc'></rich-text>
+          <rich-text nodes="{{depObj.ext_param.zhaoxing.fz_shuoming}}" class='deps-items-desc'></rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>造型说明</view>
+          <rich-text nodes="{{depObj.ext_param.zhaoxing.zx_shuoming}}" class='deps-items-desc'></rich-text>
        </view>
     </view>
   </view>
+<!-- 场景 -->
+  <view class='fy-container'>
+    <view class='dep-detail-title'><text style="color:{{theme}}" class='iconfont icon-xin'></text>场景</view>
+    <view class='deps-list'>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>场景搭配</view>
+          <rich-text nodes="{{depObj.ext_param.changjing.dapei}}" class='deps-items-desc'>
+          </rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>内景数量</view>
+          <rich-text nodes="{{depObj.ext_param.changjing.nei}}个" class='deps-items-desc'></rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>外景数量</view>
+          <rich-text nodes="{{depObj.ext_param.changjing.wai}}个" class='deps-items-desc'></rich-text>
+       </view>
+        <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>场景说明</view>
+          <rich-text nodes="{{depObj.ext_param.changjing.shuoming}}" class='deps-items-desc'></rich-text>
+       </view>
+    </view>
+  </view>
+ <!-- 拍摄 -->
+  <view class='fy-container'>
+    <view class='dep-detail-title'><text style="color:{{theme}}" class='iconfont icon-xin'></text>拍摄</view>
+    <view class='deps-list'>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>拍摄天数</view>
+          <rich-text nodes="{{depObj.ext_param.paishe.day_num}}天" class='deps-items-desc'>
+          </rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>拍摄张数</view>
+          <rich-text nodes="{{depObj.ext_param.paishe.zhang_num}}张" class='deps-items-desc'></rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>精修张数</view>
+          <rich-text nodes="{{depObj.ext_param.paishe.jing_num}}张" class='deps-items-desc'></rich-text>
+       </view>
+        <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>入册张数</view>
+          <rich-text nodes="{{depObj.ext_param.paishe.ru_num}}" class='deps-items-desc'></rich-text>
+       </view>
+    </view>
+  </view>
+  <!-- 成品 -->
+  <view class='fy-container'>
+    <view class='dep-detail-title'><text style="color:{{theme}}" class='iconfont icon-xin'></text>成品</view>
+    <view class='deps-list'>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>相册数量</view>
+          <rich-text nodes="{{depObj.ext_param.xiangce.sx_num}}本" class='deps-items-desc'>
+          </rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>相册说明</view>
+          <rich-text nodes="{{depObj.ext_param.xiangce.xc_remark}}" class='deps-items-desc'></rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>相框数量</view>
+          <rich-text nodes="{{depObj.ext_param.xiangce.sk_num}}个" class='deps-items-desc'></rich-text>
+       </view>
+        <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>相框说明</view>
+          <rich-text nodes="{{depObj.ext_param.xiangce.xk_remark}}" class='deps-items-desc'></rich-text>
+       </view>
+    </view>
+  </view>
+
+    <!-- 其他 -->
+  <view class='fy-container'>
+    <view class='dep-detail-title'><text style="color:{{theme}}" class='iconfont icon-xin'></text>其他</view>
+    <view class='deps-list'>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>套餐赠品</view>
+          <rich-text nodes="{{depObj.ext_param.qita.zp}}" class='deps-items-desc'>
+          </rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>补充说明</view>
+          <rich-text nodes="{{depObj.ext_param.qita.bc}}" class='deps-items-desc'></rich-text>
+       </view>
+    </view>
+  </view>
+  
+
 </view>
 <!-- 优惠券 -->
   <view style='margin-top:20rpx;'>

@@ -1,6 +1,9 @@
-<view  class='fy-container'>
+<view  class='fy-container' wx:if="{{status}}">
   <view style="color:{{theme}}" class='activity-title'>{{title}}</view>
   <rich-text nodes="{{content}}" bindtap="tap"></rich-text>
+</view>
+<view  class='fy-container' wx:if="{{!status}}" style='height:300rpx;line-height:300rpx;'>
+  <view style="color:{{theme}}" class='activity-title'>{{no_activity}}</view>
 </view>
 <!-- 优惠券 -->
 <view class="discount-module-box">

@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    no_activity:'本店还没有最新活动，请您敬请期待！',
     // 优惠券
     discount: [],
     // 推荐套系
@@ -35,9 +36,9 @@ Page({
 
   getActivity:function(){
     var that = this;
-    app._Get('index/get_data', 'm/huodong/f/title,content', function (data) {
+    app._Get('index/get_data', 'm/huodong/f/title,content,status', function (data) {
       if(data.length){
-        that.setData({ content: data[0].content,title:data[0].title })
+        that.setData({ content: data[0].content,title:data[0].title,status:data[0].status })
       }
       
      
