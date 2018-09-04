@@ -23,6 +23,7 @@ Page({
     app.footer(this);
     app.discount(this);
     this.getActivity();
+    this.setData({theme:app.globalData.theme})
   },
 
   /**

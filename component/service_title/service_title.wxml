@@ -1,0 +1,4 @@
+<view class='service-title'>
+    <view class='st_cn' style="color:{{theme}}">{{title_cn}}</view>
+    <view class='st_en'>{{title_en}}</view>
+  </view>

@@ -1,0 +1,17 @@
+<view class='online-searvice'>
+      <view class='online-item flex y-top'>
+          <view class='online-item-left'>
+              <view class='online-item-name'>
+                系统客服
+              </view>
+              <view class='online-item-desc'>
+                实时对话，在线回答您的问题
+              </view>
+          </view>
+          <view class='online-item-right'>
+              <button hover-class="none" class='online-item-btn' open-type='contact'>
+                <text class='iconfont icon-xiaoxi'></text>
+              </button>
+          </view>
+      </view>
+  </view>

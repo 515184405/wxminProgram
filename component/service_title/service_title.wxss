@@ -1,0 +1,16 @@
+.service-title{
+  padding:20rpx 40rpx;
+  border-top:1px solid #f1f1f1;
+  border-bottom:1px solid #f1f1f1;
+   box-shadow: 0 -2px 5px #f1f1f1;
+  position: relative;
+}
+.st_cn{
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.st_en{
+  font-size: 24rpx;
+  color:#999;
+  margin-top:5rpx;
+}

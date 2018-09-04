@@ -13,12 +13,24 @@
 <view class='dep-detail'>
   <view wx:for="{{3}}" wx:key="" class='fy-container'>
     <view class='dep-detail-title'><text style="color:{{theme}}" class='iconfont icon-xin'></text>造型</view>
-    <rich-text nodes="{{dep_desc}}" bindtap="tap"></rich-text>
+    <view class='deps-list'>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>造型数量</view>
+          <rich-text nodes="10套" class='deps-items-desc'>
+          </rich-text>
+       </view>
+       <view class='deps-items flex x-between'>
+          <view class='deps-items-title'>服装说明</view>
+          <rich-text nodes="新娘：提供5套（含1套便装）服装拍摄<br/>新郎：提供5套（含1套便装）服装拍摄" class='deps-items-desc'></rich-text>
+       </view>
+    </view>
   </view>
 </view>
 <!-- 优惠券 -->
-  <discount id="discount" bind:showDialog="showDialog" discount='{{discount}}'>
+  <view style='margin-top:20rpx;'>
+    <discount id="discount" bind:showDialog="showDialog" discount='{{discount}}'>
   </discount>
+  </view>
 <!-- 套系推荐 -->
   <recommend id="recommend" recommend='{{recommend}}'>
   </recommend>

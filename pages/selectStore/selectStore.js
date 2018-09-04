@@ -1,5 +1,6 @@
 // pages/selectStore/selectStore.js
 const app = getApp();
+var timer = 0;
 Page({
 
   /**
@@ -46,16 +47,22 @@ Page({
   searchContent: function (e) {
     var that = this;
     var searchVal = e.detail.searchVal;
-    var len = that.data.store.length;
-    that.data.storeArr = [];
-    for(var i = 0; i < len; i++){
-      if (that.data.store[i].stroeName.indexOf(searchVal) != -1){
-        that.data.storeArr.push(that.data.store[i]);
-      }
+    if (timer) {
+      clearTimeout(timer);
+      timer = 0;
     }
-    that.setData({
-      storeArr: that.data.storeArr
-    })
+    timer = setTimeout(function () {
+      var len = that.data.store.length;
+      that.data.storeArr = [];
+      for (var i = 0; i < len; i++) {
+        if (that.data.store[i].stroeName.indexOf(searchVal) != -1) {
+          that.data.storeArr.push(that.data.store[i]);
+        }
+      }
+      that.setData({
+        storeArr: that.data.storeArr
+      })
+    }, 500)
   },
   /**
    * 生命周期函数--监听页面加载
@@ -63,7 +70,6 @@ Page({
   onLoad: function (options) {
     // 获取门店数据
     var store = app.globalData.store;
-    console.log(store);
     this.setData({ store: store})
     this.getStoreArr();
   },

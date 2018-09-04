@@ -1,0 +1,16 @@
+  <view class='service-box{{types}} service-box'>
+    <view class='service-item' wx:for="{{service}}" wx:key="">
+      <view bindtap='makePhoneCalls' data-tel="{{item.tel}}" class='search-item-bg'>
+        <view class='service-avatar-box'>
+          <image src='{{item.avatar}}' mode='aspectFill' class='service-avatar'></image>
+        </view>
+        <view class='service-txt-box'>
+          <view class='searvice-name overflow-text'>{{item.name}}<text style='color:{{theme}}' class='click-me'>[点击拨号]</text></view>
+          <view class='searvice-desc overflow-text'>{{item.flat}}</view>
+        </view>
+        <view wx:if="{{types == 3}}" class='iconfont icon-dianhua'>
+
+        </view>
+      </view>
+    </view>
+  </view>

@@ -22,7 +22,7 @@
     <!-- 样片 -->
     <swiper-item>
       <view class='case-imgLoadArr'>
-          <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollH}}px" bindscroll="scrollFun" bindscrolltolower="loadImages">
+          <scroll-view scroll-with-animation="{{true}}" scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollH - 60}}px" bindscroll="scrollFun" bindscrolltolower="loadImages">
             <view style="width:100%">
               <view class="img_item item_img_left">
                 <view wx:for="{{imgLoadData.col1}}" wx:key="id">

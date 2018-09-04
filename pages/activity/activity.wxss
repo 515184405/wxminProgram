@@ -1,1 +1,12 @@
-/* pages/activity/activity.wxss */
+.activity-title{
+  text-align: center;
+  font-size: 36rpx;
+  padding-bottom:30rpx;
+  font-weight: bold;
+}
+.fy-container{
+  overflow: hidden;
+}
+.discount-module-box{
+  margin-top:20rpx;
+}

@@ -8,4 +8,7 @@
     <view class='iconfont icon-nvxingfuben'>
     </view>
   </view>
+  <view wx:if="{{storeArr.length == 0}}" class='null_store'>
+    暂无搜索门店
+  </view>
 </view>

@@ -1,4 +1,6 @@
 
+argument可能存在其他参数，此文档仅说明样式配置参数types
+
 场景配置：
 	模块名：list_1
 	arguments:{
@@ -15,4 +17,8 @@
 	arguments:{
 		types:分三种 （1,2,3）
 	}
-
+线下资讯模块：
+	模块名：service_offline
+	argument:{
+		types:分三种 （1,2,3）
+	}

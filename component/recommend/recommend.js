@@ -26,7 +26,7 @@ Component({
     },
     types:{
       type:"Number",
-      value:3
+      value:1
     }
   },
 

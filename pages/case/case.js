@@ -110,6 +110,7 @@ Page({
   },
   // 提交按钮功能
   submitFun: function () {
+    imgSrcArr = [];        
     let strfilter = 'filterData.filter';    
     this.setData({
       [strfilter]: false,
@@ -134,9 +135,9 @@ Page({
   },
   // 图片查看器
   wxParseImgTap : function(e) {
+    console.log(this.data.imgLoadData.imgSrcArr)
     var that = this;
     var nowImgUrl = e.target.dataset.src;
-    console.log(nowImgUrl)
     wx.previewImage({
       current: nowImgUrl, // 当前显示图片的http链接
       urls: that.data.imgLoadData.imgSrcArr // 需要预览的图片http链接列表
@@ -327,7 +328,6 @@ Page({
   },
   //场景案例
   loadImages: function () {
-    
     var that = this;
     //已经到底啦
     if (this.data.loadImagesEndStatus === true) {
@@ -357,7 +357,7 @@ Page({
       for(var i in data){
         images[i] = { pic: data[i].image, height:0} ;
       }
-      that.parseImages(images);
+      that.parseImages(images);;
     })
   },
   getClass:function(){

@@ -1,0 +1,47 @@
+@import '/app.wxss';
+.online-item-left{
+  display: inline-block;
+  width:70%;
+}
+.online-item-right{
+  width:30%;
+  display: inline-block;
+  box-sizing: border-box;
+  border-left:1px solid #ddd;
+  text-align: center;
+}
+.online-item-btn{
+  background-color: transparent!important;
+  display: inline-block;
+  line-height: 1;
+}
+.online-item-btn::after{
+  border:none!important;
+}
+.online-item-btn .iconfont{
+  font-size: 100rpx;
+  color:rgb(57, 214, 110);
+}
+.online-item-name{
+  font-size:30rpx;
+  color:#000;
+  margin-top:10rpx;
+}
+.online-item-desc{
+  font-size:28rpx;
+  color:#999;
+  margin-top:10rpx;
+}
+.online-searvice{
+  padding:40rpx;
+}
+.online-item-name{
+  font-size:30rpx;
+  color:#000;
+  margin-top:10rpx;
+}
+.online-item-desc{
+  font-size:28rpx;
+  color:#999;
+  margin-top:10rpx;
+}

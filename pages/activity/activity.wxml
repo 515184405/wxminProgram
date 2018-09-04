@@ -1,8 +1,12 @@
-
-<rich-text nodes="{{content}}" bindtap="tap"></rich-text>
+<view  class='fy-container'>
+  <view style="color:{{theme}}" class='activity-title'>{{title}}</view>
+  <rich-text nodes="{{content}}" bindtap="tap"></rich-text>
+</view>
 <!-- 优惠券 -->
+<view class="discount-module-box">
   <discount id="discount" bind:showDialog="showDialog" discount='{{discount}}'>
   </discount>
+</view>
 <!-- 套系推荐 -->
   <recommend id="recommend" recommend='{{recommend}}'>
   </recommend>

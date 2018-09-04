@@ -35,3 +35,19 @@
 .dep-detail-item{
   padding:20rpx 30rpx 20rpx 40rpx;
 }
+
+.deps-list{
+  margin-top:40rpx;
+}
+.deps-items{
+  margin-top:15rpx;
+}
+.deps-items-title{
+  width:20%;
+  text-align: right;
+  color:#aaa;
+}
+.deps-items-desc{
+  width:75%;
+  color:#000;
+}

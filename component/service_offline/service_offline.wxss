@@ -1,0 +1,99 @@
+@import '/app.wxss';
+.service-box{
+  padding:0 10rpx 10rpx 10rpx;
+  margin-top:10rpx;
+}
+.service-item{
+  display: inline-block;
+  width:50%;
+  padding:10rpx;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  overflow: hidden;
+}
+.search-item-bg{
+  background-color: #edf9fa;
+  padding:40rpx 20rpx;
+  text-align: center;
+  border-radius: 20rpx;
+}
+.click-me{
+  color:#999;
+  font-size: 26rpx;
+  margin-left:10rpx;
+}
+.service-avatar-box{
+  width:140rpx;
+  height:140rpx;
+  border-radius: 50%;
+  margin:0 auto;
+  overflow: hidden;
+}
+.service-avatar{
+  width:140rpx;
+  height:100%;
+}
+.searvice-name{
+  font-size: 32rpx;
+  color:rgb(58, 46, 46);
+  margin-top:10rpx;
+}
+.searvice-desc{
+  font-size: 26rpx;
+  color:#999;
+  margin-top:10rpx;  
+}
+
+/* 样式2 */
+.service-box2 .search-item-bg{
+  background-color:rgb(243, 249, 253);
+  padding:20rpx;
+}
+.service-box2 .service-avatar-box{
+  width:100%;
+  height:300rpx;
+  border-radius: 10rpx;
+  margin:0 auto;
+  overflow: hidden;
+}
+.service-box2 .service-avatar{
+  width:100%;
+  height:100%;
+}
+/* 样式3 */
+.service-box3 .service-item{
+  width:100%;
+}
+.service-box3 .search-item-bg{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding:20rpx 0;
+  border-radius: 0;
+  box-shadow: 0 3rpx 3rpx #f3f5f7;
+}
+.service-box3 .service-item:last-child .search-item-bg{
+  border-bottom:none;
+  box-shadow:none;  
+}
+.service-box3 .service-avatar-box{
+  width:120rpx;
+  height:120rpx;
+  border:1px solid #f1f1f1;
+  margin:0;
+}
+.service-box3 .service-txt-box{
+  margin-left:20rpx;
+  width:calc(100% - 250rpx);
+}
+.service-box3 .service-txt-box view{
+  text-align: left;
+  margin:0;
+}
+.service-box3 .service-txt-box .searvice-desc{
+  margin-top:20rpx;
+}
+.service-box3 .icon-dianhua{
+  font-size: 42rpx;
+  color:rgb(56, 233, 56);
+}

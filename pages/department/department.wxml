@@ -1,5 +1,5 @@
 
-<view  wx:for="{{class_data}}">
+<view  wx:for="{{class_data}}" wx:key="">
   <recommend  titleText="{{item.title}}" titleStyle="color:{{theme}};font-weight:bold" recommend='{{recommend[item.id]}}'></recommend>
 </view>
 <footer id="footer" footer="{{footer}}">
