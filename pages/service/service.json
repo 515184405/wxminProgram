@@ -1,7 +1,7 @@
 {
   "usingComponents": {
     "footer": "/component/footer/footer",
-    "service_title": "/component/service_title/service_title",
+    "service_title": "/component/title/title",
     "service_offline": "/component/service_offline/service_offline",
     "service_online": "/component/service_online/service_online",
     "about": "/component/about/about"

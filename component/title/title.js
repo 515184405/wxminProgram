@@ -12,6 +12,10 @@ Component({
     title_en: {
       type: "String",
       value: {}
+    },
+    types:{
+      type:"Number",
+      value:1
     }
   },
 

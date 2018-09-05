@@ -1,0 +1,78 @@
+.service-title{
+    padding:20rpx 40rpx;
+}
+.service-title1{
+  border-top:1px solid #f1f1f1;
+  border-bottom:1px solid #f1f1f1;
+  box-shadow: 0 -2px 5px #f1f1f1;
+  position: relative;
+}
+.service-title1 .st_cn{
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.service-title1 .st_en{
+  font-size: 24rpx;
+  color:#999;
+  margin-top:5rpx;
+}
+
+.service-title2 .st_cn{
+  position: relative;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.service-title2 .st_cn:before{
+  content: '';
+  position:absolute;
+  left:0;
+  top:50%;
+  width:35%;
+  height:1px;
+    background: linear-gradient(to left, rgba(220,220,220,1) , rgba(255,255,255,0)); /* 标准的语法 */
+}
+.service-title2 .st_cn:after{
+  content: '';
+  position:absolute;
+  right:0;
+  top:50%;
+  width:35%;
+  height:1px;
+    background: linear-gradient(to right, rgba(220,220,220,1) , rgba(255,255,255,0)); /* 标准的语法 */   
+}
+.service-title2 .st_en{
+  font-size: 24rpx;
+  color:#999;
+  text-align: center;
+  margin-top:10rpx;
+}
+.service-title3{
+  padding:30rpx;
+  position: relative;
+  width:350rpx;
+  margin:0 auto;
+  border:2rpx solid #e976767a;
+}
+.service-title3 .st_cn{
+  position: absolute;
+  text-align: center;
+  padding:5rpx 20rpx;
+  background-color: #fff;
+  color:#000!important;
+  top:-24rpx;
+  left:50%;
+  transform: translateX(-50%);
+  font-size: 32rpx;
+}
+.service-title3 .st_en{
+  position: absolute;
+  text-align: center;
+  padding:5rpx 20rpx;
+  background-color:#fff;
+  left:50%;
+  bottom:-12rpx;
+  transform: translateX(-50%);
+  font-size: 24rpx;
+  white-space:nowrap;
+}

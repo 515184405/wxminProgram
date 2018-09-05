@@ -15,19 +15,13 @@
 </view>
 <!-- 模块内容 -->
 <view class='fy-container fy-module recommend-index'>
-    <view class='fm-title' style="color:{{theme}}">
-      精品套系
-    </view>
-    <view class='fm-title-en'>Top - quality product line</view>
+    <title title_cn="精品套系" types="2" title_en="quality product line"></title>
     <!-- 套系推荐 -->
     <recommend id="recommend" titleShow="{{false}}" recommend='{{recommend}}'>
     </recommend>
 </view>
 <view class='fy-container fy-module'>
-    <view class='fm-title' style="color:{{theme}}">
-      场景案例
-    </view>
-    <view class='fm-title-en'>Top - quality product line</view>
+    <title title_cn="场景案例" types="2" title_en="Top - quality product line"></title>
     <!-- 列表 -->
     <list-one id="list1" types="{{3}}" scene='{{scene}}'>  
     </list-one>

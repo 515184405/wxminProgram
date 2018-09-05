@@ -31,36 +31,6 @@
 .fy-module{
   margin-top:20rpx;
 }
-.fm-title{
-  position: relative;
-  text-align: center;
-  font-size: 32rpx;
-  font-weight: bold;
-}
-.fm-title:before{
-  content: '';
-  position:absolute;
-  left:0;
-  top:50%;
-  width:35%;
-  height:1px;
-    background: linear-gradient(to left, rgba(220,220,220,1) , rgba(255,255,255,0)); /* 标准的语法 */
-}
-.fm-title:after{
-  content: '';
-  position:absolute;
-  right:0;
-  top:50%;
-  width:35%;
-  height:1px;
-    background: linear-gradient(to right, rgba(220,220,220,1) , rgba(255,255,255,0)); /* 标准的语法 */   
-}
-.fm-title-en{
-  font-size: 24rpx;
-  color:#999;
-  text-align: center;
-  margin-top:10rpx;
-}
 .recommend-index{
   padding:30rpx 0;
 }
