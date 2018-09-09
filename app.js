@@ -7,7 +7,7 @@ Config.globalData.store_id = 1;
 Config.globalData.store_name = '加载中...';
 Config.globalData.versions = "V1.0.11";
 Config.globalData.safe = 'asDfe';
-Config.globalData.api = 'https://wxapp.035k.com/api.php';
+Config.globalData.api = 'http://www.do.cn/api.php';
 Config.globalData.userInfo = null;
 Config.globalData.theme = '#f37d91'; //主题色
 Config.globalData.loading = 'http://img.lanrentuku.com/img/allimg/1212/5-121204193951.gif';
@@ -116,5 +116,13 @@ Config.clearCache = function(){
   this.globalData.discount = undefined;
   this.globalData.recommend = undefined;
   this.globalData.footer = undefined;
+}
+
+Config.parseImg = function (imgs){
+  var image = [];
+  for (var k in imgs) {
+    image[k] = { imgsrc: imgs[k], loading: false }
+  }
+  return image;
 }
 App(Config);

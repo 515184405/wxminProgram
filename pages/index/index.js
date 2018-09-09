@@ -59,7 +59,7 @@ Page({
   // 轮播
   getimgUrls:function(){
    var that = this;
-    app._Get('index/get_data', 'm/lunbo/f/img',function(data){
+    app._Get('index/get_data', 'm/lunbo/f/img/u/img',function(data){
       
       var imgUrls = new Array();
       for(var i in data){
@@ -71,15 +71,20 @@ Page({
   //场景案例
   scene: function () {
     var that = this;
-    app._Get('index/get_data', 'm/anli/w__is_index/1/f/id,title,price,imgs,remark as dress/o/sort@asc/l/3', function (data) {
-      //   console.log(data);
+    app._Get('index/get_data', 'm/anli/w__is_index/1/f/id,title,price,imgs,remark as dress/o/sort@asc/l/3/u/imgs', function (data) {
+    
+      for(var i in data){
+        var imgs = data[i].imgs;
+        data[i].image = app.parseImg(imgs);
+      }
+      
       that.setData({ scene: data })
     })
   },
   //导航
   daohang: function () {
     var that = this;
-    app._Get('index/get_data', 'm/daohang/f/id,title,url,img', function (data) {
+    app._Get('index/get_data', 'm/daohang/f/id,title,url,img/u/img', function (data) {
        for(var i in data){
          var k = data[i].url.split("@");
          data[i].url = k[0];
