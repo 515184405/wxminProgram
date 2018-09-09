@@ -1,7 +1,7 @@
 //app.js
 var Config = require('/utils/config.js');
 
-Config.globalData.suid = 1;
+Config.globalData.suid = 2;
 Config.globalData.wxapp_id = 1;
 Config.globalData.store_id = 1;
 Config.globalData.store_name = '加载中...';
