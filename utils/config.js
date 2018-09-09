@@ -87,7 +87,7 @@ module.exports = {
         param = Object.assign(param, extra_param);
         //动态更换域名
         requestHandler.httpsPromisify(wx.request)({
-          url: _this.globalData.api + '?s=/sheying/index/index',
+          url: _this.globalData.api + '?s=/' + _this.globalData.host_model +'/index/index',
           data:param,
           method: "GET",
           header: { 'content-type': 'application/json' }
@@ -132,10 +132,11 @@ module.exports = {
   globalData : {
     suid: 0,
     api: '',
-    project_id: 0,
+    wxapp_id: 0,
     versions: "",
     safe: '',
     footer:'',
+    host_model:'',//请求模块
     diff_time: 0//手机时间与服务器时间只差
   },
   footer:function(_this){
