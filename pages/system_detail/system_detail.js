@@ -67,8 +67,8 @@ Page({
   },
   scene: function (id) {
     var that = this;
-    app._Get('index/get_data', 'm/anli/w__id/' + id +'/f/title,price,imgs,remark as dress', function (data) {
-      //   console.log(data);
+    app._Get('index/get_data', 'm/anli/w__id/' + id +'/f/title,price,imgs,remark as dress/u/imgs', function (data) {
+      data.image = app.parseImg(data.imgs);
       that.setData({ scene: data })
       that.imageArr();
     })

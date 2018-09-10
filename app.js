@@ -74,7 +74,10 @@ Config.recommend = function(_this) {
     return;
   }
 
-  this._Get('index/get_data', 'm/taoxi/f/id,title,price,img,ext_param/w__is_index/1/o/sort@asc/l/3', function (data) {
+  this._Get('index/get_data', 'm/taoxi/f/id,title,price,img,ext_param/w__is_index/1/o/sort@asc/l/3/u/img', function (data) {
+    for(var i in data){
+      data[i].image = data[i].img;
+    }
     that.globalData.recommend = data;
     _this.setData({ recommend: data })
   })

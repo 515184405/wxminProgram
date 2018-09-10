@@ -40,7 +40,7 @@ Page({
   },
   get_info:function(id){
     var that = this;
-    app._Get('index/get_data', 'm/taoxi/w__id/'+id, function (data) {
+    app._Get('index/get_data', 'm/taoxi/u/img/w__id/'+id, function (data) {
         console.log(data);
       data.image = data.img;
       data.cust_price = data.y_price;

@@ -225,7 +225,7 @@ Page({
   },
   //下拉加载
   parseImages: function (images) {
-    // let images = [
+    //  images = [
     //   { pic: 'http://img2.imgtn.bdimg.com/it/u=286677759,1556790083&fm=26&gp=0.jpg', height: 0 },
     //   { pic: 'http://img1.imgtn.bdimg.com/it/u=1054017249,1476043288&fm=26&gp=0.jpg', height: 0 },
     //   { pic: 'http://img4.imgtn.bdimg.com/it/u=2684238956,2434316358&fm=26&gp=0.jpg', height: 0 },
@@ -250,7 +250,7 @@ Page({
     //   { pic: 'http://img2.imgtn.bdimg.com/it/u=3477704411,772244421&fm=26&gp=0.jpg', height: 0 },
     //   { pic: 'http://img4.imgtn.bdimg.com/it/u=3754638307,4051770475&fm=26&gp=0.jpg', height: 0 },
     // ];
-    console.log(images);
+  console.log(images);
     let baseId = "img-" + (+new Date());
 
     for (let i = 0; i < images.length; i++) {
@@ -315,12 +315,17 @@ Page({
     }
     var page = this.data.scenePage,count = this.data.sceneCount,start = (page-1)*count;
     this.setData({ scenePage:++page});
-    app._Get('index/get_data', 'm/anli/f/id,title,price,imgs,remark as dress/o/sort@asc/l/'+start+","+count, function (data) {
+    app._Get('index/get_data', 'm/anli/f/id,title,price,imgs,remark as dress/u/imgs/o/sort@asc/l/'+start+","+count, function (data) {
       var scene = that.data.scene;
       if (!data.length){
         that.data.sceneEndStatus = true;
         that.endMessage();
         return;
+      }
+
+      for (var i in data) {
+        var imgs = data[i].imgs;
+        data[i].image = app.parseImg(imgs);
       }
       scene = scene.concat(data);
       that.setData({ scene: scene })
@@ -335,7 +340,7 @@ Page({
     }
     var page = this.data.loadImagesPage, count = this.data.loadImagesCount, start = (page - 1) * count;
     this.setData({ loadImagesPage: ++page });
-    var param = 'm/jingxuan/f/image/o/sort@asc/l/' + start + "," + count;
+    var param = 'm/jingxuan/f/image/u/image/o/sort@asc/l/' + start + "," + count;
     //判断分类条件
     if (this.data.filterData.type !== undefined && this.data.filterData.type){
       param += "/w__class/" + this.data.filterData.type;
@@ -357,6 +362,7 @@ Page({
       for(var i in data){
         images[i] = { pic: data[i].image, height:0} ;
       }
+      
       that.parseImages(images);;
     })
   },
