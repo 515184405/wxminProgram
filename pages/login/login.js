@@ -14,10 +14,13 @@ Page({
     var that = this;
     if (e.detail.userInfo) {
       //用户按了允许授权按钮
+      console.log(e);
       app.globalData.userInfo = e.detail.userInfo;
-   
+      app._Post('index/setuser', e.detail.userInfo , function (data) {
+
+      })
       //插入登录的用户的相关信息到数据库
-      console.log(e.detail);
+     
       //授权成功后，跳转进入小程序首页
       wx.switchTab({
         url: that.data.route

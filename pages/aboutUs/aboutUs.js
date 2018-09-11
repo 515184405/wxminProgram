@@ -19,7 +19,7 @@ Page({
   },
   about: function () {
     var that = this;
-    app._Get('index/get_data', 'm/about/l/1/o/id@desc/f/email,imgs,map,map_address,qq,tel', function (data) {
+    app._Get('index/get_data', 'm/about/l/1/o/id@desc/f/email,imgs,map,map_address,qq,tel/u/imgs', function (data) {
       that.setData({ about: data[0] })
     })
   },
