@@ -3,7 +3,6 @@ var Config = require('/utils/config.js');
 
 Config.globalData.suid = 2;
 Config.globalData.wxapp_id = 14;
-Config.globalData.store_id = 7;
 Config.globalData.store_name = '加载中...';
 Config.globalData.versions = "V1.0.11";
 Config.globalData.safe = 'asDfe';
@@ -48,8 +47,7 @@ Config.logining =  function() {
 }
 Config.extra_param =  function() {
   return {
-     'w__store_id': this.globalData.store_id,
-     'store_id': this.globalData.store_id
+   
   }
 }
 
